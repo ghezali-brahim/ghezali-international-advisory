@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { BASE_URL } from '../../../../config/seo';
-import { getAlternates } from '../../../../config/seo';
-import type { Locale } from '../../../../i18n/config';
-import { resolveParams } from '../../../../lib/params';
-import { getCaseStudyBySlug, getAllCaseStudySlugs } from '../../../../lib/caseStudies';
-import CaseStudyDetail from '../../../../pages/CaseStudyDetail';
+import { BASE_URL } from '@/config/seo';
+import { getAlternates } from '@/config/seo';
+import type { Locale } from '@/i18n/config';
+import { resolveParams } from '@/lib/params';
+import { getCaseStudyBySlug, getAllCaseStudySlugs } from '@/lib/caseStudies';
+import CaseStudyDetail from '@/views/CaseStudyDetail';
 
 export const revalidate = 3600;
 

@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { BASE_URL } from '../../../../config/seo';
-import { getAlternates } from '../../../../config/seo';
-import type { Locale } from '../../../../i18n/config';
-import { resolveParams } from '../../../../lib/params';
-import { getPostBySlug, getAllSlugs } from '../../../../lib/blog';
-import BlogArticle from '../../../../pages/BlogArticle';
+import { BASE_URL } from '@/config/seo';
+import { getAlternates } from '@/config/seo';
+import type { Locale } from '@/i18n/config';
+import { resolveParams } from '@/lib/params';
+import { getPostBySlug, getAllSlugs } from '@/lib/blog';
+import BlogArticle from '@/views/BlogArticle';
 
 export const revalidate = 3600;
 

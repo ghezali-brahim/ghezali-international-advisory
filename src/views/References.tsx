@@ -1,7 +1,7 @@
 import { Globe, Building2, TrendingUp, Users } from 'lucide-react';
-import CaseStudies from '../components/CaseStudies';
-import IndustryExpertise from '../components/IndustryExpertise';
-import References from '../components/References';
+import CaseStudies from '@/components/CaseStudies';
+import IndustryExpertise from '@/components/IndustryExpertise';
+import References from '@/components/References';
 
 const ReferencesPage = () => {
   return (

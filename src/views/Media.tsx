@@ -1,5 +1,5 @@
-import Media from '../components/Media';
-import Newsletter from '../components/Newsletter';
+import Media from '@/components/Media';
+import Newsletter from '@/components/Newsletter';
 import { BookOpen, Users, TrendingUp, Award, Calendar, Globe, Clock } from 'lucide-react';
 
 const MediaPage = () => {

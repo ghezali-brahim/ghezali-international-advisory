@@ -2,7 +2,7 @@
 
 import type { ReactNode } from 'react';
 import { usePathname } from 'next/navigation';
-import { AppProvider } from '../context/AppContext';
+import { AppProvider } from '@/context/AppContext';
 import { AnalyticsProvider, PageViewTracker, ScrollDepthTracker, TimeOnPageTracker } from './Analytics';
 import { PerformanceMonitor, ResourceHints, ServiceWorkerManager, CriticalCSSLoader } from './PerformanceOptimizer';
 import Header from './Header';

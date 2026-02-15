@@ -1,7 +1,7 @@
-import ProcessTimeline from '../components/ProcessTimeline';
-import { LocaleLink } from '../components/LocaleLink';
+import ProcessTimeline from '@/components/ProcessTimeline';
+import { LocaleLink } from '@/components/LocaleLink';
 import { Crown, Rocket, TrendingUp, ArrowRight, CheckCircle, Clock, Euro, Star, Users, Shield, Zap, Globe, Building2 } from 'lucide-react';
-import { ContextualLinks } from '../components/InternalLinks';
+import { ContextualLinks } from '@/components/InternalLinks';
 
 const ServicesPage = () => {
   const services = [

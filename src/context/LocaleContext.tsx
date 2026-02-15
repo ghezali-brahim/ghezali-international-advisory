@@ -1,7 +1,7 @@
 'use client';
 
 import { createContext, useContext, type ReactNode } from 'react';
-import type { Locale } from '../i18n/config';
+import type { Locale } from '@/i18n/config';
 
 const LocaleContext = createContext<Locale | null>(null);
 

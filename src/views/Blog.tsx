@@ -1,9 +1,9 @@
 'use client';
 
 import { useMemo, useState } from 'react';
-import { LocaleLink } from '../components/LocaleLink';
+import { LocaleLink } from '@/components/LocaleLink';
 import { Calendar, Clock, User, ArrowRight, Search, Filter, BookOpen } from 'lucide-react';
-import { ContextualLinks } from '../components/InternalLinks';
+import { ContextualLinks } from '@/components/InternalLinks';
 
 export interface BlogArticleItem {
   slug: string;

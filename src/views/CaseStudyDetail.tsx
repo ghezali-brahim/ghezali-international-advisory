@@ -1,5 +1,5 @@
-import { LocaleLink } from '../components/LocaleLink';
-import type { CaseStudy } from '../lib/caseStudies';
+import { LocaleLink } from '@/components/LocaleLink';
+import type { CaseStudy } from '@/lib/caseStudies';
 import { ArrowLeft, MapPin, Briefcase } from 'lucide-react';
 
 interface CaseStudyDetailProps {

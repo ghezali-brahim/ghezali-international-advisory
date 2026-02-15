@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 import { locales, defaultLocale, isValidLocale } from './i18n/config';
 
-const basePath = '';
+const basePath: string = '';
 
 function pathnameWithoutBase(pathname: string): string {
   if (basePath && pathname.startsWith(basePath)) {

@@ -1,4 +1,4 @@
-import PrivateCircle from '../components/PrivateCircle';
+import PrivateCircle from '@/components/PrivateCircle';
 import { Lock, Users, Calendar, Star, Crown, Shield, Zap, Award } from 'lucide-react';
 
 const PrivateCirclePage = () => {

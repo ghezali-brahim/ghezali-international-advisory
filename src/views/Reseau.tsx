@@ -1,4 +1,4 @@
-import { LocaleLink } from '../components/LocaleLink';
+import { LocaleLink } from '@/components/LocaleLink';
 import { Users, Calendar, TrendingUp, Shield, Award, ArrowRight } from 'lucide-react';
 
 const ReseauPage = () => {

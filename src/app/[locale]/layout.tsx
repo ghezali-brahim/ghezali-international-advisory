@@ -1,10 +1,10 @@
 import { notFound } from 'next/navigation';
 import type { ReactNode } from 'react';
-import { isValidLocale } from '../../i18n/config';
-import type { Locale } from '../../i18n/config';
-import { resolveParams } from '../../lib/params';
-import SetLocaleLang from '../../components/SetLocaleLang';
-import { LocaleProvider } from '../../context/LocaleContext';
+import { isValidLocale } from '@/i18n/config';
+import type { Locale } from '@/i18n/config';
+import { resolveParams } from '@/lib/params';
+import SetLocaleLang from '@/components/SetLocaleLang';
+import { LocaleProvider } from '@/context/LocaleContext';
 
 export default async function LocaleLayout({
   children,

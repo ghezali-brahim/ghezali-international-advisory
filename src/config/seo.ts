@@ -1,8 +1,8 @@
 // Configuration SEO centralisée pour toutes les pages du site
 
-import type { Locale } from '../i18n/config';
-import { locales, defaultLocale } from '../i18n/config';
-import { getMarketBySlug } from './markets';
+import type { Locale } from '@/i18n/config';
+import { locales, defaultLocale, isValidLocale } from '@/i18n/config';
+import { getMarketBySlug } from '@/config/markets';
 
 export const BASE_URL = 'https://www.ghezali-business.com';
 
@@ -80,6 +80,7 @@ const pageSEOFr: Record<string, SEOConfig> = {
   legal: {
     title: `Mentions légales | ${defaultSEO.title}`,
     description: "Mentions légales - Ghezali International Advisory.",
+    keywords: "mentions légales, legal, Ghezali International Advisory",
     canonical: `${BASE_URL}/fr/legal`
   },
   privacy: {
@@ -184,6 +185,7 @@ const pageSEOEn: Record<string, SEOConfig> = {
   legal: {
     title: `Legal | ${defaultSEO.title}`,
     description: "Legal information - Ghezali International Advisory.",
+    keywords: "legal, legal notice, Ghezali International Advisory",
     canonical: `${BASE_URL}/en/legal`
   },
   privacy: {
@@ -239,8 +241,9 @@ const pageSEOByLocale: Record<Locale, Record<string, SEOConfig>> = {
   en: pageSEOEn
 };
 
-export function getSEOConfig(page: string, locale: Locale = defaultLocale): SEOConfig {
-  const byLocale = pageSEOByLocale[locale] ?? pageSEOFr;
+export function getSEOConfig(page: string, locale: string = defaultLocale): SEOConfig {
+  const loc: Locale = isValidLocale(locale) ? locale : defaultLocale;
+  const byLocale = pageSEOByLocale[loc] ?? pageSEOFr;
   return byLocale[page] ?? defaultSEO;
 }
 

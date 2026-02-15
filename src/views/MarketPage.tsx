@@ -1,5 +1,5 @@
-import { LocaleLink } from '../components/LocaleLink';
-import type { MarketConfig } from '../config/markets';
+import { LocaleLink } from '@/components/LocaleLink';
+import type { MarketConfig } from '@/config/markets';
 import { Globe, ArrowRight } from 'lucide-react';
 
 interface MarketPageProps {

@@ -4,9 +4,9 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X, ChevronDown } from 'lucide-react';
-import { useLocale } from '../context/LocaleContext';
-import { getDictionary } from '../i18n/getDictionary';
-import { locales } from '../i18n/config';
+import { useLocale } from '@/context/LocaleContext';
+import { getDictionary } from '@/i18n/getDictionary';
+import { locales } from '@/i18n/config';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

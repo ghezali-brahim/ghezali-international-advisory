@@ -2,7 +2,7 @@
 
 import type { ComponentProps } from 'react';
 import Link from 'next/link';
-import { useLocale } from '../context/LocaleContext';
+import { useLocale } from '@/context/LocaleContext';
 
 type LocaleLinkProps = ComponentProps<typeof Link>;
 

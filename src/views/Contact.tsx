@@ -1,5 +1,5 @@
-import Contact from '../components/Contact';
-import FAQ from '../components/FAQ';
+import Contact from '@/components/Contact';
+import FAQ from '@/components/FAQ';
 import { MapPin, Phone, Mail, Clock, Users, Award, TrendingUp } from 'lucide-react';
 
 const ContactPage = () => {

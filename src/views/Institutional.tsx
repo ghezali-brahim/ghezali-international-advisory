@@ -1,4 +1,4 @@
-import { LocaleLink } from '../components/LocaleLink';
+import { LocaleLink } from '@/components/LocaleLink';
 import { Globe, Shield, Users, ArrowRight } from 'lucide-react';
 
 const InstitutionalPage = () => {

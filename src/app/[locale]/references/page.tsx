@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
-import { getSEOConfig, getAlternates } from '../../../config/seo';
-import type { Locale } from '../../../i18n/config';
-import { resolveParams } from '../../../lib/params';
-import References from '../../../pages/References';
+import { getSEOConfig, getAlternates } from '@/config/seo';
+import type { Locale } from '@/i18n/config';
+import { resolveParams } from '@/lib/params';
+import References from '@/views/References';
 
 export async function generateMetadata({ params }: { params: { locale: string } | Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await resolveParams(params);

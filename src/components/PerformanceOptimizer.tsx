@@ -119,7 +119,7 @@ export const PerformanceMonitor: FC = () => {
             domContentLoaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,
             loadComplete: perfData.loadEventEnd - perfData.loadEventStart,
             firstByte: perfData.responseStart - perfData.requestStart,
-            domInteractive: perfData.domInteractive - perfData.navigationStart,
+            domInteractive: perfData.domInteractive - perfData.startTime,
           });
         }, 0);
       });

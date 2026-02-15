@@ -3,8 +3,8 @@
 import { useEffect, useRef, useState, Children, type FC, type ReactNode } from 'react';
 
 // Animation Hook
-export const useAnimation = (options: IntersectionObserverInit = {}) => {
-  const ref = useRef<HTMLElement>(null);
+export const useAnimation = <T extends HTMLElement = HTMLElement>(options: IntersectionObserverInit = {}) => {
+  const ref = useRef<T>(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -36,7 +36,7 @@ export const FadeIn: FC<{
   direction?: 'up' | 'down' | 'left' | 'right';
   className?: string;
 }> = ({ children, delay = 0, duration = 0.6, direction = 'up', className = '' }) => {
-  const [ref, isVisible] = useAnimation();
+  const [ref, isVisible] = useAnimation<HTMLDivElement>();
 
   const getTransform = () => {
     switch (direction) {
@@ -69,7 +69,7 @@ export const StaggerContainer: FC<{
   className?: string;
   staggerDelay?: number;
 }> = ({ children, className = '', staggerDelay = 100 }) => {
-  const [ref, isVisible] = useAnimation();
+  const [ref, isVisible] = useAnimation<HTMLDivElement>();
   const [childVisibility, setChildVisibility] = useState<boolean[]>([]);
 
   useEffect(() => {
@@ -112,7 +112,7 @@ export const AnimatedCounter: FC<{
   suffix?: string;
   className?: string;
 }> = ({ end, duration = 2000, prefix = '', suffix = '', className = '' }) => {
-  const [ref, isVisible] = useAnimation();
+  const [ref, isVisible] = useAnimation<HTMLSpanElement>();
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -147,7 +147,7 @@ export const TypingAnimation: FC<{
   pauseTime?: number;
   className?: string;
 }> = ({ texts, speed = 100, pauseTime = 2000, className = '' }) => {
-  const [ref, isVisible] = useAnimation();
+  const [ref, isVisible] = useAnimation<HTMLSpanElement>();
   const [currentText, setCurrentText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -203,9 +203,16 @@ export const HoverAnimation: FC<{
 };
 
 // Loading Spinner
+const spinnerBorderTClasses: Record<'yellow' | 'white' | 'black' | 'gray', string> = {
+  yellow: 'border-t-yellow-600',
+  white: 'border-t-white',
+  black: 'border-t-black',
+  gray: 'border-t-gray-600',
+};
+
 export const LoadingSpinner: FC<{
   size?: 'sm' | 'md' | 'lg';
-  color?: 'yellow' | 'white' | 'black';
+  color?: 'yellow' | 'white' | 'black' | 'gray';
   className?: string;
 }> = ({ size = 'md', color = 'yellow', className = '' }) => {
   const sizeClasses = {
@@ -214,15 +221,9 @@ export const LoadingSpinner: FC<{
     lg: 'h-12 w-12',
   };
 
-  const colorClasses = {
-    yellow: 'border-yellow-400',
-    white: 'border-white',
-    black: 'border-black',
-  };
-
   return (
     <div
-      className={`animate-spin rounded-full border-2 border-gray-300 border-t-${color === 'yellow' ? 'yellow' : color}-600 ${sizeClasses[size]} ${className}`}
+      className={`animate-spin rounded-full border-2 border-gray-300 ${spinnerBorderTClasses[color]} ${sizeClasses[size]} ${className}`}
     />
   );
 };
@@ -258,7 +259,7 @@ export const SlideIn: FC<{
   delay?: number;
   className?: string;
 }> = ({ children, direction = 'left', delay = 0, className = '' }) => {
-  const [ref, isVisible] = useAnimation();
+  const [ref, isVisible] = useAnimation<HTMLDivElement>();
 
   const getTransform = () => {
     switch (direction) {
@@ -290,7 +291,7 @@ export const ParallaxScroll: FC<{
   speed?: number;
   className?: string;
 }> = ({ children, speed = 0.5, className = '' }) => {
-  const [ref, isVisible] = useAnimation();
+  const [ref, isVisible] = useAnimation<HTMLDivElement>();
   const [offset, setOffset] = useState(0);
 
   useEffect(() => {

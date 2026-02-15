@@ -2,9 +2,9 @@
 
 import Link from 'next/link';
 import { Mail, Phone, MapPin, Linkedin, Twitter } from 'lucide-react';
-import { useLocale } from '../context/LocaleContext';
-import { getDictionary } from '../i18n/getDictionary';
-import { getMarketsForLocale } from '../config/markets';
+import { useLocale } from '@/context/LocaleContext';
+import { getDictionary } from '@/i18n/getDictionary';
+import { getMarketsForLocale } from '@/config/markets';
 
 const Footer = () => {
   const locale = useLocale();

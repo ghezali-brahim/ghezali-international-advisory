@@ -1,9 +1,9 @@
 import type { MetadataRoute } from 'next';
-import { BASE_URL } from '../config/seo';
-import { locales } from '../i18n/config';
-import { getMarketStaticParams } from '../config/markets';
-import { getAllPosts } from '../lib/blog';
-import { getAllCaseStudies } from '../lib/caseStudies';
+import { BASE_URL } from '@/config/seo';
+import { locales } from '@/i18n/config';
+import { getMarketStaticParams } from '@/config/markets';
+import { getAllPosts } from '@/lib/blog';
+import { getAllCaseStudies } from '@/lib/caseStudies';
 
 const staticPaths = [
   '',

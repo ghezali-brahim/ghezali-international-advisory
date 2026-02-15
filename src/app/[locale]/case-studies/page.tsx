@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
-import { getSEOConfig, getAlternates } from '../../../config/seo';
-import type { Locale } from '../../../i18n/config';
-import { resolveParams } from '../../../lib/params';
-import { getAllCaseStudies } from '../../../lib/caseStudies';
-import CaseStudiesListPage from '../../../pages/CaseStudiesList';
+import { getSEOConfig, getAlternates } from '@/config/seo';
+import type { Locale } from '@/i18n/config';
+import { resolveParams } from '@/lib/params';
+import { getAllCaseStudies } from '@/lib/caseStudies';
+import CaseStudiesListPage from '@/views/CaseStudiesList';
 
 export async function generateMetadata({ params }: { params: { locale: string } | Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await resolveParams(params);

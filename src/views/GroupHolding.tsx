@@ -1,17 +1,17 @@
-import { LocaleLink } from '../components/LocaleLink';
-import { Shield, PieChart, ArrowRight } from 'lucide-react';
+import { LocaleLink } from '@/components/LocaleLink';
+import { Building2, Layers, ArrowRight } from 'lucide-react';
 
-const FamilyOfficePage = () => {
+const GroupHoldingPage = () => {
   const pillars = [
     {
-      icon: Shield,
-      title: 'Discrétion et alignement',
-      description: "Accompagnement sur mesure pour family offices : stratégie patrimoniale, diversification et M&A. Alignement d'intérêts et confidentialité absolue.",
+      icon: Building2,
+      title: 'Structuration et pilotage',
+      description: "Conseil aux groupes et holdings : structuration juridique et opérationnelle, pilotage des filiales, stratégie de croissance et M&A.",
     },
     {
-      icon: PieChart,
-      title: 'Stratégie et valorisation',
-      description: "Structuration des participations, due diligence stratégique, optimisation pré-cession. Partenaire au niveau du board pour piloter la création de valeur.",
+      icon: Layers,
+      title: 'Transformation et valorisation',
+      description: "Transformation des portefeuilles, optimisation des synergies, due diligence et accompagnement cession. Partenaire au niveau du board.",
     },
   ];
 
@@ -20,15 +20,15 @@ const FamilyOfficePage = () => {
       <section className="py-24 bg-gradient-to-br from-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center px-4 py-2 rounded-full border border-yellow-400/30 bg-yellow-400/10 backdrop-blur-sm mb-6">
-            <Shield className="h-4 w-4 text-yellow-400 mr-2" />
-            <span className="text-yellow-400 text-sm font-medium">Family Office</span>
+            <Building2 className="h-4 w-4 text-yellow-400 mr-2" />
+            <span className="text-yellow-400 text-sm font-medium">Group Holding</span>
           </div>
           <h1 className="text-4xl md:text-6xl font-serif text-white mb-6">
-            Partenaire stratégique des <span className="text-yellow-400">family offices</span>
+            Partenaire stratégique des <span className="text-yellow-400">groupes et holdings</span>
           </h1>
           <div className="w-24 h-1 bg-yellow-400 mx-auto mb-6" />
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Conseil patrimonial, diversification et M&A pour family offices. Exécution au niveau board, discrétion et résultats mesurables.
+            Conseil aux groupes et holdings : structuration, M&A, transformation et valorisation. Un partenaire au niveau du board pour piloter la croissance.
           </p>
         </div>
       </section>
@@ -50,10 +50,10 @@ const FamilyOfficePage = () => {
       <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-serif text-black mb-6">
-            Nos offres pour family offices
+            Nos offres pour groupes et holdings
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-10">
-            Strategic Deals & Equity, Executive Advisory, accompagnement M&A. Découvrez nos services et nos autres segments.
+            Executive Advisory, Corporate Acceleration, M&A et valorisation. Découvrez nos services et nos autres segments.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 flex-wrap">
             <LocaleLink href="/services" className="bg-yellow-400 text-black hover:bg-yellow-500 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 inline-flex items-center">
@@ -76,4 +76,4 @@ const FamilyOfficePage = () => {
   );
 };
 
-export default FamilyOfficePage;
+export default GroupHoldingPage;

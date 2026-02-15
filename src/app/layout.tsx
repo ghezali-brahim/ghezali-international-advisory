@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import type { ReactNode } from 'react';
-import { defaultSEO, structuredData } from '../config/seo';
-import ClientRoot from '../components/ClientRoot';
+import { defaultSEO, structuredData } from '@/config/seo';
+import ClientRoot from '@/components/ClientRoot';
 import './globals.css';
 
 export const metadata: Metadata = {

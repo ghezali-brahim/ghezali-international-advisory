@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
-import { getSEOConfig, getAlternates } from '../../../config/seo';
-import type { Locale } from '../../../i18n/config';
-import { resolveParams } from '../../../lib/params';
-import { getAllPosts } from '../../../lib/blog';
-import Blog from '../../../pages/Blog';
-import type { BlogArticleItem } from '../../../pages/Blog';
+import { getSEOConfig, getAlternates } from '@/config/seo';
+import type { Locale } from '@/i18n/config';
+import { resolveParams } from '@/lib/params';
+import { getAllPosts } from '@/lib/blog';
+import Blog from '@/views/Blog';
+import type { BlogArticleItem } from '@/views/Blog';
 
 export const revalidate = 3600;
 

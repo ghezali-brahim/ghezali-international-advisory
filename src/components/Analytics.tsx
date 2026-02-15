@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, type FC, type ReactNode } from 'react';
-import { useAnalytics } from '../context/AppContext';
+import { useAnalytics } from '@/context/AppContext';
 
 // Google Analytics Events
 export const trackEvent = (eventName: string, parameters?: Record<string, any>) => {

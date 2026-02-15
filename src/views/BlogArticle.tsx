@@ -1,7 +1,7 @@
-import { LocaleLink } from '../components/LocaleLink';
+import { LocaleLink } from '@/components/LocaleLink';
 import { Calendar, Clock, User, ArrowLeft, Share2, Bookmark, Tag } from 'lucide-react';
-import { BlogRelatedLinks } from '../components/InternalLinks';
-import type { BlogPost } from '../lib/blog';
+import { BlogRelatedLinks } from '@/components/InternalLinks';
+import type { BlogPost } from '@/lib/blog';
 
 interface BlogArticleProps {
   post: BlogPost;
