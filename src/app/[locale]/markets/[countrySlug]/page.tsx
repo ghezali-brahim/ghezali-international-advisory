@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { getMarketSEOConfig, getMarketAlternates } from '../../../../../config/seo';
-import { getMarketBySlug, getMarketStaticParams } from '../../../../../config/markets';
-import type { Locale } from '../../../../../i18n/config';
-import { isValidLocale } from '../../../../../i18n/config';
-import { resolveParams } from '../../../../../lib/params';
-import MarketPage from '../../../../../pages/MarketPage';
+import { getMarketSEOConfig, getMarketAlternates } from '../../../../config/seo';
+import { getMarketBySlug, getMarketStaticParams } from '../../../../config/markets';
+import type { Locale } from '../../../../i18n/config';
+import { isValidLocale } from '../../../../i18n/config';
+import { resolveParams } from '../../../../lib/params';
+import MarketPage from '../../../../pages/MarketPage';
 
 export const revalidate = 3600;
 
