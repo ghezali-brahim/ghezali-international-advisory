@@ -1,16 +1,8 @@
 import React from 'react';
-import SEO from '../components/SEO';
 import PrivateCircle from '../components/PrivateCircle';
 import { Lock, Users, Calendar, Star, Crown, Shield, Zap, Award } from 'lucide-react';
-import { getSEOConfig, structuredData } from '../config/seo';
 
 const PrivateCirclePage = () => {
-  const seoConfig = getSEOConfig('privateCircle');
-  
-  const breadcrumbData = structuredData.breadcrumb([
-    { name: 'Accueil', url: 'https://www.ghezali-business.com/' },
-    { name: 'Cercle Privé', url: 'https://www.ghezali-business.com/cercle-prive' }
-  ]);
   const memberBenefits = [
     {
       icon: Users,
@@ -111,13 +103,6 @@ const PrivateCirclePage = () => {
 
   return (
     <div className="pt-16">
-      <SEO
-        title={seoConfig.title}
-        description={seoConfig.description}
-        keywords={seoConfig.keywords}
-        canonical={seoConfig.canonical}
-        structuredData={breadcrumbData}
-      />
       {/* Hero Section */}
       <section className="py-24 bg-gradient-to-br from-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

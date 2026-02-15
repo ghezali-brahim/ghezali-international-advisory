@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import { ChevronRight, Building, TrendingUp, DollarSign, Calendar, Target, CheckCircle } from 'lucide-react';
 

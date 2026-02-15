@@ -1,27 +1,11 @@
-import SEO from '../components/SEO';
 import { Globe, Building2, TrendingUp, Users } from 'lucide-react';
 import CaseStudies from '../components/CaseStudies';
 import IndustryExpertise from '../components/IndustryExpertise';
 import References from '../components/References';
-import { getSEOConfig, structuredData } from '../config/seo';
 
 const ReferencesPage = () => {
-  const seoConfig = getSEOConfig('references');
-  
-  const breadcrumbData = structuredData.breadcrumb([
-    { name: 'Accueil', url: 'https://www.ghezali-business.com/' },
-    { name: 'Références', url: 'https://www.ghezali-business.com/references' }
-  ]);
-
   return (
     <div className="pt-16">
-      <SEO
-        title={seoConfig.title}
-        description={seoConfig.description}
-        keywords={seoConfig.keywords}
-        canonical={seoConfig.canonical}
-        structuredData={breadcrumbData}
-      />
       <References />
       <CaseStudies />
       <IndustryExpertise />

@@ -1,30 +1,9 @@
 import React from 'react';
-import SEO from '../components/SEO';
 import { Shield, Eye, Lock, Database, Mail } from 'lucide-react';
-import { getSEOConfig, structuredData } from '../config/seo';
 
 const Privacy = () => {
-  const seoConfig = {
-    title: "Politique de Confidentialité - GHEZALI BUSINESS MASTERY",
-    description: "Politique de confidentialité et protection des données personnelles. Découvrez comment nous protégeons vos informations avec nos standards ISO 27001.",
-    keywords: "politique confidentialité, protection données, RGPD, ISO 27001, sécurité informations",
-    canonical: "https://www.ghezali-business.com/privacy"
-  };
-
-  const breadcrumbData = structuredData.breadcrumb([
-    { name: 'Accueil', url: 'https://www.ghezali-business.com/' },
-    { name: 'Politique de Confidentialité', url: 'https://www.ghezali-business.com/privacy' }
-  ]);
-
   return (
     <div className="pt-16">
-      <SEO
-        title={seoConfig.title}
-        description={seoConfig.description}
-        keywords={seoConfig.keywords}
-        canonical={seoConfig.canonical}
-        structuredData={breadcrumbData}
-      />
 
       {/* Hero Section */}
       <section className="py-24 bg-gradient-to-br from-gray-900 to-black">

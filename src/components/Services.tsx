@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Crown, Rocket, TrendingUp, ArrowRight, CheckCircle, Clock, Euro } from 'lucide-react';
 
 const Services = () => {
@@ -153,10 +153,10 @@ const Services = () => {
               Nos programmes sont conçus sur mesure pour votre ambition et vos objectifs spécifiques.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-              <Link to="/contact" className="bg-yellow-400 text-black hover:bg-yellow-500 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
+              <Link href="/contact" className="bg-yellow-400 text-black hover:bg-yellow-500 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
                 Vérifier son éligibilité
               </Link>
-              <Link to="/contact" className="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
+              <Link href="/contact" className="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
                 Recevoir notre proposition sur mesure
               </Link>
             </div>

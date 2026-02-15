@@ -1,17 +1,9 @@
 import React from 'react';
-import SEO from '../components/SEO';
 import Contact from '../components/Contact';
 import FAQ from '../components/FAQ';
 import { MapPin, Phone, Mail, Clock, Users, Award, TrendingUp } from 'lucide-react';
-import { getSEOConfig, structuredData } from '../config/seo';
 
 const ContactPage = () => {
-  const seoConfig = getSEOConfig('contact');
-  
-  const breadcrumbData = structuredData.breadcrumb([
-    { name: 'Accueil', url: 'https://www.ghezali-business.com/' },
-    { name: 'Contact', url: 'https://www.ghezali-business.com/contact' }
-  ]);
   const offices = [
     {
       city: "Paris - La Défense",
@@ -38,13 +30,6 @@ const ContactPage = () => {
 
   return (
     <div className="pt-16">
-      <SEO
-        title={seoConfig.title}
-        description={seoConfig.description}
-        keywords={seoConfig.keywords}
-        canonical={seoConfig.canonical}
-        structuredData={breadcrumbData}
-      />
       {/* Hero Contact */}
       <section className="py-24 bg-gradient-to-br from-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

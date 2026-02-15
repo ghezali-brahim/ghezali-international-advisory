@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import { Mail, Phone, MapPin, Linkedin, Twitter } from 'lucide-react';
 
 const Footer = () => {
@@ -33,39 +34,39 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-6">Navigation</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#accueil" className="text-gray-400 hover:text-yellow-400 transition-colors">
+                <Link href="/#accueil" className="text-gray-400 hover:text-yellow-400 transition-colors">
                   Accueil
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#services" className="text-gray-400 hover:text-yellow-400 transition-colors">
+                <Link href="/#services" className="text-gray-400 hover:text-yellow-400 transition-colors">
                   Nos Offres Premium
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#cercle-prive" className="text-gray-400 hover:text-yellow-400 transition-colors">
+                <Link href="/#cercle-prive" className="text-gray-400 hover:text-yellow-400 transition-colors">
                   Cercle Privé
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#references" className="text-gray-400 hover:text-yellow-400 transition-colors">
+                <Link href="/#references" className="text-gray-400 hover:text-yellow-400 transition-colors">
                   Références
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#medias" className="text-gray-400 hover:text-yellow-400 transition-colors">
+                <Link href="/#medias" className="text-gray-400 hover:text-yellow-400 transition-colors">
                   Médias
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#contact" className="text-gray-400 hover:text-yellow-400 transition-colors">
+                <Link href="/#contact" className="text-gray-400 hover:text-yellow-400 transition-colors">
                   Contact
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/blog" className="text-gray-400 hover:text-yellow-400 transition-colors">
+                <Link href="/blog" className="text-gray-400 hover:text-yellow-400 transition-colors">
                   Blog
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -101,15 +102,15 @@ const Footer = () => {
               © 2024 Ghezali Business Mastery. Tous droits réservés.
             </div>
             <div className="flex space-x-6 text-sm">
-              <a href="/legal" className="text-gray-400 hover:text-yellow-400 transition-colors">
+              <Link href="/legal" className="text-gray-400 hover:text-yellow-400 transition-colors">
                 Mentions légales
-              </a>
-              <a href="/privacy" className="text-gray-400 hover:text-yellow-400 transition-colors">
+              </Link>
+              <Link href="/privacy" className="text-gray-400 hover:text-yellow-400 transition-colors">
                 Politique de confidentialité
-              </a>
-              <a href="/blog" className="text-gray-400 hover:text-yellow-400 transition-colors">
+              </Link>
+              <Link href="/blog" className="text-gray-400 hover:text-yellow-400 transition-colors">
                 Blog
-              </a>
+              </Link>
             </div>
           </div>
         </div>

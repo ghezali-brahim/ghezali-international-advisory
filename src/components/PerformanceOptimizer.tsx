@@ -1,3 +1,5 @@
+'use client';
+
 import React, { Suspense, lazy, useEffect, useState } from 'react';
 import { LoadingSpinner } from './Animations';
 

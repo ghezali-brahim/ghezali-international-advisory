@@ -1,5 +1,7 @@
+'use client';
+
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { ArrowRight, ExternalLink, TrendingUp, Users, BookOpen } from 'lucide-react';
 
 interface InternalLinkProps {
@@ -57,7 +59,7 @@ const InternalLink: React.FC<InternalLinkProps> = ({
   }
 
   return (
-    <Link to={to} className="block">
+    <Link href={to} className="block">
       {linkContent}
     </Link>
   );
@@ -251,8 +253,8 @@ export const QuickNavigation: React.FC = () => {
         {quickLinks.map((link, index) => (
           <Link
             key={index}
-            to={link.to}
-            className="group p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors"
+            href={link.to}
+            className="group p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors block"
           >
             <h4 className="text-white font-medium group-hover:text-yellow-400 transition-colors">
               {link.title}

@@ -1,17 +1,11 @@
+'use client';
+
 import React from 'react';
-import SEO from '../components/SEO';
+import Link from 'next/link';
 import { Calendar, Clock, User, ArrowRight, Search, Filter, BookOpen, TrendingUp } from 'lucide-react';
 import { ContextualLinks } from '../components/InternalLinks';
-import { getSEOConfig, structuredData } from '../config/seo';
 
 const Blog = () => {
-  const seoConfig = getSEOConfig('blog');
-  
-  const breadcrumbData = structuredData.breadcrumb([
-    { name: 'Accueil', url: 'https://www.ghezali-business.com/' },
-    { name: 'Blog', url: 'https://www.ghezali-business.com/blog' }
-  ]);
-
   const articles = [
     {
       id: 1,
@@ -111,13 +105,6 @@ const Blog = () => {
 
   return (
     <div className="pt-16">
-      <SEO
-        title={seoConfig.title}
-        description={seoConfig.description}
-        keywords={seoConfig.keywords}
-        canonical={seoConfig.canonical}
-        structuredData={breadcrumbData}
-      />
 
       {/* Hero Section */}
       <section className="py-24 bg-gradient-to-br from-gray-900 to-black">
@@ -209,10 +196,10 @@ const Blog = () => {
                     <Clock className="h-4 w-4 mr-2" />
                     <span>{featuredArticle.readTime}</span>
                   </div>
-                  <button className="inline-flex items-center bg-yellow-400 text-black hover:bg-yellow-500 px-6 py-3 rounded-lg font-semibold transition-all duration-300 w-fit">
+                  <Link href={`/blog/${featuredArticle.id}`} className="inline-flex items-center bg-yellow-400 text-black hover:bg-yellow-500 px-6 py-3 rounded-lg font-semibold transition-all duration-300 w-fit">
                     Lire l'article
                     <ArrowRight className="ml-2 h-4 w-4" />
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -262,10 +249,10 @@ const Blog = () => {
                         </span>
                       ))}
                     </div>
-                    <button className="text-yellow-600 hover:text-yellow-700 font-medium flex items-center">
+                    <Link href={`/blog/${article.id}`} className="text-yellow-600 hover:text-yellow-700 font-medium flex items-center">
                       Lire
                       <ArrowRight className="ml-1 h-4 w-4" />
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </article>

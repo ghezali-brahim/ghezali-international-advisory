@@ -1,17 +1,9 @@
 import React from 'react';
-import SEO from '../components/SEO';
 import Media from '../components/Media';
 import Newsletter from '../components/Newsletter';
 import { BookOpen, Users, TrendingUp, Award, Calendar, Globe, Clock } from 'lucide-react';
-import { getSEOConfig, structuredData } from '../config/seo';
 
 const MediaPage = () => {
-  const seoConfig = getSEOConfig('media');
-  
-  const breadcrumbData = structuredData.breadcrumb([
-    { name: 'Accueil', url: 'https://www.ghezali-business.com/' },
-    { name: 'Médias', url: 'https://www.ghezali-business.com/medias' }
-  ]);
   const publications = [
     {
       title: "Le Guide Ultime de la Valorisation d'Entreprise",
@@ -62,13 +54,6 @@ const MediaPage = () => {
 
   return (
     <div className="pt-16">
-      <SEO
-        title={seoConfig.title}
-        description={seoConfig.description}
-        keywords={seoConfig.keywords}
-        canonical={seoConfig.canonical}
-        structuredData={breadcrumbData}
-      />
       {/* Publications Premium */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

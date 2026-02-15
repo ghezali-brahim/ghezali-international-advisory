@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import { Download, FileText, Users, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
 import FormValidation, { fieldConfigs } from './FormValidation';

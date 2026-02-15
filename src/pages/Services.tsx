@@ -1,19 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import SEO from '../components/SEO';
+import Link from 'next/link';
 import ProcessTimeline from '../components/ProcessTimeline';
 import { Crown, Rocket, TrendingUp, ArrowRight, CheckCircle, Clock, Euro, Star, Users, Shield, Zap, Globe, Building2 } from 'lucide-react';
 import { ContextualLinks } from '../components/InternalLinks';
-import { getSEOConfig, structuredData } from '../config/seo';
 
 const ServicesPage = () => {
-  const seoConfig = getSEOConfig('services');
-  
-  // Breadcrumb pour le SEO
-  const breadcrumbData = structuredData.breadcrumb([
-    { name: 'Accueil', url: 'https://www.ghezali-business.com/' },
-    { name: 'Services', url: 'https://www.ghezali-business.com/services' }
-  ]);
   const services = [
     {
       icon: TrendingUp,
@@ -150,13 +141,6 @@ const ServicesPage = () => {
 
   return (
     <div className="pt-16">
-      <SEO
-        title={seoConfig.title}
-        description={seoConfig.description}
-        keywords={seoConfig.keywords}
-        canonical={seoConfig.canonical}
-        structuredData={breadcrumbData}
-      />
       {/* Hero Section */}
       <section className="py-24 bg-gradient-to-br from-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -319,10 +303,10 @@ const ServicesPage = () => {
             Nombre de mandats limité. Vérifiez votre éligibilité ou demandez une invitation.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-            <Link to="/contact" className="bg-yellow-400 text-black hover:bg-yellow-500 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
+            <Link href="/contact" className="bg-yellow-400 text-black hover:bg-yellow-500 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
               Vérifier son éligibilité
             </Link>
-            <Link to="/contact" className="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
+            <Link href="/contact" className="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
               Recevoir notre proposition sur mesure
             </Link>
           </div>

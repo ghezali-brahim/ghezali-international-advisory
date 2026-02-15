@@ -1,7 +1,6 @@
 import React from 'react';
-import SEO from '../components/SEO';
+import Link from 'next/link';
 import { Calendar, Clock, User, ArrowLeft, Share2, Bookmark, Tag } from 'lucide-react';
-import { getSEOConfig, structuredData } from '../config/seo';
 import { BlogRelatedLinks } from '../components/InternalLinks';
 
 interface BlogArticleProps {
@@ -121,69 +120,16 @@ const BlogArticle = ({ articleId }: BlogArticleProps) => {
     wordCount: 2200
   };
 
-  const seoConfig = {
-    title: `${article.title} | GHEZALI Business Mastery`,
-    description: article.excerpt,
-    keywords: article.tags.join(', '),
-    canonical: `https://www.ghezali-business.com/blog/${articleId}`,
-    ogImage: article.image
-  };
-
-  const breadcrumbData = structuredData.breadcrumb([
-    { name: 'Accueil', url: 'https://www.ghezali-business.com/' },
-    { name: 'Blog', url: 'https://www.ghezali-business.com/blog' },
-    { name: article.title, url: `https://www.ghezali-business.com/blog/${articleId}` }
-  ]);
-
-  const articleStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": article.title,
-    "description": article.excerpt,
-    "image": article.image,
-    "author": {
-      "@type": "Person",
-      "name": article.author,
-      "url": "https://www.ghezali-business.com/team"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "GHEZALI Business Mastery",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.ghezali-business.com/logo.png"
-      }
-    },
-    "datePublished": article.date,
-    "dateModified": article.date,
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": `https://www.ghezali-business.com/blog/${articleId}`
-    },
-    "wordCount": article.wordCount,
-    "timeRequired": `PT${article.readTime.replace(' min', 'M')}`,
-    "articleSection": article.category,
-    "keywords": article.tags.join(', ')
-  };
-
   return (
     <div className="pt-16">
-      <SEO
-        title={seoConfig.title}
-        description={seoConfig.description}
-        keywords={seoConfig.keywords}
-        canonical={seoConfig.canonical}
-        ogImage={seoConfig.ogImage}
-        structuredData={[breadcrumbData, articleStructuredData]}
-      />
 
       {/* Navigation */}
       <section className="py-8 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <button className="inline-flex items-center text-gray-600 hover:text-yellow-600 transition-colors">
+          <Link href="/blog" className="inline-flex items-center text-gray-600 hover:text-yellow-600 transition-colors">
             <ArrowLeft className="h-4 w-4 mr-2" />
             Retour au blog
-          </button>
+          </Link>
         </div>
       </section>
 

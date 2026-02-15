@@ -1,30 +1,9 @@
 import React from 'react';
-import SEO from '../components/SEO';
 import { FileText, Scale, Building, Phone, Mail } from 'lucide-react';
-import { getSEOConfig, structuredData } from '../config/seo';
 
 const Legal = () => {
-  const seoConfig = {
-    title: "Mentions Légales - GHEZALI BUSINESS MASTERY",
-    description: "Mentions légales et informations juridiques de GHEZALI BUSINESS MASTERY. Société de conseil stratégique basée à Paris La Défense.",
-    keywords: "mentions légales, informations juridiques, société conseil, Paris La Défense, GHEZALI",
-    canonical: "https://www.ghezali-business.com/legal"
-  };
-
-  const breadcrumbData = structuredData.breadcrumb([
-    { name: 'Accueil', url: 'https://www.ghezali-business.com/' },
-    { name: 'Mentions Légales', url: 'https://www.ghezali-business.com/legal' }
-  ]);
-
   return (
     <div className="pt-16">
-      <SEO
-        title={seoConfig.title}
-        description={seoConfig.description}
-        keywords={seoConfig.keywords}
-        canonical={seoConfig.canonical}
-        structuredData={breadcrumbData}
-      />
 
       {/* Hero Section */}
       <section className="py-24 bg-gradient-to-br from-gray-900 to-black">

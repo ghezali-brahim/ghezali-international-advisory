@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Shield, Target, Trophy, Users, Award, Briefcase, Globe, TrendingUp } from 'lucide-react';
 
 const About = () => {
@@ -171,7 +171,7 @@ const About = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Chaque partenariat est unique. Nombre de mandats limité.
             </p>
-            <Link to="/contact" className="inline-block bg-yellow-400 text-black hover:bg-yellow-500 px-10 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-400/25">
+            <Link href="/contact" className="inline-block bg-yellow-400 text-black hover:bg-yellow-500 px-10 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-400/25">
               Vérifier son éligibilité
             </Link>
           </div>
