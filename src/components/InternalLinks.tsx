@@ -1,19 +1,20 @@
 'use client';
 
-import React from 'react';
+import type { FC, ComponentType } from 'react';
 import Link from 'next/link';
+import { LocaleLink } from './LocaleLink';
 import { ArrowRight, ExternalLink, TrendingUp, Users, BookOpen } from 'lucide-react';
 
 interface InternalLinkProps {
   to: string;
   title: string;
   description: string;
-  icon?: React.ComponentType<any>;
+  icon?: ComponentType<any>;
   className?: string;
   external?: boolean;
 }
 
-const InternalLink: React.FC<InternalLinkProps> = ({ 
+const InternalLink: FC<InternalLinkProps> = ({ 
   to, 
   title, 
   description, 
@@ -59,14 +60,14 @@ const InternalLink: React.FC<InternalLinkProps> = ({
   }
 
   return (
-    <Link href={to} className="block">
+    <LocaleLink href={to} className="block">
       {linkContent}
-    </Link>
+    </LocaleLink>
   );
 };
 
 // Composant pour les liens internes contextuels
-export const ContextualLinks: React.FC<{ context: string }> = ({ context }) => {
+export const ContextualLinks: FC<{ context: string }> = ({ context }) => {
   const getLinksForContext = (context: string) => {
     switch (context) {
       case 'home':
@@ -78,9 +79,9 @@ export const ContextualLinks: React.FC<{ context: string }> = ({ context }) => {
             icon: TrendingUp
           },
           {
-            to: '/cercle-prive',
-            title: 'Rejoindre le cercle privé',
-            description: 'Sur invitation. Réseau exclusif investisseurs et dirigeants',
+            to: '/reseau',
+            title: 'Réseau & Partenariats',
+            description: 'Partenariats sélectifs avec fonds et dirigeants',
             icon: Users
           },
           {
@@ -94,16 +95,40 @@ export const ContextualLinks: React.FC<{ context: string }> = ({ context }) => {
       case 'services':
         return [
           {
-            to: '/references',
-            title: 'Voir nos études de cas',
-            description: 'Découvrez comment nous avons transformé 200+ ETI',
+            to: '/private-equity',
+            title: 'Private Equity',
+            description: 'Partenaire stratégique des fonds PE, transformation de portefeuille',
             icon: TrendingUp
           },
           {
-            to: '/team',
-            title: 'Rencontrer notre équipe',
-            description: 'Experts reconnus avec 20+ ans d\'expérience',
+            to: '/family-office',
+            title: 'Family Office',
+            description: 'Partenaire stratégique des family offices, patrimoine et M&A',
             icon: Users
+          },
+          {
+            to: '/group-holding',
+            title: 'Group Holding',
+            description: 'Conseil aux groupes et holdings, structuration et valorisation',
+            icon: TrendingUp
+          },
+          {
+            to: '/institutional',
+            title: 'Institutional Advisory',
+            description: 'Conseil aux institutions et gouvernements',
+            icon: Users
+          },
+          {
+            to: '/case-studies',
+            title: 'Études de cas premium',
+            description: 'Références détaillées et retours d\'expérience',
+            icon: BookOpen
+          },
+          {
+            to: '/references',
+            title: 'Références et témoignages',
+            description: 'Découvrez comment nous avons transformé 200+ ETI',
+            icon: TrendingUp
           },
           {
             to: '/contact',
@@ -122,9 +147,9 @@ export const ContextualLinks: React.FC<{ context: string }> = ({ context }) => {
             icon: TrendingUp
           },
           {
-            to: '/cercle-prive',
-            title: 'Rejoindre notre réseau',
-            description: 'Accédez à un cercle fermé de dirigeants d\'exception',
+            to: '/reseau',
+            title: 'Réseau & Partenariats',
+            description: 'Partenariats sélectifs, réseau d\'investisseurs et de dirigeants',
             icon: Users
           },
           {
@@ -166,7 +191,7 @@ export const ContextualLinks: React.FC<{ context: string }> = ({ context }) => {
 };
 
 // Composant pour les liens d'articles de blog
-export const BlogRelatedLinks: React.FC = () => {
+export const BlogRelatedLinks: FC = () => {
   const relatedLinks = [
     {
       to: '/blog',
@@ -210,12 +235,27 @@ export const BlogRelatedLinks: React.FC = () => {
 };
 
 // Composant pour les liens de navigation rapide
-export const QuickNavigation: React.FC = () => {
+export const QuickNavigation: FC = () => {
   const quickLinks = [
     {
       to: '/services',
       title: 'Services',
       description: 'Nos offres premium'
+    },
+    {
+      to: '/private-equity',
+      title: 'Private Equity',
+      description: 'Fonds PE'
+    },
+    {
+      to: '/family-office',
+      title: 'Family Office',
+      description: 'Family offices'
+    },
+    {
+      to: '/group-holding',
+      title: 'Group Holding',
+      description: 'Groupes et holdings'
     },
     {
       to: '/team',
@@ -225,7 +265,17 @@ export const QuickNavigation: React.FC = () => {
     {
       to: '/references',
       title: 'Références',
-      description: 'Études de cas'
+      description: 'Témoignages'
+    },
+    {
+      to: '/case-studies',
+      title: 'Études de cas',
+      description: 'Case studies premium'
+    },
+    {
+      to: '/positioning',
+      title: 'Positionnement',
+      description: 'Notre différenciation'
     },
     {
       to: '/blog',
@@ -233,14 +283,14 @@ export const QuickNavigation: React.FC = () => {
       description: 'Insights stratégiques'
     },
     {
-      to: '/cercle-prive',
-      title: 'Cercle Privé',
-      description: 'Réseau exclusif'
+      to: '/reseau',
+      title: 'Réseau',
+      description: 'Partenariats'
     },
     {
       to: '/contact',
       title: 'Contact',
-      description: 'Nous rejoindre'
+      description: 'Nous contacter'
     }
   ];
 

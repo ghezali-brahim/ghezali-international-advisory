@@ -1,6 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
 import ProcessTimeline from '../components/ProcessTimeline';
+import { LocaleLink } from '../components/LocaleLink';
 import { Crown, Rocket, TrendingUp, ArrowRight, CheckCircle, Clock, Euro, Star, Users, Shield, Zap, Globe, Building2 } from 'lucide-react';
 import { ContextualLinks } from '../components/InternalLinks';
 
@@ -145,18 +144,22 @@ const ServicesPage = () => {
       <section className="py-24 bg-gradient-to-br from-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-serif text-white mb-6">
-            Nos offres — Pour fonds, family offices et holdings
+            Nos offres — Fonds, family offices, holdings et institutions
           </h1>
           <div className="w-24 h-1 bg-yellow-400 mx-auto mb-6"></div>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Transformation de portefeuille et impact multi-sociétés. Un mandat, plusieurs participations transformées.
+            Transformation de portefeuille et impact multi-sociétés. Un mandat, plusieurs participations transformées. Conseil aux institutions.
           </p>
         </div>
       </section>
 
-      {/* Services Detailed */}
-      <section className="py-24 bg-gray-50">
+      {/* Private Equity Advisory */}
+      <section id="private-equity-advisory" className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-serif text-black mb-4">Private Equity Advisory</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Transformation de portefeuille, task force board-level, success fee et equity alignés.</p>
+          </div>
           <div className="space-y-24">
             {services.map((service, index) => (
               <div key={index} className={`${index % 2 === 1 ? 'lg:flex-row-reverse' : ''} flex flex-col lg:flex-row items-center gap-16`}>
@@ -297,28 +300,29 @@ const ServicesPage = () => {
       <section className="py-24 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-serif text-white mb-6">
-            Réservé aux investisseurs et dirigeants sélectionnés
+            Partenariat sélectif
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Nombre de mandats limité. Vérifiez votre éligibilité ou demandez une invitation.
+            We selectively partner with investment firms and institutional investors.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-            <Link href="/contact" className="bg-yellow-400 text-black hover:bg-yellow-500 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
-              Vérifier son éligibilité
-            </Link>
-            <Link href="/contact" className="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
+            <LocaleLink href="/contact" className="bg-yellow-400 text-black hover:bg-yellow-500 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
+              Nous contacter
+            </LocaleLink>
+            <LocaleLink href="/contact" className="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
               Recevoir notre proposition sur mesure
-            </Link>
+            </LocaleLink>
           </div>
         </div>
       </section>
 
-      {/* International Institutions Section */}
-      <section className="py-24 bg-white">
+      {/* Institutional Advisory */}
+      <section id="institutional-advisory" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-serif text-black mb-6">Références Institutionnelles</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">Nos interventions auprès des gouvernements et institutions</p>
+            <h2 className="text-4xl font-serif text-black mb-4">Institutional Advisory</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-2">Conseil aux gouvernements et institutions internationales.</p>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">Références institutionnelles — Nos interventions auprès des gouvernements et institutions</p>
           </div>
 
           <div className="bg-gray-50 p-12 rounded-2xl">

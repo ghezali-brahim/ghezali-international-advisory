@@ -1,4 +1,3 @@
-import React from 'react';
 import { Award, Download, Building, TrendingUp, CheckCircle, FileText, Users, Globe } from 'lucide-react';
 
 const References = () => {

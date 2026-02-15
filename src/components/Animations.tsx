@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useRef, useState, ReactNode } from 'react';
+import { useEffect, useRef, useState, Children, type FC, type ReactNode } from 'react';
 
 // Animation Hook
 export const useAnimation = (options: IntersectionObserverInit = {}) => {
@@ -29,8 +29,8 @@ export const useAnimation = (options: IntersectionObserverInit = {}) => {
 };
 
 // Fade In Animation
-export const FadeIn: React.FC<{
-  children: React.ReactNode;
+export const FadeIn: FC<{
+  children: ReactNode;
   delay?: number;
   duration?: number;
   direction?: 'up' | 'down' | 'left' | 'right';
@@ -64,8 +64,8 @@ export const FadeIn: React.FC<{
 };
 
 // Stagger Animation for Lists
-export const StaggerContainer: React.FC<{
-  children: React.ReactNode;
+export const StaggerContainer: FC<{
+  children: ReactNode;
   className?: string;
   staggerDelay?: number;
 }> = ({ children, className = '', staggerDelay = 100 }) => {
@@ -74,7 +74,7 @@ export const StaggerContainer: React.FC<{
 
   useEffect(() => {
     if (isVisible && childVisibility.length === 0) {
-      const childrenArray = React.Children.toArray(children);
+      const childrenArray = Children.toArray(children);
       const newVisibility = new Array(childrenArray.length).fill(false);
       
       childrenArray.forEach((_, index) => {
@@ -91,7 +91,7 @@ export const StaggerContainer: React.FC<{
 
   return (
     <div ref={ref} className={className}>
-      {React.Children.map(children, (child, index) => (
+      {Children.map(children, (child, index) => (
         <FadeIn
           key={index}
           delay={index * staggerDelay}
@@ -105,7 +105,7 @@ export const StaggerContainer: React.FC<{
 };
 
 // Counter Animation
-export const AnimatedCounter: React.FC<{
+export const AnimatedCounter: FC<{
   end: number;
   duration?: number;
   prefix?: string;
@@ -141,7 +141,7 @@ export const AnimatedCounter: React.FC<{
 };
 
 // Typing Animation
-export const TypingAnimation: React.FC<{
+export const TypingAnimation: FC<{
   texts: string[];
   speed?: number;
   pauseTime?: number;
@@ -184,8 +184,8 @@ export const TypingAnimation: React.FC<{
 };
 
 // Hover Animation Wrapper
-export const HoverAnimation: React.FC<{
-  children: React.ReactNode;
+export const HoverAnimation: FC<{
+  children: ReactNode;
   scale?: number;
   rotate?: number;
   className?: string;
@@ -203,7 +203,7 @@ export const HoverAnimation: React.FC<{
 };
 
 // Loading Spinner
-export const LoadingSpinner: React.FC<{
+export const LoadingSpinner: FC<{
   size?: 'sm' | 'md' | 'lg';
   color?: 'yellow' | 'white' | 'black';
   className?: string;
@@ -228,8 +228,8 @@ export const LoadingSpinner: React.FC<{
 };
 
 // Pulse Animation
-export const Pulse: React.FC<{
-  children: React.ReactNode;
+export const Pulse: FC<{
+  children: ReactNode;
   className?: string;
 }> = ({ children, className = '' }) => {
   return (
@@ -240,8 +240,8 @@ export const Pulse: React.FC<{
 };
 
 // Bounce Animation
-export const Bounce: React.FC<{
-  children: React.ReactNode;
+export const Bounce: FC<{
+  children: ReactNode;
   className?: string;
 }> = ({ children, className = '' }) => {
   return (
@@ -252,8 +252,8 @@ export const Bounce: React.FC<{
 };
 
 // Slide In Animation
-export const SlideIn: React.FC<{
-  children: React.ReactNode;
+export const SlideIn: FC<{
+  children: ReactNode;
   direction?: 'left' | 'right' | 'up' | 'down';
   delay?: number;
   className?: string;
@@ -285,8 +285,8 @@ export const SlideIn: React.FC<{
 };
 
 // Parallax Scroll Animation
-export const ParallaxScroll: React.FC<{
-  children: React.ReactNode;
+export const ParallaxScroll: FC<{
+  children: ReactNode;
   speed?: number;
   className?: string;
 }> = ({ children, speed = 0.5, className = '' }) => {
@@ -305,7 +305,7 @@ export const ParallaxScroll: React.FC<{
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [speed]);
+  }, [speed, ref]);
 
   return (
     <div
@@ -320,7 +320,7 @@ export const ParallaxScroll: React.FC<{
   );
 };
 
-export default {
+const animationsExport = {
   FadeIn,
   StaggerContainer,
   AnimatedCounter,
@@ -332,3 +332,4 @@ export default {
   SlideIn,
   ParallaxScroll,
 };
+export default animationsExport;

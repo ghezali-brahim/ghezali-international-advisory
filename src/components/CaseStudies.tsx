@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { ChevronRight, Building, TrendingUp, DollarSign, Calendar, Target, CheckCircle } from 'lucide-react';
+import { LocaleLink } from './LocaleLink';
 
 const CaseStudies = () => {
   const [activeCase, setActiveCase] = useState(0);
@@ -108,6 +109,9 @@ const CaseStudies = () => {
             Découvrez comment nous avons transformé des entreprises et généré 
             des résultats exceptionnels pour nos clients.
           </p>
+          <LocaleLink href="/case-studies" className="inline-block mt-6 text-yellow-600 hover:text-yellow-700 font-medium">
+            Voir toutes les études de cas premium →
+          </LocaleLink>
         </div>
 
         {/* Case Study Selector */}
@@ -224,7 +228,7 @@ const CaseStudies = () => {
               Calculez votre potentiel de valorisation
             </h3>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Découvrez l'impact que notre accompagnement pourrait avoir sur votre entreprise.
+              Découvrez l&apos;impact que notre accompagnement pourrait avoir sur votre entreprise.
             </p>
             <button className="bg-yellow-400 text-black hover:bg-yellow-500 px-10 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-400/25">
               Simuler mon ROI

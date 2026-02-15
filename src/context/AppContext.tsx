@@ -1,6 +1,6 @@
 'use client';
 
-import React, { createContext, useContext, useReducer, ReactNode } from 'react';
+import { createContext, useContext, useReducer, type FC, type ReactNode } from 'react';
 
 // Types
 interface User {
@@ -169,7 +169,7 @@ const AppContext = createContext<{
 } | null>(null);
 
 // Provider
-export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+export const AppProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const [state, dispatch] = useReducer(appReducer, initialState);
 
   return (

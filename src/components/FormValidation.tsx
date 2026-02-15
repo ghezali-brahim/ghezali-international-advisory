@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect, type FC } from 'react';
 import { CheckCircle, XCircle, AlertCircle } from 'lucide-react';
 
 // Types
@@ -60,7 +60,7 @@ const validateField = (value: string, rules: ValidationRule): string | null => {
   return null;
 };
 
-const FormValidation: React.FC<FormValidationProps> = ({
+const FormValidation: FC<FormValidationProps> = ({
   fields,
   onSubmit,
   submitButtonText,

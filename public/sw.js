@@ -1,5 +1,5 @@
-// Service Worker pour GHEZALI Business Mastery
-const CACHE_NAME = 'ghezali-business-mastery-v1';
+// Service Worker pour Ghezali International Advisory
+const CACHE_NAME = 'ghezali-international-advisory-v1';
 const urlsToCache = [
   '/',
   '/static/js/bundle.js',

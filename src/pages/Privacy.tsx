@@ -1,4 +1,3 @@
-import React from 'react';
 import { Shield, Eye, Lock, Database, Mail } from 'lucide-react';
 
 const Privacy = () => {
@@ -30,7 +29,7 @@ const Privacy = () => {
 
             <h2 className="text-2xl font-serif text-black mb-6">1. Introduction</h2>
             <p className="text-gray-700 mb-6">
-              GHEZALI BUSINESS MASTERY s'engage à protéger la confidentialité et la sécurité de vos données personnelles. 
+              GHEZALI INTERNATIONAL ADVISORY s'engage à protéger la confidentialité et la sécurité de vos données personnelles. 
               Cette politique de confidentialité explique comment nous collectons, utilisons et protégeons vos informations 
               conformément au Règlement Général sur la Protection des Données (RGPD).
             </p>
@@ -38,7 +37,7 @@ const Privacy = () => {
             <h2 className="text-2xl font-serif text-black mb-6">2. Responsable du traitement</h2>
             <div className="bg-gray-50 p-6 rounded-lg mb-8">
               <p className="text-gray-700 mb-4">
-                <strong>GHEZALI BUSINESS MASTERY</strong><br />
+                <strong>GHEZALI INTERNATIONAL ADVISORY</strong><br />
                 Tour Majunga<br />
                 6 Place de la Pyramide<br />
                 92400 Courbevoie<br />

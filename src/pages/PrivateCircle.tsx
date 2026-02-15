@@ -1,4 +1,3 @@
-import React from 'react';
 import PrivateCircle from '../components/PrivateCircle';
 import { Lock, Users, Calendar, Star, Crown, Shield, Zap, Award } from 'lucide-react';
 

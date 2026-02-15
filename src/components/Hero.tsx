@@ -1,5 +1,4 @@
-import React from 'react';
-import Link from 'next/link';
+import { LocaleLink } from './LocaleLink';
 import { ArrowRight, Star, Play, Shield } from 'lucide-react';
 
 const Hero = () => {
@@ -9,7 +8,7 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <img
           src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg"
-          alt="Cabinet de conseil stratégique premium - Dirigeants d'ETI et grands groupes en réunion d'affaires - GHEZALI BUSINESS MASTERY"
+          alt="Cabinet de conseil stratégique - Dirigeants d'ETI et grands groupes en réunion d'affaires - Ghezali International Advisory"
           className="w-full h-full object-cover"
           loading="eager"
         />
@@ -22,23 +21,23 @@ const Hero = () => {
           {/* Badge */}
           <div className="inline-flex items-center px-4 py-2 rounded-full border border-yellow-400/30 bg-black/30 backdrop-blur-sm mb-8">
             <span className="text-yellow-400 text-sm font-medium">
-              Fonds PE • Family Offices • Holdings — Sur invitation
+              Private Equity • Family Offices • Institutional Investors
             </span>
           </div>
 
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif text-white mb-6 leading-tight">
             <span className="text-yellow-400 block">
-              Nous transformons votre performance.
+              Strategic Advisory for Private Equity, Family Offices and Institutional Investors.
             </span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-gray-300 mb-2 max-w-3xl mx-auto leading-relaxed">
-            Transformation de portefeuille et accélération opérationnelle pour fonds et family offices. Mandats limités, confidentialité absolue.
+            Portfolio transformation. Board-level execution. Measurable value creation.
           </p>
           <p className="text-base md:text-lg text-gray-400 mb-8 max-w-2xl mx-auto">
-            Nombre de mandats actifs limité. Pas d'appel d'offres.
+            We selectively partner with investment firms and institutional investors.
           </p>
 
           {/* Video CTA */}
@@ -57,11 +56,11 @@ const Hero = () => {
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-yellow-400">12</div>
-              <div className="text-gray-400">Mandats actifs limités</div>
+              <div className="text-gray-400">Mandats actifs</div>
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-yellow-400">15</div>
-              <div className="text-gray-400">Pays d'intervention</div>
+              <div className="text-gray-400">Pays d&apos;intervention</div>
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-yellow-400">24h</div>
@@ -71,14 +70,14 @@ const Hero = () => {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-            <Link href="/contact" className="bg-yellow-400 text-black hover:bg-yellow-500 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-400/25 flex items-center">
-              Vérifier son éligibilité
+            <LocaleLink href="/contact" className="bg-yellow-400 text-black hover:bg-yellow-500 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-400/25 flex items-center">
+              Nous contacter
               <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-            <Link href="/contact" className="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center">
-              Demander une invitation
+            </LocaleLink>
+            <LocaleLink href="/contact" className="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center">
+              Échanger
               <Star className="ml-2 h-5 w-5" />
-            </Link>
+            </LocaleLink>
           </div>
 
           {/* Trust Badge */}
@@ -89,7 +88,7 @@ const Hero = () => {
 
           {/* Trust Indicators */}
           <div className="mt-16 pt-8 border-t border-gray-700">
-            <p className="text-gray-400 text-sm mb-2">Cercle fermé. Nos clients ne nous citent pas.</p>
+            <p className="text-gray-400 text-sm mb-2">Confidentialité absolue. Nos clients ne nous citent pas.</p>
             <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2 opacity-60">
               <span className="text-2xl font-bold text-white">FONDS PE</span>
               <span className="text-2xl font-bold text-white">FAMILY OFFICES</span>

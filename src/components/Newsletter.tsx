@@ -179,7 +179,7 @@ const Newsletter = () => {
             {/* Testimonial */}
             <div className="mt-8 bg-gray-800 p-6 rounded-xl border border-gray-700">
               <blockquote className="text-gray-300 italic mb-4">
-                "La newsletter Ghezali Business Mastery est devenue ma lecture incontournable. 
+                "La newsletter Ghezali International Advisory est devenue ma lecture incontournable. 
                 Les insights sont toujours pertinents et actionnables."
               </blockquote>
               <cite className="text-gray-400 text-sm">

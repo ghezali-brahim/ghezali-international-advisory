@@ -1,4 +1,3 @@
-import React from 'react';
 import { Star, Quote, Shield, TrendingUp } from 'lucide-react';
 
 const Testimonials = () => {
@@ -13,7 +12,7 @@ const Testimonials = () => {
       rating: 5
     },
     {
-      quote: "Cercle fermé, discrétion totale. Ils interviennent sur plusieurs de nos participations avec une cohérence rare. On les recommande en interne.",
+      quote: "Confidentialité absolue, discrétion totale. Ils interviennent sur plusieurs de nos participations avec une cohérence rare. On les recommande en interne.",
       author: "Sophie V.",
       position: "Directrice Investissements",
       company: "Family Office, Europe",

@@ -235,7 +235,7 @@ const IndustryExpertise = () => {
                 <span className="text-yellow-600 font-semibold">Témoignage client</span>
               </div>
               <blockquote className="text-gray-700 italic mb-4">
-                "L'expertise sectorielle de Ghezali Business Mastery a fait toute la différence. 
+                "L'expertise sectorielle de Ghezali International Advisory a fait toute la différence. 
                 Ils comprennent parfaitement nos enjeux et défis spécifiques."
               </blockquote>
               <cite className="text-gray-600 text-sm">

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Globe, Building2, TrendingUp, Users, Award, CheckCircle, ArrowRight } from 'lucide-react';
 
 const InternationalInstitutions = () => {
@@ -79,10 +78,10 @@ const InternationalInstitutions = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-4 py-2 rounded-full border border-yellow-400/30 bg-yellow-400/10 backdrop-blur-sm mb-6">
             <Globe className="h-4 w-4 text-yellow-400 mr-2" />
-            <span className="text-yellow-400 text-sm font-medium">Expertise Institutionnelle Internationale</span>
+            <span className="text-yellow-400 text-sm font-medium">Institutional Advisory</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-serif text-white mb-6">
-            Partenaire des <span className="text-yellow-400">Institutions Mondiales</span>
+            Institutional Advisory — <span className="text-yellow-400">Conseil aux institutions</span>
           </h2>
           <div className="w-24 h-1 bg-yellow-400 mx-auto mb-6"></div>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">

@@ -1,4 +1,3 @@
-import React from 'react';
 import Contact from '../components/Contact';
 import FAQ from '../components/FAQ';
 import { MapPin, Phone, Mail, Clock, Users, Award, TrendingUp } from 'lucide-react';
@@ -38,7 +37,7 @@ const ContactPage = () => {
           </h1>
           <div className="w-24 h-1 bg-yellow-400 mx-auto mb-6"></div>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Fonds, family offices, holdings : vérifiez votre éligibilité ou demandez une invitation. 
+            Fonds, family offices, institutions : échangeons sur votre mandat. 
             Chaque demande est examinée personnellement. Nombre de mandats limité.
           </p>
         </div>

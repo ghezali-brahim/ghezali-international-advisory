@@ -1,6 +1,6 @@
 'use client';
 
-import React, { Suspense, lazy, useEffect, useState } from 'react';
+import { Suspense, lazy, useEffect, useState, useRef, type FC, type ReactNode } from 'react';
 import { LoadingSpinner } from './Animations';
 
 // Lazy loading des composants lourds
@@ -10,7 +10,7 @@ const ProcessTimeline = lazy(() => import('./ProcessTimeline'));
 const Team = lazy(() => import('./Team'));
 
 // Image lazy loading component
-export const LazyImage: React.FC<{
+export const LazyImage: FC<{
   src: string;
   alt: string;
   className?: string;
@@ -47,7 +47,7 @@ export const LazyImage: React.FC<{
 };
 
 // Preloader component
-export const Preloader: React.FC = () => {
+export const Preloader: FC = () => {
   return (
     <div className="fixed inset-0 bg-white z-50 flex items-center justify-center">
       <div className="text-center">
@@ -55,7 +55,7 @@ export const Preloader: React.FC = () => {
           <LoadingSpinner size="lg" color="yellow" />
         </div>
         <h2 className="text-xl font-semibold text-gray-800 mb-2">
-          GHEZALI Business Mastery
+          Ghezali International Advisory
         </h2>
         <p className="text-gray-600">Chargement en cours...</p>
       </div>
@@ -64,9 +64,9 @@ export const Preloader: React.FC = () => {
 };
 
 // Suspense wrapper avec fallback
-export const SuspenseWrapper: React.FC<{
-  children: React.ReactNode;
-  fallback?: React.ReactNode;
+export const SuspenseWrapper: FC<{
+  children: ReactNode;
+  fallback?: ReactNode;
 }> = ({ children, fallback = <LoadingSpinner size="md" /> }) => {
   return <Suspense fallback={fallback}>{children}</Suspense>;
 };
@@ -76,7 +76,7 @@ export const useIntersectionObserver = (
   callback: () => void,
   options: IntersectionObserverInit = {}
 ) => {
-  const targetRef = React.useRef<HTMLDivElement>(null);
+  const targetRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const target = targetRef.current;
@@ -102,7 +102,7 @@ export const useIntersectionObserver = (
 };
 
 // Performance monitoring
-export const PerformanceMonitor: React.FC = () => {
+export const PerformanceMonitor: FC = () => {
   useEffect(() => {
     // Core Web Vitals monitoring (simplified)
     if (typeof window !== 'undefined' && window.location.hostname === 'localhost') {
@@ -130,7 +130,7 @@ export const PerformanceMonitor: React.FC = () => {
 };
 
 // Resource hints
-export const ResourceHints: React.FC = () => {
+export const ResourceHints: FC = () => {
   useEffect(() => {
     // Preconnect to external domains
     const domains = [
@@ -166,7 +166,7 @@ export const ResourceHints: React.FC = () => {
 };
 
 // Bundle analyzer (dev only)
-export const BundleAnalyzer: React.FC = () => {
+export const BundleAnalyzer: FC = () => {
   useEffect(() => {
     if (typeof window !== 'undefined' && window.location.hostname === 'localhost') {
       // Log bundle size information
@@ -182,7 +182,7 @@ export const BundleAnalyzer: React.FC = () => {
 };
 
 // Service Worker registration
-export const ServiceWorkerManager: React.FC = () => {
+export const ServiceWorkerManager: FC = () => {
   useEffect(() => {
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
@@ -201,7 +201,7 @@ export const ServiceWorkerManager: React.FC = () => {
 };
 
 // Memory usage monitor
-export const MemoryMonitor: React.FC = () => {
+export const MemoryMonitor: FC = () => {
   useEffect(() => {
     if ('memory' in performance) {
       const logMemory = () => {
@@ -223,7 +223,7 @@ export const MemoryMonitor: React.FC = () => {
 };
 
 // Critical CSS loader
-export const CriticalCSSLoader: React.FC = () => {
+export const CriticalCSSLoader: FC = () => {
   useEffect(() => {
     // Load critical CSS inline for above-the-fold content
     const criticalCSS = `
@@ -242,7 +242,7 @@ export const CriticalCSSLoader: React.FC = () => {
   return null;
 };
 
-export default {
+const performanceOptimizerExport = {
   LazyImage,
   Preloader,
   SuspenseWrapper,
@@ -254,3 +254,4 @@ export default {
   MemoryMonitor,
   CriticalCSSLoader,
 };
+export default performanceOptimizerExport;

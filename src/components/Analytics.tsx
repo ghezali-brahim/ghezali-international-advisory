@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef, type FC, type ReactNode } from 'react';
 import { useAnalytics } from '../context/AppContext';
 
 // Google Analytics Events
@@ -69,7 +69,7 @@ export const useAnalyticsTracking = () => {
 };
 
 // Analytics Provider Component
-export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const AnalyticsProvider: FC<{ children: ReactNode }> = ({ children }) => {
   useEffect(() => {
     // Only initialize analytics in production or if explicitly enabled
     if (typeof window !== 'undefined' && window.location.hostname !== 'localhost') {
@@ -128,7 +128,7 @@ export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ chi
 };
 
 // Page View Tracker (n'utilise pas le contexte pour éviter la boucle de re-render)
-export const PageViewTracker: React.FC<{ pageName: string }> = ({ pageName }) => {
+export const PageViewTracker: FC<{ pageName: string }> = ({ pageName }) => {
   const lastTrackedRef = useRef<string | null>(null);
 
   useEffect(() => {
@@ -144,7 +144,7 @@ export const PageViewTracker: React.FC<{ pageName: string }> = ({ pageName }) =>
 };
 
 // Scroll Depth Tracker
-export const ScrollDepthTracker: React.FC = () => {
+export const ScrollDepthTracker: FC = () => {
   const { trackScroll } = useAnalyticsTracking();
 
   useEffect(() => {
@@ -172,7 +172,7 @@ export const ScrollDepthTracker: React.FC = () => {
 };
 
 // Time on Page Tracker
-export const TimeOnPageTracker: React.FC<{ pageName: string }> = ({ pageName }) => {
+export const TimeOnPageTracker: FC<{ pageName: string }> = ({ pageName }) => {
   const { trackTimeOnPage } = useAnalyticsTracking();
 
   useEffect(() => {
@@ -261,7 +261,7 @@ export const trackCustomEvent = (eventName: string, parameters?: Record<string, 
   });
 };
 
-export default {
+const analyticsExport = {
   useAnalyticsTracking,
   AnalyticsProvider,
   PageViewTracker,
@@ -271,3 +271,4 @@ export default {
   trackLead,
   trackCustomEvent,
 };
+export default analyticsExport;

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Newspaper, Mic, Video, PenTool } from 'lucide-react';
 
 const Media = () => {

@@ -1,4 +1,4 @@
-// Déclarations globales TypeScript pour GHEZALI Business Mastery
+// Déclarations globales TypeScript pour Ghezali International Advisory
 
 declare global {
   interface Window {

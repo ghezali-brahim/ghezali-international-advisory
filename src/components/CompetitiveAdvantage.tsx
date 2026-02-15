@@ -1,4 +1,3 @@
-import React from 'react';
 import { Shield, Zap, Target, Users, Award, CheckCircle, Star, Layers } from 'lucide-react';
 
 const CompetitiveAdvantage = () => {
@@ -18,7 +17,7 @@ const CompetitiveAdvantage = () => {
     {
       icon: Shield,
       title: "Confidentialité absolue",
-      description: "Cercle fermé : vos deals restent privés. Aucun conflit d'intérêts.",
+      description: "Vos deals restent privés. Aucun conflit d'intérêts.",
       details: [
         "NDA systématique avant tout échange",
         "Équipes dédiées sans rotation",
@@ -53,15 +52,15 @@ const CompetitiveAdvantage = () => {
     },
     {
       icon: Users,
-      title: "Cercle fermé et recommandations",
-      description: "Les investisseurs se connaissent, co-investissent, siègent aux mêmes boards. Réussir avec 2–3 fonds ouvre le cercle.",
+      title: "Réseau et recommandations",
+      description: "Les investisseurs se connaissent, co-investissent, siègent aux mêmes boards. Réussir avec quelques fonds ouvre les références.",
       details: [
         "Réseau de dirigeants et d'investisseurs",
         "Deal flow et co-investissements",
-        "Références par le cercle, pas par la pub",
-        "Un réseau que l'argent seul ne peut acheter"
+        "Références par le réseau, pas par la pub",
+        "Partenariats que l'argent seul ne peut acheter"
       ],
-      differentiator: "Réussir avec quelques fonds suffit : le cercle fait le reste"
+      differentiator: "Réussir avec quelques fonds suffit : le réseau fait le reste"
     }
   ];
 
@@ -92,7 +91,7 @@ const CompetitiveAdvantage = () => {
     },
     {
       criteria: "Réseau",
-      ghezali: "Cercle privé exclusif",
+      ghezali: "Réseau sélectif",
       others: "Réseau commercial",
       advantage: true
     },
@@ -114,7 +113,7 @@ const CompetitiveAdvantage = () => {
           </h2>
           <div className="w-24 h-1 bg-yellow-600 mx-auto mb-6"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Cercle fermé, sélection exigeante. Ce qui nous différencie du conseil traditionnel.
+            Sélection exigeante et confidentialité. Ce qui nous différencie du conseil traditionnel.
           </p>
         </div>
 
@@ -165,7 +164,7 @@ const CompetitiveAdvantage = () => {
                 <thead className="bg-gray-900 text-white">
                   <tr>
                     <th className="px-6 py-4 text-left font-semibold">Critères</th>
-                    <th className="px-6 py-4 text-left font-semibold text-yellow-400">Ghezali Business Mastery</th>
+                    <th className="px-6 py-4 text-left font-semibold text-yellow-400">Ghezali International Advisory</th>
                     <th className="px-6 py-4 text-left font-semibold">Cabinets Traditionnels</th>
                   </tr>
                 </thead>
@@ -199,7 +198,7 @@ const CompetitiveAdvantage = () => {
                 ))}
               </div>
               <blockquote className="text-gray-300 italic mb-4">
-                "Un partenaire stratégique du portefeuille, pas un prestataire. Exit à 4,2x au lieu des 2,8x prévus. La valeur créée parle d'elle-même."
+                &quot;Un partenaire stratégique du portefeuille, pas un prestataire. Exit à 4,2x au lieu des 2,8x prévus. La valeur créée parle d&apos;elle-même.&quot;
               </blockquote>
               <cite className="text-yellow-400">— Managing Partner, Fonds PE</cite>
             </div>
@@ -210,7 +209,7 @@ const CompetitiveAdvantage = () => {
                 ))}
               </div>
               <blockquote className="text-gray-300 italic mb-4">
-                "Cercle fermé, discrétion totale. Ils interviennent sur plusieurs de nos participations avec une cohérence rare. On les recommande en interne."
+                &quot;Confidentialité absolue, discrétion totale. Ils interviennent sur plusieurs de nos participations avec une cohérence rare. On les recommande en interne.&quot;
               </blockquote>
               <cite className="text-yellow-400">— Family Office, Europe</cite>
             </div>
@@ -221,9 +220,9 @@ const CompetitiveAdvantage = () => {
                 ))}
               </div>
               <blockquote className="text-gray-300 italic mb-4">
-                "En 18 mois, valorisation du portefeuille significativement renforcée. Un contrat, plusieurs sociétés transformées. C'est exactement ce qu'on cherchait."
+                &quot;En 18 mois, valorisation du portefeuille significativement renforcée. Un contrat, plusieurs sociétés transformées. C&apos;est exactement ce qu&apos;on cherchait.&quot;
               </blockquote>
-              <cite className="text-yellow-400">— Holding d'entrepreneurs</cite>
+              <cite className="text-yellow-400">— Holding d&apos;entrepreneurs</cite>
             </div>
           </div>
         </div>

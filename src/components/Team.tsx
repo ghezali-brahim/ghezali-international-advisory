@@ -1,11 +1,10 @@
-import React from 'react';
 import { Award, BookOpen, Users, Globe, Linkedin, Mail } from 'lucide-react';
 
 const Team = () => {
   const founder = {
     name: "Ghezali",
     title: "Fondateur & CEO",
-    subtitle: "Business Mastery",
+    subtitle: "International Advisory",
     experience: "20+ années",
     specialties: ["Stratégie Corporate", "M&A", "Transformation", "Leadership"],
     achievements: [
@@ -14,7 +13,7 @@ const Team = () => {
       "15 pays d'intervention",
       "95% de taux de réussite"
     ],
-    bio: "Entrepreneur et stratège reconnu, fort de 20 années d'expérience en développement commercial, structuration d'entreprises et acquisitions stratégiques. Ancien dirigeant de Business Evasion, il a créé Ghezali Business Mastery pour accompagner les ETI et Grands Groupes vers l'excellence opérationnelle.",
+    bio: "Entrepreneur et stratège reconnu, fort de 20 années d'expérience en développement commercial, structuration d'entreprises et acquisitions stratégiques. Ancien dirigeant de Business Evasion, il a créé Ghezali International Advisory pour accompagner fonds, family offices et institutions dans la transformation de leurs portefeuilles.",
     education: [
       "MBA Strategy & Finance",
       "Executive Program - INSEAD",
@@ -78,7 +77,7 @@ const Team = () => {
             <div>
               <img
                 src={founder.image}
-                alt="Ghezali - Fondateur et CEO de GHEZALI BUSINESS MASTERY - Expert en stratégie d'entreprise, M&A et transformation d'ETI - 20 ans d'expérience"
+                alt="Ghezali - Fondateur et CEO de Ghezali International Advisory - Expert en stratégie d'entreprise, M&A et transformation d'ETI - 20 ans d'expérience"
                 className="w-full h-96 object-cover rounded-lg shadow-2xl"
                 loading="lazy"
               />

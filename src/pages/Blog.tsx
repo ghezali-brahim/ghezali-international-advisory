@@ -1,107 +1,39 @@
 'use client';
 
-import React from 'react';
-import Link from 'next/link';
-import { Calendar, Clock, User, ArrowRight, Search, Filter, BookOpen, TrendingUp } from 'lucide-react';
+import { useMemo, useState } from 'react';
+import { LocaleLink } from '../components/LocaleLink';
+import { Calendar, Clock, User, ArrowRight, Search, Filter, BookOpen } from 'lucide-react';
 import { ContextualLinks } from '../components/InternalLinks';
 
-const Blog = () => {
-  const articles = [
-    {
-      id: 1,
-      title: "Comment valoriser votre ETI avant une cession : Guide complet 2024",
-      excerpt: "Découvrez les méthodes exclusives pour maximiser la valeur de votre entreprise avant une cession. Multiples optimisés, valorisation augmentée de +40%.",
-      content: "Guide complet sur la valorisation d'entreprise...",
-      author: "Ghezali",
-      date: "2024-10-01",
-      readTime: "12 min",
-      category: "Valorisation",
-      tags: ["valorisation entreprise", "cession", "M&A", "ETI"],
-      image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
-      featured: true,
-      wordCount: 2200
-    },
-    {
-      id: 2,
-      title: "Transformation digitale des ETI : 10 erreurs à éviter absolument",
-      excerpt: "Les pièges les plus courants dans la transformation digitale des ETI. Comment éviter les échecs coûteux et réussir votre transformation.",
-      content: "La transformation digitale des ETI...",
-      author: "Marie-Claire Dubois",
-      date: "2024-09-28",
-      readTime: "8 min",
-      category: "Digital",
-      tags: ["transformation digitale", "ETI", "innovation", "technologie"],
-      image: "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg",
-      featured: false,
-      wordCount: 1500
-    },
-    {
-      id: 3,
-      title: "Levée de fonds Série B : Préparer son pitch parfait en 2024",
-      excerpt: "Les secrets d'un pitch qui convertit les investisseurs. Structure, timing, arguments : tout ce qu'il faut savoir pour réussir sa levée.",
-      content: "Préparer une levée de fonds...",
-      author: "Jean-Marc Laurent",
-      date: "2024-09-25",
-      readTime: "10 min",
-      category: "Financement",
-      tags: ["levée de fonds", "pitch", "investisseurs", "financement"],
-      image: "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg",
-      featured: false,
-      wordCount: 1800
-    },
-    {
-      id: 4,
-      title: "Executive Advisory : Quand et pourquoi faire appel à un expert ?",
-      excerpt: "Guide complet pour comprendre l'Executive Advisory. Quand en avoir besoin, comment choisir, et ROI attendu pour dirigeants d'ETI.",
-      content: "L'Executive Advisory est...",
-      author: "Ghezali",
-      date: "2024-09-22",
-      readTime: "6 min",
-      category: "Leadership",
-      tags: ["executive advisory", "leadership", "conseil", "dirigeants"],
-      image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
-      featured: false,
-      wordCount: 1200
-    },
-    {
-      id: 5,
-      title: "M&A : Maximiser le multiple de sortie en 12 mois",
-      excerpt: "Techniques avancées pour optimiser la valorisation lors d'une opération M&A. Multiples passés de 8x à 12x avec notre méthode.",
-      content: "Optimiser le multiple de sortie...",
-      author: "Pierre-Antoine Martin",
-      date: "2024-09-20",
-      readTime: "15 min",
-      category: "M&A",
-      tags: ["M&A", "multiple", "valorisation", "acquisition"],
-      image: "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg",
-      featured: false,
-      wordCount: 2500
-    },
-    {
-      id: 6,
-      title: "Corporate Acceleration : Accélérer la croissance de 30% en 12 mois",
-      excerpt: "Notre méthodologie exclusive pour transformer une ETI en champion de croissance. Résultats garantis et mesurables.",
-      content: "L'accélération corporate...",
-      author: "Ghezali",
-      date: "2024-09-18",
-      readTime: "9 min",
-      category: "Croissance",
-      tags: ["corporate acceleration", "croissance", "transformation", "performance"],
-      image: "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg",
-      featured: false,
-      wordCount: 1600
-    }
-  ];
+export interface BlogArticleItem {
+  slug: string;
+  title: string;
+  excerpt: string;
+  author: string;
+  date: string;
+  readTime: string;
+  category: string;
+  tags: string[];
+  image: string;
+  featured: boolean;
+}
 
-  const categories = ["Tous", "Valorisation", "Digital", "Financement", "Leadership", "M&A", "Croissance"];
-  const [selectedCategory, setSelectedCategory] = React.useState("Tous");
+const Blog = ({ articles }: { articles: BlogArticleItem[] }) => {
+  const categories = useMemo(() => {
+    const cats = new Set(articles.map((a) => a.category));
+    return ['Tous', ...Array.from(cats)];
+  }, [articles]);
 
-  const filteredArticles = selectedCategory === "Tous" 
-    ? articles 
-    : articles.filter(article => article.category === selectedCategory);
+  const defaultArticles: BlogArticleItem[] = [];
+  const list = articles?.length ? articles : defaultArticles;
+  const [selectedCategory, setSelectedCategory] = useState("Tous");
 
-  const featuredArticle = articles.find(article => article.featured);
-  const regularArticles = articles.filter(article => !article.featured);
+  const filteredArticles = selectedCategory === 'Tous'
+    ? list
+    : list.filter((article) => article.category === selectedCategory);
+
+  const featuredArticle = list.find((article) => article.featured);
+  const regularArticles = list.filter((article) => !article.featured);
 
   return (
     <div className="pt-16">
@@ -196,10 +128,10 @@ const Blog = () => {
                     <Clock className="h-4 w-4 mr-2" />
                     <span>{featuredArticle.readTime}</span>
                   </div>
-                  <Link href={`/blog/${featuredArticle.id}`} className="inline-flex items-center bg-yellow-400 text-black hover:bg-yellow-500 px-6 py-3 rounded-lg font-semibold transition-all duration-300 w-fit">
+                  <LocaleLink href={`/blog/${featuredArticle.slug}`} className="inline-flex items-center bg-yellow-400 text-black hover:bg-yellow-500 px-6 py-3 rounded-lg font-semibold transition-all duration-300 w-fit">
                     Lire l'article
                     <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
+                  </LocaleLink>
                 </div>
               </div>
             </div>
@@ -212,11 +144,11 @@ const Blog = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-3 gap-8">
             {filteredArticles.map((article) => (
-              <article key={article.id} className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
+              <article key={article.slug} className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
                 <div className="relative">
                   <img
                     src={article.image}
-                    alt={`${article.title} - Article GHEZALI Business Mastery`}
+                    alt={`${article.title} - Article Ghezali International Advisory`}
                     className="w-full h-48 object-cover"
                     loading="lazy"
                   />
@@ -243,16 +175,16 @@ const Blog = () => {
                   </div>
                   <div className="flex items-center justify-between">
                     <div className="flex flex-wrap gap-2">
-                      {article.tags.slice(0, 2).map((tag) => (
+                      {(article.tags || []).slice(0, 2).map((tag) => (
                         <span key={tag} className="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs">
                           {tag}
                         </span>
                       ))}
                     </div>
-                    <Link href={`/blog/${article.id}`} className="text-yellow-600 hover:text-yellow-700 font-medium flex items-center">
+                    <LocaleLink href={`/blog/${article.slug}`} className="text-yellow-600 hover:text-yellow-700 font-medium flex items-center">
                       Lire
                       <ArrowRight className="ml-1 h-4 w-4" />
-                    </Link>
+                    </LocaleLink>
                   </div>
                 </div>
               </article>

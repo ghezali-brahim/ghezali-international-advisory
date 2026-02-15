@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import type { ReactNode } from 'react';
 import { usePathname } from 'next/navigation';
 import { AppProvider } from '../context/AppContext';
 import { AnalyticsProvider, PageViewTracker, ScrollDepthTracker, TimeOnPageTracker } from './Analytics';
@@ -10,26 +10,28 @@ import ScrollToTop from './ScrollToTop';
 import Footer from './Footer';
 import NewsletterPopup from './NewsletterPopup';
 
-const pathnameToPageName: Record<string, string> = {
-  '/': 'Home',
-  '/services': 'Services',
-  '/cercle-prive': 'Private Circle',
-  '/references': 'References',
-  '/team': 'Team',
-  '/medias': 'Media',
-  '/contact': 'Contact',
-  '/blog': 'Blog',
-  '/privacy': 'Privacy',
-  '/legal': 'Legal',
-};
-
 function getPageName(pathname: string): string {
-  if (pathnameToPageName[pathname]) return pathnameToPageName[pathname];
-  if (pathname.startsWith('/blog/')) return 'Blog Article';
+  const withoutLocale = pathname.replace(/^\/(fr|en)(\/|$)/, '$2') || '/';
+  const map: Record<string, string> = {
+    '/': 'Home',
+    '/services': 'Services',
+    '/reseau': 'Réseau',
+    '/references': 'References',
+    '/team': 'Team',
+    '/medias': 'Media',
+    '/contact': 'Contact',
+    '/blog': 'Blog',
+    '/privacy': 'Privacy',
+    '/legal': 'Legal',
+    '/private-equity': 'Private Equity',
+    '/institutional': 'Institutional',
+  };
+  if (map[withoutLocale]) return map[withoutLocale];
+  if (/^\/blog\//.test(withoutLocale)) return 'Blog Article';
   return 'Page';
 }
 
-export default function ClientRoot({ children }: { children: React.ReactNode }) {
+export default function ClientRoot({ children }: { children: ReactNode }) {
   const pathname = usePathname();
   const pageName = getPageName(pathname ?? '/');
 

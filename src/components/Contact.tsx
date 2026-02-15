@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import { LocaleLink } from './LocaleLink';
 import { Shield, Calendar, Phone, Mail } from 'lucide-react';
 
 const Contact = () => {
@@ -31,7 +32,7 @@ const Contact = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-serif text-black mb-6">
-            Rejoindre <span className="text-yellow-600">l'Excellence</span>
+            <span className="text-yellow-600">Nous contacter</span>
           </h2>
           <div className="w-24 h-1 bg-yellow-600 mx-auto mb-6"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -81,7 +82,7 @@ const Contact = () => {
 
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    Chiffre d'affaires annuel *
+                    Chiffre d&apos;affaires annuel *
                   </label>
                   <select
                     name="ca"
@@ -191,22 +192,22 @@ const Contact = () => {
               </button>
             </div>
 
-            {/* Private Circle CTA */}
+            {/* Échange */}
             <div className="bg-gradient-to-r from-gray-900 to-black p-8 rounded-2xl text-white">
-              <h3 className="text-xl font-serif mb-4">Invitation au Cercle Privé</h3>
+              <h3 className="text-xl font-serif mb-4">Échanger avec nous</h3>
               <p className="text-gray-300 mb-6">
-                Rejoignez notre réseau exclusif de dirigeants d'exception pour des événements privés et des opportunités uniques.
+                Échangeons sur votre mandat et vos objectifs. Réponse sous 24h.
               </p>
-              <button className="w-full border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black py-3 px-6 rounded-lg font-semibold transition-all duration-300">
-                Demander une invitation
-              </button>
+              <LocaleLink href="/contact" className="block w-full border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black py-3 px-6 rounded-lg font-semibold transition-all duration-300 text-center">
+                Échanger
+              </LocaleLink>
             </div>
 
             {/* Trust Indicators */}
             <div className="bg-gray-100 p-6 rounded-lg">
               <h4 className="font-semibold text-black mb-3">Pourquoi nous faire confiance ?</h4>
               <ul className="space-y-2 text-sm text-gray-600">
-                <li>• 20 ans d'expérience en accompagnement ETI</li>
+                <li>• 20 ans d&apos;expérience en accompagnement ETI</li>
                 <li>• +500M€ de valorisation générée</li>
                 <li>• Confidentialité absolue garantie</li>
                 <li>• Résultats contractuels et mesurables</li>

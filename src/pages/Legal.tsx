@@ -1,7 +1,7 @@
-import React from 'react';
+import Link from 'next/link';
 import { FileText, Scale, Building, Phone, Mail } from 'lucide-react';
 
-const Legal = () => {
+const Legal = ({ locale = 'fr' }: { locale?: string }) => {
   return (
     <div className="pt-16">
 
@@ -14,7 +14,7 @@ const Legal = () => {
           </h1>
           <div className="w-24 h-1 bg-yellow-400 mx-auto mb-6"></div>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Informations légales et réglementaires concernant GHEZALI BUSINESS MASTERY. 
+            Informations légales et réglementaires concernant GHEZALI INTERNATIONAL ADVISORY. 
             Transparence et conformité selon les standards internationaux.
           </p>
         </div>
@@ -34,7 +34,7 @@ const Legal = () => {
                 <Building className="h-6 w-6 text-yellow-600 mr-3 mt-1" />
                 <div>
                   <p className="text-gray-700 mb-2">
-                    <strong>GHEZALI BUSINESS MASTERY</strong><br />
+                    <strong>GHEZALI INTERNATIONAL ADVISORY</strong><br />
                     Société par actions simplifiée (SAS)
                   </p>
                   <p className="text-gray-700 mb-2">
@@ -81,7 +81,7 @@ const Legal = () => {
                 <h3 className="text-lg font-semibold text-black">Cabinet de conseil stratégique</h3>
               </div>
               <p className="text-gray-700 mb-4">
-                GHEZALI BUSINESS MASTERY est spécialisé dans :
+                GHEZALI INTERNATIONAL ADVISORY est spécialisé dans :
               </p>
               <ul className="list-disc list-inside text-gray-700 space-y-2">
                 <li>Conseil en stratégie d'entreprise</li>
@@ -96,7 +96,7 @@ const Legal = () => {
             <h2 className="text-2xl font-serif text-black mb-6">5. Propriété intellectuelle</h2>
             <p className="text-gray-700 mb-4">
               L'ensemble du contenu de ce site (textes, images, vidéos, logos, etc.) est protégé par le droit d'auteur 
-              et appartient à GHEZALI BUSINESS MASTERY ou à ses partenaires.
+              et appartient à GHEZALI INTERNATIONAL ADVISORY ou à ses partenaires.
             </p>
             <p className="text-gray-700 mb-6">
               Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments 
@@ -123,7 +123,7 @@ const Legal = () => {
             <h2 className="text-2xl font-serif text-black mb-6">8. Collecte de données</h2>
             <p className="text-gray-700 mb-6">
               Les données personnelles collectées sur ce site font l'objet d'un traitement conforme au RGPD. 
-              Pour plus d'informations, consultez notre <a href="/privacy" className="text-yellow-600 hover:text-yellow-700">Politique de Confidentialité</a>.
+              Pour plus d'informations, consultez notre <Link href={`/${locale}/privacy`} className="text-yellow-600 hover:text-yellow-700">Politique de Confidentialité</Link>.
             </p>
 
             <h2 className="text-2xl font-serif text-black mb-6">9. Droit applicable</h2>
@@ -151,7 +151,7 @@ const Legal = () => {
 
             <h2 className="text-2xl font-serif text-black mb-6">11. Modifications</h2>
             <p className="text-gray-700 mb-8">
-              GHEZALI BUSINESS MASTERY se réserve le droit de modifier les présentes mentions légales à tout moment. 
+              GHEZALI INTERNATIONAL ADVISORY se réserve le droit de modifier les présentes mentions légales à tout moment. 
               Les modifications entrent en vigueur dès leur publication sur le site.
             </p>
           </div>

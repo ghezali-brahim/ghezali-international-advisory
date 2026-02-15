@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import type { ReactNode } from 'react';
 import { defaultSEO, structuredData } from '../config/seo';
 import ClientRoot from '../components/ClientRoot';
 import './globals.css';
@@ -8,21 +9,21 @@ export const metadata: Metadata = {
   title: defaultSEO.title,
   description: defaultSEO.description,
   keywords: defaultSEO.keywords,
-  authors: [{ name: 'GHEZALI BUSINESS MASTERY' }],
+  authors: [{ name: 'Ghezali International Advisory' }],
   robots: 'index, follow',
   openGraph: {
     type: 'website',
     url: defaultSEO.canonical,
-    title: 'GHEZALI BUSINESS MASTERY - Cabinet Premium d\'Accélération Stratégique',
-    description: 'Cabinet premium d\'accélération stratégique pour dirigeants ambitieux. Confidentialité absolue, résultats mesurables, impact immédiat. +500M€ de valorisation créée.',
+    title: 'Ghezali International Advisory - Strategic Advisory for PE, Family Offices & Institutional Investors',
+    description: 'Strategic advisory for private equity, family offices and institutional investors. Portfolio transformation, board-level execution, measurable value creation.',
     images: [{ url: defaultSEO.ogImage ?? '/og-image.jpg', width: 1200, height: 630 }],
     locale: 'fr_FR',
-    siteName: 'GHEZALI BUSINESS MASTERY',
+    siteName: 'Ghezali International Advisory',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'GHEZALI BUSINESS MASTERY - Cabinet Premium d\'Accélération Stratégique',
-    description: 'Cabinet premium d\'accélération stratégique pour dirigeants ambitieux. Confidentialité absolue, résultats mesurables, impact immédiat.',
+    title: 'Ghezali International Advisory - Strategic Advisory for PE, Family Offices & Institutional Investors',
+    description: 'Strategic advisory for private equity, family offices and institutional investors. Portfolio transformation, board-level execution.',
     images: ['/twitter-image.jpg'],
   },
   alternates: { canonical: defaultSEO.canonical },
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
     'ICBM': '48.8566, 2.3522',
     'apple-mobile-web-app-capable': 'yes',
     'apple-mobile-web-app-status-bar-style': 'black-translucent',
-    'apple-mobile-web-app-title': 'GHEZALI Business Mastery',
+    'apple-mobile-web-app-title': 'Ghezali International Advisory',
     'mobile-web-app-capable': 'yes',
   },
   icons: {
@@ -48,7 +49,10 @@ export const viewport: Viewport = {
   themeColor: '#FBBF24',
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
+  if (process.env.NODE_ENV === 'development') {
+    console.log('[root layout] render');
+  }
   return (
     <html lang="fr">
       <head>

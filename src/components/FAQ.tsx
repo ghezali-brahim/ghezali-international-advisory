@@ -62,7 +62,7 @@ const FAQ = () => {
       ]
     },
     {
-      title: "Éligibilité & Critères",
+      title: "Critères d'engagement",
       icon: Clock,
       questions: [
         {
@@ -97,7 +97,7 @@ const FAQ = () => {
           <div className="w-24 h-1 bg-yellow-600 mx-auto mb-6"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Retrouvez les réponses aux questions les plus courantes sur notre approche, 
-            nos méthodes et nos conditions d'intervention.
+            nos méthodes et nos conditions d&apos;intervention.
           </p>
         </div>
 
@@ -152,7 +152,7 @@ const FAQ = () => {
             </h3>
             <p className="text-gray-300 mb-6">
               Notre équipe est disponible pour répondre à toutes vos questions 
-              lors d'un échange confidentiel.
+              lors d&apos;un échange confidentiel.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
               <button className="bg-yellow-400 text-black hover:bg-yellow-500 px-6 py-3 rounded-lg font-semibold transition-all duration-300">

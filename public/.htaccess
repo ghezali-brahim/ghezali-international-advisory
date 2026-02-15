@@ -1,4 +1,4 @@
-# GHEZALI BUSINESS MASTERY - .htaccess Configuration
+# Ghezali International Advisory - .htaccess Configuration
 
 # Enable Rewrite Engine
 <IfModule mod_rewrite.c>

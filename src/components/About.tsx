@@ -1,5 +1,4 @@
-import React from 'react';
-import Link from 'next/link';
+import { LocaleLink } from './LocaleLink';
 import { Shield, Target, Trophy, Users, Award, Briefcase, Globe, TrendingUp } from 'lucide-react';
 
 const About = () => {
@@ -12,7 +11,7 @@ const About = () => {
     {
       icon: Shield,
       title: "Confidentialité",
-      description: "Discrétion absolue, deals privés, cercle fermé. Votre stratégie reste entre nos mains expertes."
+      description: "Discrétion absolue, deals privés. Votre stratégie reste entre nos mains expertes."
     },
     {
       icon: Target,
@@ -59,7 +58,7 @@ const About = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-serif text-black mb-6">
-            L'ADN <span className="text-yellow-600">Ghezali Business Mastery</span>
+            L&apos;ADN <span className="text-yellow-600">Ghezali International Advisory</span>
           </h2>
           <div className="w-24 h-1 bg-yellow-600 mx-auto mb-6"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
@@ -72,18 +71,18 @@ const About = () => {
           <div>
             <img
               src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg"
-              alt="Leadership exécutif et transformation d'entreprise - Expert en stratégie ETI et valorisation - Cabinet GHEZALI"
+              alt="Leadership exécutif et transformation d&apos;entreprise - Expert en stratégie ETI et valorisation - Cabinet GHEZALI"
               className="w-full h-96 object-cover rounded-lg shadow-2xl"
               loading="lazy"
             />
           </div>
           <div>
             <h3 className="text-3xl font-serif text-black mb-6">
-              20 ans d'expérience au service de l'excellence
+              20 ans d&apos;expérience au service de l&apos;excellence
             </h3>
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
               Notre fondateur a bâti sa réputation sur 20 années de commercial de haut niveau, 
-              de structuration d'entreprises et d'acquisitions stratégiques. Cette expertise unique 
+              de structuration d&apos;entreprises et d&apos;acquisitions stratégiques. Cette expertise unique 
               nous permet d'allier vision stratégique et exécution opérationnelle immédiate.
             </p>
             <p className="text-lg text-gray-600 mb-8 leading-relaxed">
@@ -92,7 +91,7 @@ const About = () => {
             </p>
             <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-yellow-600">
               <p className="text-lg font-semibold text-black italic">
-                "Ni cabinet, ni prestataire. Partenaire stratégique du portefeuille : board, exécution, valorisation. Un contrat, plusieurs sociétés transformées."
+                &quot;Ni cabinet, ni prestataire. Partenaire stratégique du portefeuille : board, exécution, valorisation. Un contrat, plusieurs sociétés transformées.&quot;
               </p>
             </div>
           </div>
@@ -162,18 +161,18 @@ const About = () => {
               </div>
               <p className="text-gray-300 mb-6">
                 Nous accompagnons également les pays et institutions internationales dans leur stratégie de développement, 
-                l'optimisation de leur croissance, la dynamisation des marchés et la transformation des systèmes en place.
+                l&apos;optimisation de leur croissance, la dynamisation des marchés et la transformation des systèmes en place.
               </p>
             </div>
             <h3 className="text-3xl md:text-4xl font-serif text-white mb-6">
-              Réservé aux investisseurs et dirigeants sélectionnés
+              Partenariat sélectif
             </h3>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Chaque partenariat est unique. Nombre de mandats limité.
+              We selectively partner with investment firms and institutional investors.
             </p>
-            <Link href="/contact" className="inline-block bg-yellow-400 text-black hover:bg-yellow-500 px-10 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-400/25">
-              Vérifier son éligibilité
-            </Link>
+            <LocaleLink href="/contact" className="inline-block bg-yellow-400 text-black hover:bg-yellow-500 px-10 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-400/25">
+              Nous contacter
+            </LocaleLink>
           </div>
         </div>
       </div>
