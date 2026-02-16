@@ -27,7 +27,7 @@ export default function TranslationsProvider({
     instance
       .init({
         lng: locale,
-        resources: resources as Resource,
+        resources: resources as unknown as Resource,
         fallbackLng: defaultLocale,
         supportedLngs: [...locales],
         defaultNS: namespaces[0],

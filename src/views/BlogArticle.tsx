@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { LocaleLink } from '@/components/LocaleLink';
 import { Calendar, Clock, User, ArrowLeft, Share2, Bookmark, Tag } from 'lucide-react';
 import { BlogRelatedLinks } from '@/components/InternalLinks';
@@ -71,12 +72,14 @@ const BlogArticle = ({ post }: BlogArticleProps) => {
 
       {post.image && (
         <section className="py-0">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <img
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative w-full h-96">
+            <Image
               src={post.image}
               alt=""
-              className="w-full h-96 object-cover rounded-xl"
-              loading="eager"
+              fill
+              className="object-cover rounded-xl"
+              sizes="(max-width: 896px) 100vw, 896px"
+              unoptimized
             />
           </div>
         </section>
