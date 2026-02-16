@@ -171,11 +171,11 @@ const Footer = () => {
               </div>
               <div className="flex items-center">
                 <Phone className="h-5 w-5 text-yellow-400 mr-3 flex-shrink-0" />
-                <p className="text-gray-400">+33 (0)1 XX XX XX XX</p>
+                <a href="tel:+33187660601" className="text-gray-400 hover:text-yellow-400 transition-colors">+33 1 87 66 06 01</a>
               </div>
               <div className="flex items-center">
                 <Mail className="h-5 w-5 text-yellow-400 mr-3 flex-shrink-0" />
-                <p className="text-gray-400">contact@ghezali-business.com</p>
+                <a href="mailto:contact@ghezaliadvisory.com" className="text-gray-400 hover:text-yellow-400 transition-colors">contact@ghezaliadvisory.com</a>
               </div>
             </div>
           </div>

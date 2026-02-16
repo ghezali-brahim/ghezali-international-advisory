@@ -2,9 +2,28 @@
 
 import React, { useState } from 'react';
 import { LocaleLink } from './LocaleLink';
+import { useLocale } from '@/context/LocaleContext';
 import { Shield, Calendar, Phone, Mail } from 'lucide-react';
 
+const CONTACT_EMAIL = 'contact@ghezaliadvisory.com';
+const PHONE_FR = '+33 1 87 66 06 01';
+const PHONE_FR_HREF = 'tel:+33187660601';
+const WHATSAPP = '+33 6 95 33 74 43';
+const WHATSAPP_HREF = 'https://wa.me/33695337443';
+const RDV_URL = 'https://bookings.business-evasion.com/#/session-prive';
+
+const OBJECTIVE_LABELS: Record<string, string> = {
+  valorisation: 'Valuation increase',
+  levee: 'Fundraising preparation',
+  cession: 'Sale preparation',
+  croissance: 'Growth acceleration',
+  transformation: 'Digital transformation',
+  autre: 'Other strategic project',
+};
+
 const Contact = () => {
+  const locale = useLocale();
+  const rdvDisclaimer = locale === 'fr' ? '(sous condition de validation)' : '(subject to validation)';
   const [formData, setFormData] = useState({
     nom: '',
     societe: '',
@@ -22,8 +41,17 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
+    const subject = `[Contact] ${formData.nom} - ${formData.societe}`;
+    const objectiveLabel = formData.objectif ? OBJECTIVE_LABELS[formData.objectif] ?? formData.objectif : '';
+    const body = [
+      `Name: ${formData.nom}`,
+      `Company: ${formData.societe}`,
+      `Annual revenue: ${formData.ca}`,
+      `Primary objective: ${objectiveLabel}`,
+      formData.message ? `\nMessage:\n${formData.message}` : ''
+    ].filter(Boolean).join('\n');
+    const mailto = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
   };
 
   return (
@@ -52,43 +80,49 @@ const Contact = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
+                    <label htmlFor="contact-nom" className="block text-sm font-semibold text-gray-700 mb-2">
                       Name *
                     </label>
                     <input
+                      id="contact-nom"
                       type="text"
                       name="nom"
                       value={formData.nom}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
                       required
+                      aria-required="true"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
+                    <label htmlFor="contact-societe" className="block text-sm font-semibold text-gray-700 mb-2">
                       Company *
                     </label>
                     <input
+                      id="contact-societe"
                       type="text"
                       name="societe"
                       value={formData.societe}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
                       required
+                      aria-required="true"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label htmlFor="contact-ca" className="block text-sm font-semibold text-gray-700 mb-2">
                     Annual revenue *
                   </label>
                   <select
+                    id="contact-ca"
                     name="ca"
                     value={formData.ca}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
                     required
+                    aria-required="true"
                   >
                     <option value="">Select your range</option>
                     <option value="50-100M">50M€ - 100M€</option>
@@ -99,15 +133,17 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label htmlFor="contact-objectif" className="block text-sm font-semibold text-gray-700 mb-2">
                     Primary objective *
                   </label>
                   <select
+                    id="contact-objectif"
                     name="objectif"
                     value={formData.objectif}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
                     required
+                    aria-required="true"
                   >
                     <option value="">Select your objective</option>
                     <option value="valorisation">Valuation increase</option>
@@ -120,22 +156,25 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label htmlFor="contact-message" className="block text-sm font-semibold text-gray-700 mb-2">
                     Confidential message
                   </label>
                   <textarea
+                    id="contact-message"
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
                     rows={4}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
                     placeholder="Briefly describe your situation and expectations..."
-                  ></textarea>
+                    aria-describedby="contact-message-desc"
+                  />
+                  <span id="contact-message-desc" className="sr-only">Optional. Briefly describe your situation and expectations.</span>
                 </div>
 
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <p className="text-sm text-gray-600 leading-relaxed">
-                    <Shield className="h-4 w-4 inline mr-2 text-yellow-600" />
+                    <Shield className="h-4 w-4 inline mr-2 text-yellow-600" aria-hidden />
                     All information shared is strictly confidential and protected by a non-disclosure agreement.
                   </p>
                 </div>
@@ -144,7 +183,7 @@ const Contact = () => {
                   type="submit"
                   className="w-full bg-black text-white hover:bg-gray-800 py-4 px-6 rounded-lg font-semibold text-lg transition-all duration-300"
                 >
-                  Submit my application
+                  {locale === 'fr' ? 'Soumettre ma candidature' : 'Submit my application'}
                 </button>
               </form>
 
@@ -161,17 +200,24 @@ const Contact = () => {
               <h3 className="text-2xl font-serif mb-6">Direct contact</h3>
               <div className="space-y-4">
                 <div className="flex items-center">
-                  <Phone className="h-5 w-5 text-yellow-400 mr-4" />
+                  <Phone className="h-5 w-5 text-yellow-400 mr-4 flex-shrink-0" />
                   <div>
-                    <p className="font-semibold">Direct line</p>
-                    <p className="text-gray-300">+33 (0)1 XX XX XX XX</p>
+                    <p className="font-semibold">Direct line (France)</p>
+                    <a href={PHONE_FR_HREF} className="text-gray-300 hover:text-yellow-400 transition-colors">{PHONE_FR}</a>
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <Mail className="h-5 w-5 text-yellow-400 mr-4" />
+                  <Phone className="h-5 w-5 text-yellow-400 mr-4 flex-shrink-0" />
+                  <div>
+                    <p className="font-semibold">WhatsApp (Paris, France)</p>
+                    <a href={WHATSAPP_HREF} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-yellow-400 transition-colors">{WHATSAPP}</a>
+                  </div>
+                </div>
+                <div className="flex items-center">
+                  <Mail className="h-5 w-5 text-yellow-400 mr-4 flex-shrink-0" />
                   <div>
                     <p className="font-semibold">Confidential email</p>
-                    <p className="text-gray-300">contact@ghezali-business.com</p>
+                    <a href={`mailto:${CONTACT_EMAIL}`} className="text-gray-300 hover:text-yellow-400 transition-colors">{CONTACT_EMAIL}</a>
                   </div>
                 </div>
               </div>
@@ -183,12 +229,18 @@ const Contact = () => {
                 <Calendar className="h-6 w-6 text-yellow-600 mr-3" />
                 <h3 className="text-xl font-serif text-black">Confidential discussion</h3>
               </div>
-              <p className="text-gray-600 mb-6">
+              <p className="text-gray-600 mb-2">
                 Book a 30-minute confidential call directly with our team.
               </p>
-              <button className="w-full bg-yellow-600 text-white hover:bg-yellow-700 py-3 px-6 rounded-lg font-semibold transition-all duration-300">
-                Book a slot
-              </button>
+              <p className="text-sm text-gray-500 mb-6">{rdvDisclaimer}</p>
+              <a
+                href={RDV_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full bg-yellow-600 text-white hover:bg-yellow-700 py-3 px-6 rounded-lg font-semibold transition-all duration-300 text-center"
+              >
+                {locale === 'fr' ? 'Réserver un créneau' : 'Book a slot'}
+              </a>
             </div>
 
             {/* Échange */}

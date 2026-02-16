@@ -1,29 +1,35 @@
 import Contact from '@/components/Contact';
 import FAQ from '@/components/FAQ';
-import { MapPin, Phone, Mail, Clock, Users, Award, TrendingUp } from 'lucide-react';
+import { Phone, Mail, Clock, Users, Award, TrendingUp } from 'lucide-react';
 
 const ContactPage = () => {
   const offices = [
     {
       city: "Paris - La Défense",
       address: "Tour Majunga\n6 Place de la Pyramide\n92400 Courbevoie",
-      phone: "+33 (0)1 XX XX XX XX",
-      email: "paris@ghezali-business.com",
-      hours: "Mon-Fri: 8am-8pm"
+      phone: "+33 1 87 66 06 01",
+      phoneHref: "tel:+33187660601",
+      email: "paris@ghezaliadvisory.com",
+      hours: "Mon-Fri: 8am-8pm",
+      soon: false
     },
     {
       city: "Londres",
       address: "25 Old Broad Street\nLondon EC2N 1HN\nUnited Kingdom",
       phone: "+44 (0)20 XXXX XXXX",
-      email: "london@ghezali-business.com",
-      hours: "Mon-Fri: 8am-8pm"
+      phoneHref: "",
+      email: "london@ghezaliadvisory.com",
+      hours: "Coming soon",
+      soon: true
     },
     {
       city: "New York",
       address: "1 World Trade Center\nNew York, NY 10007\nUnited States",
-      phone: "+1 (212) XXX-XXXX",
-      email: "newyork@ghezali-business.com",
-      hours: "Mon-Fri: 8am-8pm"
+      phone: "+1 949 409 7066",
+      phoneHref: "tel:+19494097066",
+      email: "newyork@ghezaliadvisory.com",
+      hours: "Coming soon",
+      soon: true
     }
   ];
 
@@ -55,25 +61,30 @@ const ContactPage = () => {
 
           <div className="grid lg:grid-cols-3 gap-8">
             {offices.map((office, index) => (
-              <div key={index} className="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-all duration-300">
-                <h3 className="text-2xl font-serif text-black mb-6">{office.city}</h3>
-                
+              <div key={index} className={`bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-all duration-300 ${office.soon ? 'opacity-90' : ''}`}>
+                <div className="flex items-center gap-2 flex-wrap mb-6">
+                  <h3 className="text-2xl font-serif text-black">{office.city}</h3>
+                  {office.soon && (
+                    <span className="inline-flex items-center px-2.5 py-0.5 rounded text-xs font-medium bg-yellow-100 text-yellow-800">
+                      Soon
+                    </span>
+                  )}
+                </div>
                 <div className="space-y-4">
-                  <div className="flex items-start">
-                    <MapPin className="h-5 w-5 text-yellow-600 mr-3 mt-1 flex-shrink-0" />
-                    <div className="text-gray-700 whitespace-pre-line">{office.address}</div>
-                  </div>
-                  
-                  <div className="flex items-center">
-                    <Phone className="h-5 w-5 text-yellow-600 mr-3 flex-shrink-0" />
-                    <div className="text-gray-700">{office.phone}</div>
-                  </div>
-                  
+                  {office.phoneHref ? (
+                    <div className="flex items-center">
+                      <Phone className="h-5 w-5 text-yellow-600 mr-3 flex-shrink-0" />
+                      <div className="text-gray-700">
+                        <a href={office.phoneHref} className="hover:text-yellow-600 transition-colors">{office.phone}</a>
+                      </div>
+                    </div>
+                  ) : null}
                   <div className="flex items-center">
                     <Mail className="h-5 w-5 text-yellow-600 mr-3 flex-shrink-0" />
-                    <div className="text-gray-700">{office.email}</div>
+                    <div className="text-gray-700">
+                      <a href={`mailto:${office.email}`} className="hover:text-yellow-600 transition-colors">{office.email}</a>
+                    </div>
                   </div>
-                  
                   <div className="flex items-center">
                     <Clock className="h-5 w-5 text-yellow-600 mr-3 flex-shrink-0" />
                     <div className="text-gray-700">{office.hours}</div>

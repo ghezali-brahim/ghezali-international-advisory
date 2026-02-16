@@ -388,7 +388,7 @@ export const structuredData = {
     "logo": "https://www.ghezali-business.com/logo.png",
     "description": "Strategic advisory for private equity, family offices and institutional investors. Portfolio transformation, board-level execution, measurable value creation.",
     "telephone": "+33-1-XX-XX-XX-XX",
-    "email": "contact@ghezali-business.com",
+    "email": "contact@ghezaliadvisory.com",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Tour Majunga, 6 Place de la Pyramide",
