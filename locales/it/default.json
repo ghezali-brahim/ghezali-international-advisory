@@ -1,0 +1,132 @@
+{
+  "capitalPartnerships": {
+    "cta": {
+      "availableUponRequest": "Disponibile su richiesta",
+      "contact": "Contatto"
+    },
+    "disclaimer": {
+      "text": "Questa non è un'offerta pubblica. La partecipazione è soggetta a conformità normativa e qualificazione privata."
+    },
+    "hero": {
+      "badge1": "Partnership di capitale privato",
+      "badge2": "Solo su introduzione",
+      "badge3": "Non un'offerta pubblica",
+      "headline": "Distribuzione di capitale transfrontaliera con creazione di valore operativo",
+      "subtitle": "Collaboriamo con investitori selezionati negli Stati Uniti o internazionali per investire capitale in mercati strutturalmente sottovalutati con governance disciplinata ed esecuzione attiva."
+    },
+    "problem": {
+      "intro": "La liquidità negli Stati Uniti è abbondante. Molti mercati globali sono strutturalmente sottovalutati. Le inefficienze del capitale creano opportunità; le lacune operative riducono le performance.",
+      "items": [
+        "Inefficienza del capitale",
+        "Sconto strutturale",
+        "Proprietà frammentata",
+        "Uscite guidate dalla successione",
+        "Mercati di crescita trascurati"
+      ],
+      "title": "Il contesto"
+    },
+    "process": {
+      "steps": [
+        "Qualificazione",
+        "Discussione riservata",
+        "Allineamento della tesi",
+        "Accesso al pipeline",
+        "Partecipazione strutturata"
+      ],
+      "title": "Processo"
+    },
+    "risk": {
+      "intro": "Governance, allineamento degli interessi e controllo operativo al centro del nostro approccio.",
+      "items": [
+        "Livello di governance",
+        "Allineamento degli interessi",
+        "Reporting strutturato",
+        "Leva conservativa",
+        "Strutturazione legale locale",
+        "Controllo operativo"
+      ],
+      "title": "Framework di mitigazione del rischio"
+    },
+    "solution": {
+      "intro": "Colleghiamo capitale ed esecuzione operativa attraverso le giurisdizioni.",
+      "items": [
+        "Origine locale",
+        "Due diligence sul campo",
+        "Trasformazione operativa",
+        "Supervisione della governance",
+        "Disciplina di uscita"
+      ],
+      "title": "Il nostro ruolo"
+    },
+    "structure": {
+      "intro": "Partecipazione possibile attraverso varie forme; nessuna promessa di ritorno.",
+      "items": [
+        "SPV per affare",
+        "Co-investimento",
+        "Partecipazione strutturata",
+        "Distribuzione di capitale guidata da consulenza"
+      ],
+      "title": "Struttura proposta"
+    },
+    "thesis": {
+      "focusItems": [
+        "Acquisizioni di maggioranza PMI",
+        "Situazioni speciali",
+        "Ristrutturazione operativa",
+        "Espansione transfrontaliera"
+      ],
+      "focusTitle": "Focus",
+      "targetEbitda": "Intervallo EBITDA",
+      "targetGeography": "Geografia",
+      "targetRevenue": "Intervallo di fatturato",
+      "targetSector": "Focus settoriale",
+      "targetTitle": "Profilo target",
+      "title": "Tesi di investimento"
+    }
+  },
+  "footer": {
+    "availableUponRequest": "Disponibile su richiesta",
+    "blog": "Blog",
+    "contact": "Contatto",
+    "contactTitle": "Contatto",
+    "expertise": "Competenza",
+    "familyOffice": "Family Office",
+    "groupHolding": "Holding di gruppo",
+    "home": "Home",
+    "institutional": "Istituzionale",
+    "legal": "Legale",
+    "markets": "Mercati",
+    "media": "Media",
+    "navigation": "Navigazione",
+    "network": "Rete",
+    "offers": "Offerte premium",
+    "positioning": "Posizionamento",
+    "privacy": "Informativa sulla privacy",
+    "privateEquity": "Private Equity",
+    "rights": "Tutti i diritti riservati.",
+    "strategicCapitalPartnerships": "Partnership di capitale strategico"
+  },
+  "nav": {
+    "blog": "Blog",
+    "caseStudies": "Casi studio",
+    "contact": "Contattaci",
+    "corporateAcceleration": "Accelerazione aziendale",
+    "executiveAdvisory": "Consulenza esecutiva",
+    "expertise": "Competenza",
+    "familyOffice": "Family Office",
+    "groupHolding": "Holding di gruppo",
+    "home": "Home",
+    "institutional": "Istituzionale",
+    "institutionalAdvisory": "Consulenza istituzionale",
+    "markets": "Mercati",
+    "media": "Media",
+    "network": "Rete",
+    "offers": "Le nostre offerte",
+    "positioning": "Posizionamento",
+    "privateEquity": "Private Equity",
+    "references": "Riferimenti",
+    "strategicDeals": "Accordi strategici e capitale",
+    "team": "Il nostro team",
+    "testimonials": "Testimonianze"
+  }
+}

@@ -109,7 +109,7 @@ const CaseStudies = () => {
             Découvrez comment nous avons transformé des entreprises et généré 
             des résultats exceptionnels pour nos clients.
           </p>
-          <LocaleLink href="/case-studies" className="inline-block mt-6 text-yellow-600 hover:text-yellow-700 font-medium">
+          <LocaleLink href="/expertise" className="inline-block mt-6 text-yellow-600 hover:text-yellow-700 font-medium">
             Voir toutes les études de cas premium →
           </LocaleLink>
         </div>

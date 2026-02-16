@@ -1,0 +1,132 @@
+{
+  "capitalPartnerships": {
+    "cta": {
+      "availableUponRequest": "Disponible sur demande",
+      "contact": "Contact"
+    },
+    "disclaimer": {
+      "text": "Ceci n'est pas une offre publique. La participation est soumise à la conformité réglementaire et à la qualification privée."
+    },
+    "hero": {
+      "badge1": "Partenariats en capital privé",
+      "badge2": "Par introduction uniquement",
+      "badge3": "Pas une offre publique",
+      "headline": "Déploiement de capital transfrontalier avec création de valeur opérationnelle",
+      "subtitle": "Nous nous associons à des investisseurs américains ou internationaux sélectionnés pour déployer des capitaux dans des marchés structurellement sous-évalués avec une gouvernance disciplinée et une exécution active."
+    },
+    "problem": {
+      "intro": "La liquidité aux États-Unis est abondante. De nombreux marchés mondiaux sont structurellement mal évalués. Les inefficacités du capital créent des opportunités ; les lacunes opérationnelles réduisent la performance.",
+      "items": [
+        "Inefficacité du capital",
+        "Remise en question structurelle",
+        "Propriété fragmentée",
+        "Sorties motivées par la succession",
+        "Marchés de croissance sous-servis"
+      ],
+      "title": "Le contexte"
+    },
+    "process": {
+      "steps": [
+        "Qualification",
+        "Discussion confidentielle",
+        "Alignement de thèse",
+        "Accès au pipeline",
+        "Participation structurée"
+      ],
+      "title": "Processus"
+    },
+    "risk": {
+      "intro": "Gouvernance, alignement des intérêts et contrôle opérationnel au cœur de notre approche.",
+      "items": [
+        "Couche de gouvernance",
+        "Alignement des intérêts",
+        "Reporting structuré",
+        "Effet de levier conservateur",
+        "Structuration juridique locale",
+        "Contrôle opérationnel"
+      ],
+      "title": "Cadre de mitigation des risques"
+    },
+    "solution": {
+      "intro": "Nous faisons le lien entre le capital et l'exécution opérationnelle à travers les juridictions.",
+      "items": [
+        "Origination locale",
+        "Diligence sur le terrain",
+        "Transformation opérationnelle",
+        "Surveillance de la gouvernance",
+        "Discipline de sortie"
+      ],
+      "title": "Notre rôle"
+    },
+    "structure": {
+      "intro": "Participation possible sous diverses formes ; aucune promesse de retour.",
+      "items": [
+        "SPV par accord",
+        "Co-investissement",
+        "Participation structurée",
+        "Déploiement de capital dirigé par des conseils"
+      ],
+      "title": "Structure proposée"
+    },
+    "thesis": {
+      "focusItems": [
+        "Acquisitions majoritaires de PME",
+        "Situations spéciales",
+        "Redressement opérationnel",
+        "Expansion transfrontalière"
+      ],
+      "focusTitle": "Concentration",
+      "targetEbitda": "Plage d'EBITDA",
+      "targetGeography": "Géographie",
+      "targetRevenue": "Plage de revenus",
+      "targetSector": "Concentration sectorielle",
+      "targetTitle": "Profil cible",
+      "title": "Thèse d'investissement"
+    }
+  },
+  "footer": {
+    "availableUponRequest": "Disponible sur demande",
+    "blog": "Blog",
+    "contact": "Contact",
+    "contactTitle": "Contact",
+    "expertise": "Expertise",
+    "familyOffice": "Bureau de famille",
+    "groupHolding": "Groupe Holding",
+    "home": "Accueil",
+    "institutional": "Institutionnel",
+    "legal": "Juridique",
+    "markets": "Marchés",
+    "media": "Média",
+    "navigation": "Navigation",
+    "network": "Réseau",
+    "offers": "Offres premium",
+    "positioning": "Positionnement",
+    "privacy": "Politique de confidentialité",
+    "privateEquity": "Capital-investissement",
+    "rights": "Tous droits réservés.",
+    "strategicCapitalPartnerships": "Partenariats en capital stratégique"
+  },
+  "nav": {
+    "blog": "Blog",
+    "caseStudies": "Études de cas",
+    "contact": "Contactez-nous",
+    "corporateAcceleration": "Accélération d'entreprise",
+    "executiveAdvisory": "Conseil exécutif",
+    "expertise": "Expertise",
+    "familyOffice": "Bureau de famille",
+    "groupHolding": "Groupe Holding",
+    "home": "Accueil",
+    "institutional": "Institutionnel",
+    "institutionalAdvisory": "Conseil institutionnel",
+    "markets": "Marchés",
+    "media": "Médias",
+    "network": "Réseau",
+    "offers": "Nos offres",
+    "positioning": "Positionnement",
+    "privateEquity": "Capital-investissement",
+    "references": "Références",
+    "strategicDeals": "Accords stratégiques et capital",
+    "team": "Notre équipe",
+    "testimonials": "Témoignages"
+  }
+}

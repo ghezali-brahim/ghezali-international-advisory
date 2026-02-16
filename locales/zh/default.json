@@ -1,0 +1,132 @@
+{
+  "capitalPartnerships": {
+    "cta": {
+      "availableUponRequest": "应要求提供",
+      "contact": "联系"
+    },
+    "disclaimer": {
+      "text": "这不是公开发行。参与需遵守监管合规和私人资格。"
+    },
+    "hero": {
+      "badge1": "私人资本合作伙伴关系",
+      "badge2": "仅通过介绍",
+      "badge3": "非公开发行",
+      "headline": "跨境资本部署与运营价值创造",
+      "subtitle": "我们与精选的美国或国际投资者合作，将资本投入结构性被低估的市场，实施严格的治理和积极的执行。"
+    },
+    "problem": {
+      "intro": "美国流动性充足。许多全球市场在结构上定价错误。资本效率低下创造了机会；运营差距降低了绩效。",
+      "items": [
+        "资本低效",
+        "结构折扣",
+        "分散所有权",
+        "继任驱动的退出",
+        "服务不足的增长市场"
+      ],
+      "title": "背景"
+    },
+    "process": {
+      "steps": [
+        "资格",
+        "保密讨论",
+        "主题对齐",
+        "获取项目管道",
+        "结构化参与"
+      ],
+      "title": "流程"
+    },
+    "risk": {
+      "intro": "治理、利益对齐和运营控制是我们方法的核心。",
+      "items": [
+        "治理层",
+        "利益一致性",
+        "结构化报告",
+        "保守杠杆",
+        "本地法律结构",
+        "运营控制"
+      ],
+      "title": "风险缓解框架"
+    },
+    "solution": {
+      "intro": "我们在不同法域之间架起资本与运营执行的桥梁。",
+      "items": [
+        "本地来源",
+        "实地尽职调查",
+        "运营转型",
+        "治理监督",
+        "退出纪律"
+      ],
+      "title": "我们的角色"
+    },
+    "structure": {
+      "intro": "通过多种形式参与；无回报承诺。",
+      "items": [
+        "逐笔特殊目的载体",
+        "共同投资",
+        "结构化参与",
+        "顾问主导的资本部署"
+      ],
+      "title": "提议的结构"
+    },
+    "thesis": {
+      "focusItems": [
+        "中小企业多数收购",
+        "特殊情况",
+        "运营扭转",
+        "跨境扩张"
+      ],
+      "focusTitle": "焦点",
+      "targetEbitda": "EBITDA范围",
+      "targetGeography": "地理",
+      "targetRevenue": "收入范围",
+      "targetSector": "行业重点",
+      "targetTitle": "目标档案",
+      "title": "投资论点"
+    }
+  },
+  "footer": {
+    "availableUponRequest": "根据要求提供",
+    "blog": "博客",
+    "contact": "联系",
+    "contactTitle": "联系",
+    "expertise": "专业知识",
+    "familyOffice": "家族办公室",
+    "groupHolding": "集团控股",
+    "home": "首页",
+    "institutional": "机构",
+    "legal": "法律",
+    "markets": "市场",
+    "media": "媒体",
+    "navigation": "导航",
+    "network": "网络",
+    "offers": "优质优惠",
+    "positioning": "定位",
+    "privacy": "隐私政策",
+    "privateEquity": "私募股权",
+    "rights": "版权所有。",
+    "strategicCapitalPartnerships": "战略资本合作伙伴关系"
+  },
+  "nav": {
+    "blog": "博客",
+    "caseStudies": "案例研究",
+    "contact": "联系我们",
+    "corporateAcceleration": "企业加速",
+    "executiveAdvisory": "执行顾问",
+    "expertise": "专业知识",
+    "familyOffice": "家族办公室",
+    "groupHolding": "集团控股",
+    "home": "首页",
+    "institutional": "机构",
+    "institutionalAdvisory": "机构咨询",
+    "markets": "市场",
+    "media": "媒体",
+    "network": "网络",
+    "offers": "我们的报价",
+    "positioning": "定位",
+    "privateEquity": "私募股权",
+    "references": "参考文献",
+    "strategicDeals": "战略交易与股权",
+    "team": "我们的团队",
+    "testimonials": "推荐信"
+  }
+}

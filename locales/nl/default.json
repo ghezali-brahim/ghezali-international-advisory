@@ -1,0 +1,132 @@
+{
+  "capitalPartnerships": {
+    "cta": {
+      "availableUponRequest": "Beschikbaar op aanvraag",
+      "contact": "Contact"
+    },
+    "disclaimer": {
+      "text": "Dit is geen openbaar aanbod. Deelname is onderhevig aan naleving van regelgeving en particuliere kwalificatie."
+    },
+    "hero": {
+      "badge1": "Private kapitaalpartnerschappen",
+      "badge2": "Alleen op introductie",
+      "badge3": "Geen openbare aanbieding",
+      "headline": "Grensoverschrijdende kapitaaluitzetting met operationele waardecreatie",
+      "subtitle": "Wij werken samen met geselecteerde Amerikaanse of internationale investeerders om kapitaal te investeren in structureel ondergewaardeerde markten met gedisciplineerde governance en actieve uitvoering."
+    },
+    "problem": {
+      "intro": "De liquiditeit in de VS is overvloedig. Veel wereldmarkten zijn structureel verkeerd geprijsd. Kapitaalinefficiënties creëren kansen; operationele hiaten verminderen de prestaties.",
+      "items": [
+        "Kapitaalinefficiëntie",
+        "Structurele korting",
+        "Gefragmenteerd eigendom",
+        "Opvolgingsgedreven exits",
+        "Onderbediende groeimarkten"
+      ],
+      "title": "De context"
+    },
+    "process": {
+      "steps": [
+        "Kwalificatie",
+        "Vertrouwelijke discussie",
+        "Thesisafstemming",
+        "Toegang tot pijplijn",
+        "Gestructureerde deelname"
+      ],
+      "title": "Proces"
+    },
+    "risk": {
+      "intro": "Governance, belangenafstemming en operationele controle staan centraal in onze aanpak.",
+      "items": [
+        "Governance-laag",
+        "Afstemming van belangen",
+        "Gestructureerde rapportage",
+        "Conservatieve hefboomwerking",
+        "Lokale juridische structurering",
+        "Operationele controle"
+      ],
+      "title": "Risicobeperking kader"
+    },
+    "solution": {
+      "intro": "Wij overbruggen kapitaal en operationele uitvoering over jurisdicties heen.",
+      "items": [
+        "Lokale oorsprong",
+        "Ter plaatse due diligence",
+        "Operationele transformatie",
+        "Toezicht op governance",
+        "Exitdiscipline"
+      ],
+      "title": "Onze rol"
+    },
+    "structure": {
+      "intro": "Deelname mogelijk via verschillende vormen; geen belofte van rendement.",
+      "items": [
+        "Deal-voor-deal SPV",
+        "Co-investering",
+        "Gestructureerde deelname",
+        "Adviesgestuurde kapitaaluitzetting"
+      ],
+      "title": "Voorgestelde structuur"
+    },
+    "thesis": {
+      "focusItems": [
+        "Overnames van MKB-meerderheden",
+        "Speciale situaties",
+        "Operationele ommekeer",
+        "Grensoverschrijdende uitbreiding"
+      ],
+      "focusTitle": "Focus",
+      "targetEbitda": "EBITDA bereik",
+      "targetGeography": "Geografie",
+      "targetRevenue": "Omzetbereik",
+      "targetSector": "Sectorfocus",
+      "targetTitle": "Doelprofiel",
+      "title": "Investeringshypothese"
+    }
+  },
+  "footer": {
+    "availableUponRequest": "Beschikbaar op aanvraag",
+    "blog": "Blog",
+    "contact": "Contact",
+    "contactTitle": "Contact",
+    "expertise": "Expertise",
+    "familyOffice": "Familiekantoor",
+    "groupHolding": "Groep Holding",
+    "home": "Home",
+    "institutional": "Institutioneel",
+    "legal": "Juridisch",
+    "markets": "Markten",
+    "media": "Media",
+    "navigation": "Navigatie",
+    "network": "Netwerk",
+    "offers": "Premium Aanbiedingen",
+    "positioning": "Positionering",
+    "privacy": "Privacybeleid",
+    "privateEquity": "Private Equity",
+    "rights": "Alle rechten voorbehouden.",
+    "strategicCapitalPartnerships": "Strategische Kapitaalpartnerschappen"
+  },
+  "nav": {
+    "blog": "Blog",
+    "caseStudies": "Casestudy's",
+    "contact": "Neem contact met ons op",
+    "corporateAcceleration": "Corporate Acceleration",
+    "executiveAdvisory": "Uitvoerend Advies",
+    "expertise": "Expertise",
+    "familyOffice": "Familiekantoor",
+    "groupHolding": "Groep Holding",
+    "home": "Home",
+    "institutional": "Institutioneel",
+    "institutionalAdvisory": "Institutioneel Advies",
+    "markets": "Markten",
+    "media": "Media",
+    "network": "Netwerk",
+    "offers": "Onze aanbiedingen",
+    "positioning": "Positionering",
+    "privateEquity": "Private Equity",
+    "references": "Referenties",
+    "strategicDeals": "Strategische Deals & Eigen vermogen",
+    "team": "Ons team",
+    "testimonials": "Getuigenissen"
+  }
+}

@@ -3,13 +3,12 @@ import { BASE_URL } from '@/config/seo';
 import { locales } from '@/i18n/config';
 import { getMarketStaticParams } from '@/config/markets';
 import { getAllPosts } from '@/lib/blog';
-import { getAllCaseStudies } from '@/lib/caseStudies';
 
 const staticPaths = [
   '',
   '/services',
   '/reseau',
-  '/references',
+  '/expertise',
   '/team',
   '/medias',
   '/contact',
@@ -21,7 +20,7 @@ const staticPaths = [
   '/family-office',
   '/group-holding',
   '/positioning',
-  '/case-studies',
+  '/capital-partnerships',
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -57,18 +56,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.6,
     });
-  }
-
-  const caseStudies = getAllCaseStudies();
-  for (const locale of locales) {
-    for (const study of caseStudies) {
-      entries.push({
-        url: `${BASE_URL}/${locale}/case-studies/${study.slug}`,
-        lastModified: study.date ? new Date(study.date) : lastMod,
-        changeFrequency: 'monthly',
-        priority: 0.6,
-      });
-    }
   }
 
   return entries;

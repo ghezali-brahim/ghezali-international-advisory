@@ -5,18 +5,19 @@ import { usePathname } from 'next/navigation';
 import { AppProvider } from '@/context/AppContext';
 import { AnalyticsProvider, PageViewTracker, ScrollDepthTracker, TimeOnPageTracker } from './Analytics';
 import { PerformanceMonitor, ResourceHints, ServiceWorkerManager, CriticalCSSLoader } from './PerformanceOptimizer';
+import { getPathWithoutLocale } from '@/i18n/config';
 import Header from './Header';
 import ScrollToTop from './ScrollToTop';
 import Footer from './Footer';
 import NewsletterPopup from './NewsletterPopup';
 
 function getPageName(pathname: string): string {
-  const withoutLocale = pathname.replace(/^\/(fr|en)(\/|$)/, '$2') || '/';
+  const withoutLocale = getPathWithoutLocale(pathname) || '/';
   const map: Record<string, string> = {
     '/': 'Home',
     '/services': 'Services',
     '/reseau': 'Réseau',
-    '/references': 'References',
+    '/expertise': 'Expertise',
     '/team': 'Team',
     '/medias': 'Media',
     '/contact': 'Contact',

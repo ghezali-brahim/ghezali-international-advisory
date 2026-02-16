@@ -65,7 +65,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData.organization) }}
         />
-        <ClientRoot>{children}</ClientRoot>
+        {children}
       </body>
     </html>
   );

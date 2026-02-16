@@ -25,7 +25,7 @@ export const defaultSEO: SEOConfig = {
 const pageSEOFr: Record<string, SEOConfig> = {
   home: {
     title: "Ghezali International Advisory - Strategic Advisory for PE, Family Offices & Institutional Investors",
-    description: "Strategic advisory for private equity, family offices and institutional investors. Portfolio transformation, board-level execution, measurable value creation. +500M€ de valorisation créée, 15 pays. Un contrat, plusieurs sociétés transformées.",
+    description: "Strategic advisory for private equity, family offices and institutional investors. Portfolio transformation, board-level execution, measurable value creation. +500M€ de valorisation créée, 25 pays. Un contrat, plusieurs sociétés transformées.",
     keywords: "fonds private equity, family office, holding, partenaire stratégique portefeuille, transformation portefeuille, M&A fonds, executive advisory, ETI, valorisation entreprise, Paris La Défense",
     canonical: `${BASE_URL}/fr`
   },
@@ -36,15 +36,15 @@ const pageSEOFr: Record<string, SEOConfig> = {
     canonical: `${BASE_URL}/fr/services`
   },
   privateCircle: {
-    title: "Réseau & Partenariats | Ghezali International Advisory",
-    description: "Partenariats sélectifs avec fonds PE, family offices et institutions. Réseau d'investisseurs et de dirigeants, valeur advisory partagée.",
-    keywords: "réseau investisseurs, partenariats fonds PE, family office, advisory, confidentialité",
+    title: "Interventions stratégiques internationales | Ghezali International Advisory",
+    description: "Mandats stratégiques board-level et institutionnels sur invitation. Nombre limité de mandats en Europe, États-Unis et Moyen-Orient. Cadre d'engagement défini.",
+    keywords: "interventions stratégiques internationales, mandats board-level, advisory sur invitation, mandats institutionnels, strategic interventions",
     canonical: `${BASE_URL}/fr/reseau`
   },
   reseau: {
-    title: "Réseau & Partenariats | Ghezali International Advisory",
-    description: "Partenariats sélectifs avec fonds PE, family offices et institutions. Réseau d'investisseurs et de dirigeants, valeur advisory partagée, confidentialité absolue.",
-    keywords: "réseau investisseurs, partenariats fonds PE, family office, advisory, confidentialité",
+    title: "Interventions stratégiques internationales | Ghezali International Advisory",
+    description: "Mandats stratégiques board-level et institutionnels sur invitation. Nombre limité de mandats en Europe, États-Unis et Moyen-Orient. Cadre d'engagement défini.",
+    keywords: "interventions stratégiques internationales, mandats board-level, advisory sur invitation, mandats institutionnels, strategic interventions",
     canonical: `${BASE_URL}/fr/reseau`
   },
   references: {
@@ -52,6 +52,12 @@ const pageSEOFr: Record<string, SEOConfig> = {
     description: "Découvrez nos succès clients : +500M€ de valorisation créée, 200+ ETI accompagnées. Études de cas détaillées et témoignages de dirigeants. ROI mesurable et prouvé.",
     keywords: "études de cas, références clients, success stories, témoignages dirigeants, valorisation entreprise, transformation ETI",
     canonical: `${BASE_URL}/fr/references`
+  },
+  expertise: {
+    title: "Expertise sectorielle | Ghezali International Advisory",
+    description: "Expertise sectorielle : industrie, distribution, tech, services. Accompagnement sur mesure et résultats optimaux pour fonds PE et family offices.",
+    keywords: "expertise sectorielle, industrie, distribution, tech, services, conseil stratégique, transformation",
+    canonical: `${BASE_URL}/fr/expertise`
   },
   team: {
     title: "Notre Équipe d'Experts - 20 Ans d'Excellence | Ghezali International Advisory",
@@ -124,6 +130,12 @@ const pageSEOFr: Record<string, SEOConfig> = {
     description: "Études de cas détaillées : transformation d'ETI, valorisation, M&A. Références premium et retours d'expérience clients.",
     keywords: "études de cas, case studies, références clients, transformation ETI, valorisation, M&A",
     canonical: `${BASE_URL}/fr/case-studies`
+  },
+  capitalPartnerships: {
+    title: "Partenariats capital stratégique - Cross-Border Capital | Ghezali International Advisory",
+    description: "Partenariats sélectifs avec investisseurs US ou internationaux. Déploiement de capital sur marchés sous-évalués, gouvernance et création de valeur opérationnelle.",
+    keywords: "partenariats capital, cross-border, création de valeur opérationnelle, investisseurs qualifiés, advisory capital",
+    canonical: `${BASE_URL}/fr/capital-partnerships`
   }
 };
 
@@ -141,15 +153,15 @@ const pageSEOEn: Record<string, SEOConfig> = {
     canonical: `${BASE_URL}/en/services`
   },
   privateCircle: {
-    title: "Network & Partnerships | Ghezali International Advisory",
-    description: "Selective partnerships with PE funds, family offices and institutions. Network of investors and executives.",
-    keywords: "investor network, PE partnerships, family office, advisory, confidentiality",
+    title: "International Strategic Interventions | Ghezali International Advisory",
+    description: "Board-level and institutional mandates by invitation only. Limited number of mandates across Europe, United States and the Middle East. Defined engagement framework.",
+    keywords: "international strategic interventions, board-level mandates, advisory by invitation, institutional mandates, strategic interventions",
     canonical: `${BASE_URL}/en/reseau`
   },
   reseau: {
-    title: "Network & Partnerships | Ghezali International Advisory",
-    description: "Selective partnerships with PE funds, family offices and institutions. Network of investors and executives, absolute confidentiality.",
-    keywords: "investor network, PE partnerships, family office, advisory, confidentiality",
+    title: "International Strategic Interventions | Ghezali International Advisory",
+    description: "Board-level and institutional mandates by invitation only. Limited number of mandates across Europe, United States and the Middle East. Defined engagement framework.",
+    keywords: "international strategic interventions, board-level mandates, advisory by invitation, institutional mandates, strategic interventions",
     canonical: `${BASE_URL}/en/reseau`
   },
   references: {
@@ -157,6 +169,12 @@ const pageSEOEn: Record<string, SEOConfig> = {
     description: "Client success stories: +500M€ value created, 200+ companies supported. Case studies and executive testimonials.",
     keywords: "case studies, client references, success stories, testimonials, value creation",
     canonical: `${BASE_URL}/en/references`
+  },
+  expertise: {
+    title: "Sector Expertise | Ghezali International Advisory",
+    description: "Sector expertise: industry, distribution, tech, services. Tailored support and optimal results for PE funds and family offices.",
+    keywords: "sector expertise, industry, distribution, tech, services, strategic advisory, transformation",
+    canonical: `${BASE_URL}/en/expertise`
   },
   team: {
     title: "Our Expert Team - 20 Years of Excellence | Ghezali International Advisory",
@@ -229,6 +247,12 @@ const pageSEOEn: Record<string, SEOConfig> = {
     description: "Detailed case studies: mid-market transformation, value creation, M&A. Premium references and client experience.",
     keywords: "case studies, client references, mid-market transformation, value creation, M&A",
     canonical: `${BASE_URL}/en/case-studies`
+  },
+  capitalPartnerships: {
+    title: "Strategic Capital Partnerships - Cross-Border Capital | Ghezali International Advisory",
+    description: "Selective partnerships with U.S. or international investors. Cross-border capital deployment, operational value creation, disciplined governance.",
+    keywords: "capital partnerships, cross-border capital, operational value creation, qualified investors, advisory-led deployment",
+    canonical: `${BASE_URL}/en/capital-partnerships`
   }
 };
 
@@ -243,7 +267,7 @@ const pageSEOByLocale: Record<Locale, Record<string, SEOConfig>> = {
 
 export function getSEOConfig(page: string, locale: string = defaultLocale): SEOConfig {
   const loc: Locale = isValidLocale(locale) ? locale : defaultLocale;
-  const byLocale = pageSEOByLocale[loc] ?? pageSEOFr;
+  const byLocale = pageSEOByLocale[loc] ?? (loc === 'fr' ? pageSEOFr : pageSEOEn);
   return byLocale[page] ?? defaultSEO;
 }
 

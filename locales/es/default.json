@@ -1,0 +1,132 @@
+{
+  "capitalPartnerships": {
+    "cta": {
+      "availableUponRequest": "Disponible a solicitud",
+      "contact": "Contacto"
+    },
+    "disclaimer": {
+      "text": "Esto no es una oferta pública. La participación está sujeta al cumplimiento regulatorio y a la calificación privada."
+    },
+    "hero": {
+      "badge1": "Asociaciones de capital privado",
+      "badge2": "Solo por introducción",
+      "badge3": "No es una oferta pública",
+      "headline": "Despliegue de Capital Transfronterizo con Creación de Valor Operacional",
+      "subtitle": "Nos asociamos con inversores selectos de EE. UU. o internacionales para desplegar capital en mercados estructuralmente subvaluados con gobernanza disciplinada y ejecución activa."
+    },
+    "problem": {
+      "intro": "La liquidez en EE. UU. es abundante. Muchos mercados globales están estructuralmente mal valorados. Las ineficiencias de capital crean oportunidades; las brechas operativas reducen el rendimiento.",
+      "items": [
+        "Ineficiencia de capital",
+        "Descuento estructural",
+        "Propiedad fragmentada",
+        "Salidas impulsadas por sucesión",
+        "Mercados de crecimiento desatendidos"
+      ],
+      "title": "El contexto"
+    },
+    "process": {
+      "steps": [
+        "Calificación",
+        "Discusión confidencial",
+        "Alineación de tesis",
+        "Acceso a la cartera",
+        "Participación estructurada"
+      ],
+      "title": "Proceso"
+    },
+    "risk": {
+      "intro": "Gobernanza, alineación de intereses y control operativo en el núcleo de nuestro enfoque.",
+      "items": [
+        "Capa de gobernanza",
+        "Alineación de intereses",
+        "Informes estructurados",
+        "Apalancamiento conservador",
+        "Estructuración legal local",
+        "Control operativo"
+      ],
+      "title": "Marco de mitigación de riesgos"
+    },
+    "solution": {
+      "intro": "Conectamos capital y ejecución operativa a través de jurisdicciones.",
+      "items": [
+        "Origen local",
+        "Debida diligencia en el terreno",
+        "Transformación operativa",
+        "Supervisión de gobernanza",
+        "Disciplina de salida"
+      ],
+      "title": "Nuestro papel"
+    },
+    "structure": {
+      "intro": "Participación posible a través de diversas formas; sin promesa de retorno.",
+      "items": [
+        "SPV por acuerdo",
+        "Co-inversión",
+        "Participación estructurada",
+        "Despliegue de capital liderado por asesoría"
+      ],
+      "title": "Estructura propuesta"
+    },
+    "thesis": {
+      "focusItems": [
+        "Adquisiciones de mayoría de pymes",
+        "Situaciones especiales",
+        "Reestructuración operativa",
+        "Expansión transfronteriza"
+      ],
+      "focusTitle": "Enfoque",
+      "targetEbitda": "Rango de EBITDA",
+      "targetGeography": "Geografía",
+      "targetRevenue": "Rango de ingresos",
+      "targetSector": "Enfoque sectorial",
+      "targetTitle": "Perfil objetivo",
+      "title": "Tesis de inversión"
+    }
+  },
+  "footer": {
+    "availableUponRequest": "Disponible a solicitud",
+    "blog": "Blog",
+    "contact": "Contacto",
+    "contactTitle": "Contacto",
+    "expertise": "Experiencia",
+    "familyOffice": "Oficina Familiar",
+    "groupHolding": "Grupo Holding",
+    "home": "Inicio",
+    "institutional": "Institucional",
+    "legal": "Legal",
+    "markets": "Mercados",
+    "media": "Medios",
+    "navigation": "Navegación",
+    "network": "Red",
+    "offers": "Ofertas premium",
+    "positioning": "Posicionamiento",
+    "privacy": "Política de privacidad",
+    "privateEquity": "Capital Privado",
+    "rights": "Todos los derechos reservados.",
+    "strategicCapitalPartnerships": "Asociaciones de capital estratégico"
+  },
+  "nav": {
+    "blog": "Blog",
+    "caseStudies": "Estudios de caso",
+    "contact": "Contáctenos",
+    "corporateAcceleration": "Aceleración Corporativa",
+    "executiveAdvisory": "Asesoría ejecutiva",
+    "expertise": "Experiencia",
+    "familyOffice": "Oficina Familiar",
+    "groupHolding": "Grupo Holding",
+    "home": "Inicio",
+    "institutional": "Institucional",
+    "institutionalAdvisory": "Asesoría Institucional",
+    "markets": "Mercados",
+    "media": "Medios",
+    "network": "Red",
+    "offers": "Nuestras ofertas",
+    "positioning": "Posicionamiento",
+    "privateEquity": "Capital Privado",
+    "references": "Referencias",
+    "strategicDeals": "Acuerdos estratégicos y capital",
+    "team": "Nuestro Equipo",
+    "testimonials": "Testimonios"
+  }
+}

@@ -1,15 +1,37 @@
 'use client';
 
 import Link from 'next/link';
+import { useMemo } from 'react';
 import { Mail, Phone, MapPin, Linkedin, Twitter } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { useLocale } from '@/context/LocaleContext';
-import { getDictionary } from '@/i18n/getDictionary';
-import { getMarketsForLocale } from '@/config/markets';
+import { markets } from '@/config/markets';
+
+const REGION_ORDER: string[] = ['europe', 'americas', 'mena', 'apac', 'africa'];
+const REGION_LABELS: Record<string, { fr: string; en: string }> = {
+  americas: { fr: 'Amériques', en: 'Americas' },
+  europe: { fr: 'Europe', en: 'Europe' },
+  africa: { fr: 'Afrique', en: 'Africa' },
+  mena: { fr: 'Moyen-Orient & Golfe', en: 'Middle East & Gulf' },
+  apac: { fr: 'Asie-Pacifique', en: 'Asia-Pacific' },
+};
 
 const Footer = () => {
   const locale = useLocale();
   const prefix = `/${locale}`;
-  const t = getDictionary(locale).footer;
+  const { t } = useTranslation('default');
+  const marketsByRegion = useMemo(() => {
+    const map: Record<string, typeof markets> = {};
+    for (const m of markets) {
+      if (!map[m.region]) map[m.region] = [];
+      map[m.region].push(m);
+    }
+    return REGION_ORDER.filter((r) => map[r]?.length).map((region) => ({
+      region,
+      label: locale === 'fr' ? REGION_LABELS[region]?.fr ?? region : REGION_LABELS[region]?.en ?? region,
+      markets: map[region],
+    }));
+  }, [locale]);
   return (
     <footer className="bg-black text-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -38,93 +60,106 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">{t.navigation}</h3>
+            <h3 className="text-lg font-semibold mb-6">{t('footer.navigation')}</h3>
             <ul className="space-y-3">
               <li>
                 <Link href={`${prefix}/#accueil`} className="text-gray-400 hover:text-yellow-400 transition-colors">
-                  {t.home}
+                  {t('footer.home')}
                 </Link>
               </li>
               <li>
                 <Link href={`${prefix}/services`} className="text-gray-400 hover:text-yellow-400 transition-colors">
-                  {t.offers}
+                  {t('footer.offers')}
                 </Link>
               </li>
               <li>
                 <Link href={`${prefix}/private-equity`} className="text-gray-400 hover:text-yellow-400 transition-colors">
-                  {t.privateEquity}
+                  {t('footer.privateEquity')}
                 </Link>
               </li>
               <li>
                 <Link href={`${prefix}/institutional`} className="text-gray-400 hover:text-yellow-400 transition-colors">
-                  {t.institutional}
+                  {t('footer.institutional')}
                 </Link>
               </li>
               <li>
                 <Link href={`${prefix}/family-office`} className="text-gray-400 hover:text-yellow-400 transition-colors">
-                  {t.familyOffice}
+                  {t('footer.familyOffice')}
                 </Link>
               </li>
               <li>
                 <Link href={`${prefix}/group-holding`} className="text-gray-400 hover:text-yellow-400 transition-colors">
-                  {t.groupHolding}
+                  {t('footer.groupHolding')}
                 </Link>
               </li>
               <li>
                 <Link href={`${prefix}/reseau`} className="text-gray-400 hover:text-yellow-400 transition-colors">
-                  {t.network}
+                  {t('footer.network')}
                 </Link>
               </li>
               <li>
-                <Link href={`${prefix}/references`} className="text-gray-400 hover:text-yellow-400 transition-colors">
-                  {t.references}
-                </Link>
-              </li>
-              <li>
-                <Link href={`${prefix}/case-studies`} className="text-gray-400 hover:text-yellow-400 transition-colors">
-                  {t.caseStudies}
+                <Link href={`${prefix}/expertise`} className="text-gray-400 hover:text-yellow-400 transition-colors">
+                  {t('footer.expertise')}
                 </Link>
               </li>
               <li>
                 <Link href={`${prefix}/positioning`} className="text-gray-400 hover:text-yellow-400 transition-colors">
-                  {t.positioning}
+                  {t('footer.positioning')}
                 </Link>
               </li>
               <li>
                 <Link href={`${prefix}/#medias`} className="text-gray-400 hover:text-yellow-400 transition-colors">
-                  {t.media}
+                  {t('footer.media')}
                 </Link>
               </li>
               <li>
                 <Link href={`${prefix}/#contact`} className="text-gray-400 hover:text-yellow-400 transition-colors">
-                  {t.contact}
+                  {t('footer.contact')}
                 </Link>
               </li>
               <li>
                 <Link href={`${prefix}/blog`} className="text-gray-400 hover:text-yellow-400 transition-colors">
-                  {t.blog}
+                  {t('footer.blog')}
                 </Link>
+              </li>
+              <li className="pt-2 border-t border-gray-800 mt-2">
+                <Link href={`${prefix}/capital-partnerships`} className="text-gray-400 hover:text-yellow-400 transition-colors">
+                  {t('footer.strategicCapitalPartnerships')}
+                </Link>
+                <span className="block text-gray-500 text-xs mt-0.5">{t('footer.availableUponRequest')}</span>
               </li>
             </ul>
           </div>
 
-          {/* Marchés */}
+          {/* Marchés (24 marchés par région) */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">{t.markets}</h3>
-            <ul className="space-y-3">
-              {getMarketsForLocale(locale).map((market) => (
-                <li key={market.id}>
-                  <Link href={`${prefix}/markets/${market.slug}`} className="text-gray-400 hover:text-yellow-400 transition-colors">
-                    {locale === 'fr' ? market.name : market.nameEn}
-                  </Link>
-                </li>
+            <h3 className="text-lg font-semibold mb-6">{t('footer.markets')}</h3>
+            <div className="space-y-5">
+              {marketsByRegion.map(({ region, label, markets: regionMarkets }) => (
+                <div key={region}>
+                  <h4 className="text-xs font-semibold uppercase tracking-wider text-yellow-400/90 mb-2">
+                    {label}
+                  </h4>
+                  <ul className="space-y-2">
+                    {regionMarkets.map((market) => {
+                      const marketLocale = market.locales.includes(locale) ? locale : market.defaultLocale;
+                      return (
+                        <li key={market.id}>
+                          <Link href={`/${marketLocale}/markets/${market.slug}`} className="text-gray-400 hover:text-yellow-400 transition-colors text-sm">
+                            {locale === 'fr' ? market.name : market.nameEn}
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">{t.contactTitle}</h3>
+            <h3 className="text-lg font-semibold mb-6">{t('footer.contactTitle')}</h3>
             <div className="space-y-4">
               <div className="flex items-start">
                 <MapPin className="h-5 w-5 text-yellow-400 mr-3 mt-0.5 flex-shrink-0" />
@@ -150,17 +185,17 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
-              © 2024 Ghezali International Advisory. {t.rights}
+              © 2024 Ghezali International Advisory. {t('footer.rights')}
             </div>
             <div className="flex space-x-6 text-sm">
               <Link href={`${prefix}/legal`} className="text-gray-400 hover:text-yellow-400 transition-colors">
-                {t.legal}
+                {t('footer.legal')}
               </Link>
               <Link href={`${prefix}/privacy`} className="text-gray-400 hover:text-yellow-400 transition-colors">
-                {t.privacy}
+                {t('footer.privacy')}
               </Link>
               <Link href={`${prefix}/blog`} className="text-gray-400 hover:text-yellow-400 transition-colors">
-                {t.blog}
+                {t('footer.blog')}
               </Link>
             </div>
           </div>

@@ -1,0 +1,132 @@
+{
+  "capitalPartnerships": {
+    "cta": {
+      "availableUponRequest": "Auf Anfrage erhältlich",
+      "contact": "Kontakt"
+    },
+    "disclaimer": {
+      "text": "Dies ist kein öffentliches Angebot. Die Teilnahme unterliegt der Einhaltung von Vorschriften und der privaten Qualifikation."
+    },
+    "hero": {
+      "badge1": "Private Kapitalpartnerschaften",
+      "badge2": "Nur durch Einführung",
+      "badge3": "Keine öffentliche Angebot",
+      "headline": "Grenzüberschreitende Kapitalbereitstellung mit operativer Wertschöpfung",
+      "subtitle": "Wir arbeiten mit ausgewählten US-amerikanischen oder internationalen Investoren zusammen, um Kapital in strukturell unterbewertete Märkte mit disziplinierter Governance und aktiver Umsetzung zu investieren."
+    },
+    "problem": {
+      "intro": "Die Liquidität in den USA ist reichlich. Viele globale Märkte sind strukturell falsch bewertet. Kapitalineffizienzen schaffen Chancen; operationale Lücken verringern die Leistung.",
+      "items": [
+        "Kapitalineffizienz",
+        "Struktureller Rabatt",
+        "Zersplittertes Eigentum",
+        "Nachfolgebedingte Exits",
+        "Unterversorgte Wachstums Märkte"
+      ],
+      "title": "Der Kontext"
+    },
+    "process": {
+      "steps": [
+        "Qualifikation",
+        "Vertrauliche Diskussion",
+        "Thesenabgleich",
+        "Zugang zur Pipeline",
+        "Strukturierte Beteiligung"
+      ],
+      "title": "Prozess"
+    },
+    "risk": {
+      "intro": "Governance, Interessenausgleich und operative Kontrolle stehen im Mittelpunkt unseres Ansatzes.",
+      "items": [
+        "Governance-Ebene",
+        "Interessenangleichung",
+        "Strukturierte Berichterstattung",
+        "Konservative Verschuldung",
+        "Lokale rechtliche Strukturierung",
+        "Betriebliche Kontrolle"
+      ],
+      "title": "Risikominderungsrahmen"
+    },
+    "solution": {
+      "intro": "Wir überbrücken Kapital und operationale Ausführung über Jurisdiktionen hinweg.",
+      "items": [
+        "Lokale Herkunft",
+        "Vor-Ort-Due-Diligence",
+        "Betriebliche Transformation",
+        "Governance-Überwachung",
+        "Exit-Disziplin"
+      ],
+      "title": "Unsere Rolle"
+    },
+    "structure": {
+      "intro": "Beteiligung möglich in verschiedenen Formen; keine Rückkehrversprechen.",
+      "items": [
+        "Deal-by-Deal SPV",
+        "Co-Investment",
+        "Strukturierte Beteiligung",
+        "Beratungsgeführte Kapitalbereitstellung"
+      ],
+      "title": "Vorgeschlagene Struktur"
+    },
+    "thesis": {
+      "focusItems": [
+        "Mehrheitsakquisitionen von KMU",
+        "Sonderfälle",
+        "Betriebliche Wende",
+        "Grenzüberschreitende Expansion"
+      ],
+      "focusTitle": "Fokus",
+      "targetEbitda": "EBITDA-Bereich",
+      "targetGeography": "Geografie",
+      "targetRevenue": "Umsatzbereich",
+      "targetSector": "Sektor Fokus",
+      "targetTitle": "Zielprofil",
+      "title": "Investitionsthese"
+    }
+  },
+  "footer": {
+    "availableUponRequest": "Auf Anfrage verfügbar",
+    "blog": "Blog",
+    "contact": "Kontakt",
+    "contactTitle": "Kontakt",
+    "expertise": "Expertise",
+    "familyOffice": "Familienbüro",
+    "groupHolding": "Gruppenholding",
+    "home": "Startseite",
+    "institutional": "Institutionell",
+    "legal": "Rechtliches",
+    "markets": "Märkte",
+    "media": "Medien",
+    "navigation": "Navigation",
+    "network": "Netzwerk",
+    "offers": "Premium-Angebote",
+    "positioning": "Positionierung",
+    "privacy": "Datenschutzrichtlinie",
+    "privateEquity": "Private Equity",
+    "rights": "Alle Rechte vorbehalten.",
+    "strategicCapitalPartnerships": "Strategische Kapitalpartnerschaften"
+  },
+  "nav": {
+    "blog": "Blog",
+    "caseStudies": "Fallstudien",
+    "contact": "Kontaktieren Sie uns",
+    "corporateAcceleration": "Unternehmensbeschleunigung",
+    "executiveAdvisory": "Executive Advisory",
+    "expertise": "Expertise",
+    "familyOffice": "Familienbüro",
+    "groupHolding": "Gruppenholding",
+    "home": "Startseite",
+    "institutional": "Institutionell",
+    "institutionalAdvisory": "Institutionelle Beratung",
+    "markets": "Märkte",
+    "media": "Medien",
+    "network": "Netzwerk",
+    "offers": "Unsere Angebote",
+    "positioning": "Positionierung",
+    "privateEquity": "Private Equity",
+    "references": "Referenzen",
+    "strategicDeals": "Strategische Deals & Eigenkapital",
+    "team": "Unser Team",
+    "testimonials": "Referenzen"
+  }
+}

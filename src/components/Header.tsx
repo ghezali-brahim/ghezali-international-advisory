@@ -1,26 +1,42 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X, ChevronDown } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { useLocale } from '@/context/LocaleContext';
-import { getDictionary } from '@/i18n/getDictionary';
-import { locales } from '@/i18n/config';
+import { locales, getPathWithoutLocale, localeFlags } from '@/i18n/config';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [langDropdownOpen, setLangDropdownOpen] = useState(false);
   const pathname = usePathname();
   const locale = useLocale();
-  const t = getDictionary(locale).nav;
+  const { t } = useTranslation('default');
   const prefix = `/${locale}`;
+  const pathWithoutLocale = getPathWithoutLocale(pathname ?? '/');
+  const langDropdownRef = useRef<HTMLDivElement>(null);
 
   // Fermer menu mobile et dropdown à chaque changement de page
   useEffect(() => {
     setIsMenuOpen(false);
     setActiveDropdown(null);
+    setLangDropdownOpen(false);
   }, [pathname]);
+
+  // Fermer le dropdown langue au clic extérieur
+  useEffect(() => {
+    if (!langDropdownOpen) return;
+    const handleClickOutside = (e: MouseEvent) => {
+      if (langDropdownRef.current && !langDropdownRef.current.contains(e.target as Node)) {
+        setLangDropdownOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [langDropdownOpen]);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -46,99 +62,88 @@ const Header = () => {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-8">
               <Link href={prefix} className={`px-3 py-2 text-sm font-medium transition-colors ${pathname === prefix || pathname === `${prefix}/` ? 'text-yellow-400' : 'text-white hover:text-yellow-400'}`}>
-                {t.home}
+                {t('nav.home')}
               </Link>
               <div className="relative">
                 <button
                   onClick={() => handleDropdown('services')}
                   className={`px-3 py-2 text-sm font-medium flex items-center transition-colors ${pathname === `${prefix}/services` ? 'text-yellow-400' : 'text-white hover:text-yellow-400'}`}
                 >
-                  {t.offers}
+                  {t('nav.offers')}
                   <ChevronDown className="ml-1 h-4 w-4" />
                 </button>
                 {activeDropdown === 'services' && (
                   <div className="absolute top-full left-0 mt-2 w-64 bg-black/95 backdrop-blur-sm border border-gray-800 rounded-lg shadow-xl">
                     <Link href={`${prefix}/services#strategic-deals`} className="block px-4 py-3 text-sm text-white hover:bg-gray-800 hover:text-yellow-400">
-                      {t.strategicDeals}
+                      {t('nav.strategicDeals')}
                     </Link>
                     <Link href={`${prefix}/services#executive-advisory`} className="block px-4 py-3 text-sm text-white hover:bg-gray-800 hover:text-yellow-400">
-                      {t.executiveAdvisory}
+                      {t('nav.executiveAdvisory')}
                     </Link>
                     <Link href={`${prefix}/services#corporate-acceleration`} className="block px-4 py-3 text-sm text-white hover:bg-gray-800 hover:text-yellow-400">
-                      {t.corporateAcceleration}
+                      {t('nav.corporateAcceleration')}
                     </Link>
                     <Link href={`${prefix}/services#institutional-advisory`} className="block px-4 py-3 text-sm text-white hover:bg-gray-800 hover:text-yellow-400">
-                      {t.institutionalAdvisory}
+                      {t('nav.institutionalAdvisory')}
                     </Link>
                     <div className="border-t border-gray-700 my-2" />
                     <Link href={`${prefix}/private-equity`} className="block px-4 py-3 text-sm text-white hover:bg-gray-800 hover:text-yellow-400">
-                      {t.privateEquity}
+                      {t('nav.privateEquity')}
                     </Link>
                     <Link href={`${prefix}/family-office`} className="block px-4 py-3 text-sm text-white hover:bg-gray-800 hover:text-yellow-400">
-                      {t.familyOffice}
+                      {t('nav.familyOffice')}
                     </Link>
                     <Link href={`${prefix}/group-holding`} className="block px-4 py-3 text-sm text-white hover:bg-gray-800 hover:text-yellow-400">
-                      {t.groupHolding}
+                      {t('nav.groupHolding')}
                     </Link>
                     <Link href={`${prefix}/institutional`} className="block px-4 py-3 text-sm text-white hover:bg-gray-800 hover:text-yellow-400">
-                      {t.institutional}
+                      {t('nav.institutional')}
                     </Link>
                   </div>
                 )}
               </div>
-              <div className="relative">
-                <button
-                  onClick={() => handleDropdown('expertise')}
-                  className="text-white hover:text-yellow-400 px-3 py-2 text-sm font-medium flex items-center transition-colors"
-                >
-                  {t.expertise}
-                  <ChevronDown className="ml-1 h-4 w-4" />
-                </button>
-                {activeDropdown === 'expertise' && (
-                  <div className="absolute top-full left-0 mt-2 w-64 bg-black/95 backdrop-blur-sm border border-gray-800 rounded-lg shadow-xl">
-                    <Link href={`${prefix}/team`} className="block px-4 py-3 text-sm text-white hover:bg-gray-800 hover:text-yellow-400">
-                      {t.team}
-                    </Link>
-                    <Link href={`${prefix}/case-studies`} className="block px-4 py-3 text-sm text-white hover:bg-gray-800 hover:text-yellow-400">
-                      {t.caseStudies}
-                    </Link>
-                    <Link href={`${prefix}/positioning`} className="block px-4 py-3 text-sm text-white hover:bg-gray-800 hover:text-yellow-400">
-                      {t.positioning}
-                    </Link>
-                    <Link href={`${prefix}/references`} className="block px-4 py-3 text-sm text-white hover:bg-gray-800 hover:text-yellow-400">
-                      {t.references}
-                    </Link>
-                    <Link href={`${prefix}/#testimonials`} className="block px-4 py-3 text-sm text-white hover:bg-gray-800 hover:text-yellow-400">
-                      {t.testimonials}
-                    </Link>
-                  </div>
-                )}
-              </div>
-              <Link href={`${prefix}/reseau`} className={`px-3 py-2 text-sm font-medium transition-colors ${pathname === `${prefix}/reseau` ? 'text-yellow-400' : 'text-white hover:text-yellow-400'}`}>
-                {t.network}
+              <Link href={`${prefix}/expertise`} className={`px-3 py-2 text-sm font-medium transition-colors ${pathname === `${prefix}/expertise` ? 'text-yellow-400' : 'text-white hover:text-yellow-400'}`}>
+                {t('nav.expertise')}
               </Link>
-              <Link href={`${prefix}/references`} className={`px-3 py-2 text-sm font-medium transition-colors ${pathname === `${prefix}/references` ? 'text-yellow-400' : 'text-white hover:text-yellow-400'}`}>
-                {t.references}
+              <Link href={`${prefix}/reseau`} className={`px-3 py-2 text-sm font-medium transition-colors ${pathname === `${prefix}/reseau` ? 'text-yellow-400' : 'text-white hover:text-yellow-400'}`}>
+                {t('nav.network')}
               </Link>
               <Link href={`${prefix}/blog`} className={`px-3 py-2 text-sm font-medium transition-colors ${pathname === `${prefix}/blog` ? 'text-yellow-400' : 'text-white hover:text-yellow-400'}`}>
-                {t.blog}
+                {t('nav.blog')}
               </Link>
               <Link href={`${prefix}/medias`} className={`px-3 py-2 text-sm font-medium transition-colors ${pathname === `${prefix}/medias` ? 'text-yellow-400' : 'text-white hover:text-yellow-400'}`}>
-                {t.media}
+                {t('nav.media')}
               </Link>
-              <div className="flex items-center gap-2">
-                {locales.map((loc) => (
-                  <Link
-                    key={loc}
-                    href={pathname ? `/${loc}${pathname.replace(new RegExp(`^/${locale}`), '') || '/'}` : `/${loc}`}
-                    className={`px-2 py-1 text-sm font-medium transition-colors ${locale === loc ? 'text-yellow-400' : 'text-gray-400 hover:text-white'}`}
-                  >
-                    {loc.toUpperCase()}
-                  </Link>
-                ))}
+              <div className="relative" ref={langDropdownRef}>
+                <button
+                  type="button"
+                  onClick={() => setLangDropdownOpen((v) => !v)}
+                  className="flex items-center gap-1 px-2 py-1.5 text-lg rounded border border-gray-700 hover:border-gray-500 transition-colors"
+                  aria-label="Changer de langue"
+                  aria-expanded={langDropdownOpen}
+                  aria-haspopup="true"
+                >
+                  <span className="leading-none">{localeFlags[locale]}</span>
+                  <ChevronDown className="h-4 w-4 text-gray-400" />
+                </button>
+                {langDropdownOpen && (
+                  <div className="absolute top-full right-0 mt-2 w-48 bg-black/95 backdrop-blur-sm border border-gray-800 rounded-lg shadow-xl py-2 z-50">
+                    {locales.map((loc) => (
+                      <Link
+                        key={loc}
+                        href={`/${loc}${pathWithoutLocale || '/'}`}
+                        className={`flex items-center gap-2 px-4 py-2 text-sm transition-colors ${locale === loc ? 'text-yellow-400 bg-gray-800/50' : 'text-white hover:bg-gray-800 hover:text-yellow-400'}`}
+                        onClick={() => setLangDropdownOpen(false)}
+                      >
+                        <span className="text-lg leading-none">{localeFlags[loc]}</span>
+                        <span>{loc.toUpperCase()}</span>
+                      </Link>
+                    ))}
+                  </div>
+                )}
               </div>
               <Link href={`${prefix}/contact`} className="bg-yellow-400 text-black hover:bg-yellow-500 px-4 py-2 rounded-lg text-sm font-medium transition-colors">
-                {t.contact}
+                {t('nav.contact')}
               </Link>
             </div>
           </div>
@@ -159,40 +164,49 @@ const Header = () => {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-black/95 backdrop-blur-sm">
               <Link href={prefix} className="text-white hover:text-yellow-400 block px-3 py-2 text-base font-medium">
-                {t.home}
+                {t('nav.home')}
               </Link>
               <Link href={`${prefix}/services`} className="text-white hover:text-yellow-400 block px-3 py-2 text-base font-medium">
-                {t.offers}
+                {t('nav.offers')}
               </Link>
               <Link href={`${prefix}/private-equity`} className="text-white hover:text-yellow-400 block px-3 py-2 text-base font-medium">
-                {t.privateEquity}
+                {t('nav.privateEquity')}
               </Link>
               <Link href={`${prefix}/family-office`} className="text-white hover:text-yellow-400 block px-3 py-2 text-base font-medium">
-                {t.familyOffice}
+                {t('nav.familyOffice')}
               </Link>
               <Link href={`${prefix}/group-holding`} className="text-white hover:text-yellow-400 block px-3 py-2 text-base font-medium">
-                {t.groupHolding}
+                {t('nav.groupHolding')}
               </Link>
               <Link href={`${prefix}/reseau`} className="text-white hover:text-yellow-400 block px-3 py-2 text-base font-medium">
-                {t.network}
+                {t('nav.network')}
               </Link>
-              <Link href={`${prefix}/references`} className="text-white hover:text-yellow-400 block px-3 py-2 text-base font-medium">
-                {t.references}
-              </Link>
-              <Link href={`${prefix}/case-studies`} className="text-white hover:text-yellow-400 block px-3 py-2 text-base font-medium">
-                {t.caseStudies}
+              <Link href={`${prefix}/expertise`} className="text-white hover:text-yellow-400 block px-3 py-2 text-base font-medium">
+                {t('nav.expertise')}
               </Link>
               <Link href={`${prefix}/positioning`} className="text-white hover:text-yellow-400 block px-3 py-2 text-base font-medium">
-                {t.positioning}
+                {t('nav.positioning')}
               </Link>
               <Link href={`${prefix}/blog`} className="text-white hover:text-yellow-400 block px-3 py-2 text-base font-medium">
-                {t.blog}
+                {t('nav.blog')}
               </Link>
               <Link href={`${prefix}/medias`} className="text-white hover:text-yellow-400 block px-3 py-2 text-base font-medium">
-                {t.media}
+                {t('nav.media')}
               </Link>
-              <Link href={`${prefix}/contact`} className="bg-yellow-400 text-black hover:bg-yellow-500 block px-3 py-2 rounded-lg text-base font-medium">
-                {t.contact}
+              <div className="flex flex-wrap gap-2 px-3 py-2 border-t border-gray-800 mt-2 pt-3">
+                {locales.map((loc) => (
+                  <Link
+                    key={loc}
+                    href={`/${loc}${pathWithoutLocale || '/'}`}
+                    className={`inline-flex items-center justify-center w-10 h-10 rounded-lg text-xl transition-colors ${locale === loc ? 'bg-yellow-400/20 text-yellow-400' : 'text-gray-400 hover:bg-gray-800 hover:text-white'}`}
+                    title={loc.toUpperCase()}
+                  >
+                    {localeFlags[loc]}
+                  </Link>
+                ))}
+              </div>
+              <Link href={`${prefix}/contact`} className="bg-yellow-400 text-black hover:bg-yellow-500 block px-3 py-2 rounded-lg text-base font-medium mt-2">
+                {t('nav.contact')}
               </Link>
             </div>
           </div>

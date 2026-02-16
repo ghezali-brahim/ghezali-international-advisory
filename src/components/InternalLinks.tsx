@@ -119,16 +119,10 @@ export const ContextualLinks: FC<{ context: string }> = ({ context }) => {
             icon: Users
           },
           {
-            to: '/case-studies',
-            title: 'Études de cas premium',
-            description: 'Références détaillées et retours d\'expérience',
+            to: '/expertise',
+            title: 'Expertise sectorielle',
+            description: 'Industrie, distribution, tech, services — accompagnement sur mesure',
             icon: BookOpen
-          },
-          {
-            to: '/references',
-            title: 'Références et témoignages',
-            description: 'Découvrez comment nous avons transformé 200+ ETI',
-            icon: TrendingUp
           },
           {
             to: '/contact',
@@ -263,14 +257,9 @@ export const QuickNavigation: FC = () => {
       description: 'Nos experts'
     },
     {
-      to: '/references',
-      title: 'Références',
-      description: 'Témoignages'
-    },
-    {
-      to: '/case-studies',
-      title: 'Études de cas',
-      description: 'Case studies premium'
+      to: '/expertise',
+      title: 'Expertise',
+      description: 'Expertise sectorielle'
     },
     {
       to: '/positioning',

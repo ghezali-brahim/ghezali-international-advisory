@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { BASE_URL } from '@/config/seo';
 import { getAlternates } from '@/config/seo';
 import type { Locale } from '@/i18n/config';
+import { locales } from '@/i18n/config';
 import { resolveParams } from '@/lib/params';
 import { getPostBySlug, getAllSlugs } from '@/lib/blog';
 import BlogArticle from '@/views/BlogArticle';
@@ -13,7 +14,6 @@ type Params = { locale: string; slug: string };
 
 export async function generateStaticParams() {
   const slugs = getAllSlugs();
-  const locales: Locale[] = ['fr', 'en'];
   return locales.flatMap((locale) => slugs.map((slug) => ({ locale, slug })));
 }
 

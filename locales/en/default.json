@@ -1,0 +1,132 @@
+{
+  "capitalPartnerships": {
+    "cta": {
+      "availableUponRequest": "Available upon request",
+      "contact": "Contact"
+    },
+    "disclaimer": {
+      "text": "This is not a public offering. Participation is subject to regulatory compliance and private qualification."
+    },
+    "hero": {
+      "badge1": "Private capital partnerships",
+      "badge2": "By introduction only",
+      "badge3": "Not a public offering",
+      "headline": "Cross-Border Capital Deployment with Operational Value Creation",
+      "subtitle": "We partner with select U.S. or international investors to deploy capital into structurally undervalued markets with disciplined governance and active execution."
+    },
+    "problem": {
+      "intro": "U.S. liquidity is abundant. Many global markets are structurally mispriced. Capital inefficiencies create opportunity; operational gaps reduce performance.",
+      "items": [
+        "Capital inefficiency",
+        "Structural discount",
+        "Fragmented ownership",
+        "Succession-driven exits",
+        "Underserved growth markets"
+      ],
+      "title": "The context"
+    },
+    "process": {
+      "steps": [
+        "Qualification",
+        "Confidential discussion",
+        "Thesis alignment",
+        "Access to pipeline",
+        "Structured participation"
+      ],
+      "title": "Process"
+    },
+    "risk": {
+      "intro": "Governance, alignment of interest and operational control at the core of our approach.",
+      "items": [
+        "Governance layer",
+        "Alignment of interest",
+        "Structured reporting",
+        "Conservative leverage",
+        "Local legal structuring",
+        "Operational control"
+      ],
+      "title": "Risk mitigation framework"
+    },
+    "solution": {
+      "intro": "We bridge capital and operational execution across jurisdictions.",
+      "items": [
+        "Local origination",
+        "On-the-ground due diligence",
+        "Operational transformation",
+        "Governance oversight",
+        "Exit discipline"
+      ],
+      "title": "Our role"
+    },
+    "structure": {
+      "intro": "Participation possible through various forms; no return promise.",
+      "items": [
+        "Deal-by-deal SPV",
+        "Co-investment",
+        "Structured participation",
+        "Advisory-led capital deployment"
+      ],
+      "title": "Structure proposed"
+    },
+    "thesis": {
+      "focusItems": [
+        "SME majority acquisitions",
+        "Special situations",
+        "Operational turnaround",
+        "Cross-border expansion"
+      ],
+      "focusTitle": "Focus",
+      "targetEbitda": "EBITDA range",
+      "targetGeography": "Geography",
+      "targetRevenue": "Revenue range",
+      "targetSector": "Sector focus",
+      "targetTitle": "Target profile",
+      "title": "Investment thesis"
+    }
+  },
+  "footer": {
+    "availableUponRequest": "Available upon request",
+    "blog": "Blog",
+    "contact": "Contact",
+    "contactTitle": "Contact",
+    "expertise": "Expertise",
+    "familyOffice": "Family Office",
+    "groupHolding": "Group Holding",
+    "home": "Home",
+    "institutional": "Institutional",
+    "legal": "Legal",
+    "markets": "Markets",
+    "media": "Media",
+    "navigation": "Navigation",
+    "network": "Network",
+    "offers": "Premium Offers",
+    "positioning": "Positioning",
+    "privacy": "Privacy Policy",
+    "privateEquity": "Private Equity",
+    "rights": "All rights reserved.",
+    "strategicCapitalPartnerships": "Strategic Capital Partnerships"
+  },
+  "nav": {
+    "blog": "Blog",
+    "caseStudies": "Case Studies",
+    "contact": "Contact us",
+    "corporateAcceleration": "Corporate Acceleration",
+    "executiveAdvisory": "Executive Advisory",
+    "expertise": "Expertise",
+    "familyOffice": "Family Office",
+    "groupHolding": "Group Holding",
+    "home": "Home",
+    "institutional": "Institutional",
+    "institutionalAdvisory": "Institutional Advisory",
+    "markets": "Markets",
+    "media": "Media",
+    "network": "Network",
+    "offers": "Our offers",
+    "positioning": "Positioning",
+    "privateEquity": "Private Equity",
+    "references": "References",
+    "strategicDeals": "Strategic Deals & Equity",
+    "team": "Our Team",
+    "testimonials": "Testimonials"
+  }
+}

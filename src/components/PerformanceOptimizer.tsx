@@ -146,20 +146,6 @@ export const ResourceHints: FC = () => {
       link.href = domain;
       document.head.appendChild(link);
     });
-
-    // Preload critical resources
-    const criticalResources = [
-      { href: '/src/components/Hero.tsx', as: 'script' },
-      { href: '/src/components/Header.tsx', as: 'script' },
-    ];
-
-    criticalResources.forEach(resource => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = resource.href;
-      link.as = resource.as;
-      document.head.appendChild(link);
-    });
   }, []);
 
   return null;

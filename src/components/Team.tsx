@@ -10,7 +10,7 @@ const Team = () => {
     achievements: [
       "500M€+ de valorisation générée",
       "200+ ETI accompagnées",
-      "15 pays d'intervention",
+      "25 pays d'intervention",
       "95% de taux de réussite"
     ],
     bio: "Entrepreneur et stratège reconnu, fort de 20 années d'expérience en développement commercial, structuration d'entreprises et acquisitions stratégiques. Ancien dirigeant de Business Evasion, il a créé Ghezali International Advisory pour accompagner fonds, family offices et institutions dans la transformation de leurs portefeuilles.",

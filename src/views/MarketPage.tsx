@@ -56,7 +56,7 @@ const MarketPage = ({ market, locale }: MarketPageProps) => {
               <p className="text-gray-600 leading-relaxed mb-6">
                 Découvrez nos études de cas premium et nos références clients. +500M€ de valorisation créée, 200+ ETI accompagnées.
               </p>
-              <LocaleLink href="/case-studies" className="inline-flex items-center bg-yellow-400 text-black hover:bg-yellow-500 px-6 py-3 rounded-lg font-medium transition-all duration-300">
+              <LocaleLink href="/expertise" className="inline-flex items-center bg-yellow-400 text-black hover:bg-yellow-500 px-6 py-3 rounded-lg font-medium transition-all duration-300">
                 Voir les études de cas
                 <ArrowRight className="ml-2 h-4 w-4" />
               </LocaleLink>

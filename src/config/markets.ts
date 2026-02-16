@@ -13,7 +13,19 @@ export type MarketId =
   | 'africa-west'
   | 'africa-east'
   | 'africa-south'
-  | 'africa-north';
+  | 'africa-north'
+  | 'fr'
+  | 'ch'
+  | 'de'
+  | 'lu'
+  | 'nl'
+  | 'es'
+  | 'it'
+  | 'sa'
+  | 'qa'
+  | 'il'
+  | 'sg'
+  | 'hk';
 
 export interface MarketConfig {
   id: MarketId;
@@ -68,8 +80,8 @@ export const markets: MarketConfig[] = [
     name: 'Émirats arabes unis',
     nameEn: 'UAE / Dubai',
     region: 'mena',
-    locales: ['en'],
-    defaultLocale: 'en',
+    locales: ['ar', 'en'],
+    defaultLocale: 'ar',
   },
   {
     id: 'au',
@@ -142,6 +154,114 @@ export const markets: MarketConfig[] = [
     region: 'africa',
     locales: ['fr', 'en'],
     defaultLocale: 'fr',
+  },
+  {
+    id: 'fr',
+    slug: 'france',
+    name: 'France',
+    nameEn: 'France',
+    region: 'europe',
+    locales: ['fr'],
+    defaultLocale: 'fr',
+  },
+  {
+    id: 'ch',
+    slug: 'suisse',
+    name: 'Suisse',
+    nameEn: 'Switzerland',
+    region: 'europe',
+    locales: ['fr', 'en'],
+    defaultLocale: 'fr',
+  },
+  {
+    id: 'de',
+    slug: 'allemagne',
+    name: 'Allemagne',
+    nameEn: 'Germany',
+    region: 'europe',
+    locales: ['de', 'en'],
+    defaultLocale: 'de',
+  },
+  {
+    id: 'lu',
+    slug: 'luxembourg',
+    name: 'Luxembourg',
+    nameEn: 'Luxembourg',
+    region: 'europe',
+    locales: ['fr', 'en'],
+    defaultLocale: 'fr',
+  },
+  {
+    id: 'nl',
+    slug: 'pays-bas',
+    name: 'Pays-Bas',
+    nameEn: 'Netherlands',
+    region: 'europe',
+    locales: ['nl', 'en'],
+    defaultLocale: 'nl',
+  },
+  {
+    id: 'es',
+    slug: 'espagne',
+    name: 'Espagne',
+    nameEn: 'Spain',
+    region: 'europe',
+    locales: ['es', 'en'],
+    defaultLocale: 'es',
+  },
+  {
+    id: 'it',
+    slug: 'italie',
+    name: 'Italie',
+    nameEn: 'Italy',
+    region: 'europe',
+    locales: ['it', 'en'],
+    defaultLocale: 'it',
+  },
+  {
+    id: 'sa',
+    slug: 'arabie-saoudite',
+    name: 'Arabie saoudite',
+    nameEn: 'Saudi Arabia',
+    region: 'mena',
+    locales: ['ar', 'en'],
+    defaultLocale: 'ar',
+  },
+  {
+    id: 'qa',
+    slug: 'qatar',
+    name: 'Qatar',
+    nameEn: 'Qatar',
+    region: 'mena',
+    locales: ['ar', 'en'],
+    defaultLocale: 'ar',
+  },
+  {
+    id: 'il',
+    slug: 'israel',
+    name: 'Israël',
+    nameEn: 'Israel',
+    region: 'mena',
+    locales: ['he', 'en'],
+    defaultLocale: 'he',
+  },
+  {
+    id: 'sg',
+    slug: 'singapour',
+    name: 'Singapour',
+    nameEn: 'Singapore',
+    region: 'apac',
+    locales: ['en'],
+    defaultLocale: 'en',
+  },
+  {
+    id: 'hk',
+    slug: 'hong-kong',
+    name: 'Hong Kong',
+    nameEn: 'Hong Kong',
+    region: 'apac',
+    locales: ['zh', 'en'],
+    defaultLocale: 'zh',
   },
 ];
 
