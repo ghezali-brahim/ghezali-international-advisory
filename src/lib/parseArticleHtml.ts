@@ -17,10 +17,10 @@ export function parseArticleSections(html: string): ArticleSection[] {
     const trimmed = part.trim();
     if (!trimmed) continue;
 
-    const match = trimmed.match(/<h2[^>]*>(.*?)<\/h2>/is);
+    const match = trimmed.match(/<h2[^>]*>([\s\S]*?)<\/h2>/i);
     if (match) {
       const title = match[1].replace(/<[^>]+>/g, '').trim();
-      const content = trimmed.replace(/<h2[^>]*>.*?<\/h2>/is, '').trim();
+      const content = trimmed.replace(/<h2[^>]*>[\s\S]*?<\/h2>/i, '').trim();
       if (title && content) {
         sections.push({ title, content });
       }

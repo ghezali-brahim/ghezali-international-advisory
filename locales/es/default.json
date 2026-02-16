@@ -106,6 +106,34 @@
     "rights": "Todos los derechos reservados.",
     "strategicCapitalPartnerships": "Asociaciones de capital estratégico"
   },
+  "marketArticles": {
+    "enterpriseGrowth": {
+      "description": "Estrategia de crecimiento y escalado corporativo para el mercado medio.",
+      "descriptionEn": "Estrategia de crecimiento y escalado corporativo para el mercado medio.",
+      "title": "Estrategia de crecimiento empresarial",
+      "titleEn": "Estrategia de Crecimiento Empresarial"
+    },
+    "internationalGrowth": {
+      "description": "Estrategia de crecimiento internacional y expansión transfronteriza para inversores.",
+      "descriptionEn": "Estrategia de crecimiento internacional y expansión transfronteriza para inversores.",
+      "title": "Estrategia de crecimiento internacional",
+      "titleEn": "Estrategia de Crecimiento Internacional"
+    },
+    "privateEquity": {
+      "description": "Apoyo de fondos de capital privado y creación de valor en la cartera.",
+      "descriptionEn": "Apoyo de fondos de capital privado y creación de valor en la cartera.",
+      "title": "Consultoría de Capital Privado",
+      "titleEn": "Consultoría de Capital Privado"
+    },
+    "resourcesSubtitle": "Artículos y análisis para inversores en",
+    "resourcesTitle": "Recursos estratégicos",
+    "strategicPositioning": {
+      "description": "Consultoría de estrategia global y posicionamiento internacional.",
+      "descriptionEn": "Consultoría de estrategia global y posicionamiento internacional.",
+      "title": "Posicionamiento estratégico",
+      "titleEn": "Posicionamiento Estratégico"
+    }
+  },
   "nav": {
     "blog": "Blog",
     "caseStudies": "Estudios de caso",

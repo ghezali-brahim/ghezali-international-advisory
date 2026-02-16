@@ -106,6 +106,34 @@
     "rights": "Tutti i diritti riservati.",
     "strategicCapitalPartnerships": "Partnership di capitale strategico"
   },
+  "marketArticles": {
+    "enterpriseGrowth": {
+      "description": "Strategia di crescita e scalabilità aziendale per il mercato medio.",
+      "descriptionEn": "Strategia di crescita e scalabilità aziendale per il mercato medio.",
+      "title": "Strategia di crescita aziendale",
+      "titleEn": "Strategia di Crescita per le Imprese"
+    },
+    "internationalGrowth": {
+      "description": "Strategia di crescita internazionale ed espansione transfrontaliera per gli investitori.",
+      "descriptionEn": "Strategia di crescita internazionale ed espansione transfrontaliera per gli investitori.",
+      "title": "Strategia di crescita internazionale",
+      "titleEn": "Strategia di Crescita Internazionale"
+    },
+    "privateEquity": {
+      "description": "Supporto ai fondi PE e creazione di valore per il portafoglio.",
+      "descriptionEn": "Supporto ai fondi PE e creazione di valore per il portafoglio.",
+      "title": "Consulenza in Private Equity",
+      "titleEn": "Consulenza in Private Equity"
+    },
+    "resourcesSubtitle": "Articoli e analisi per gli investitori in",
+    "resourcesTitle": "Risorse strategiche",
+    "strategicPositioning": {
+      "description": "Consulenza strategica globale e posizionamento internazionale.",
+      "descriptionEn": "Consulenza strategica globale e posizionamento internazionale.",
+      "title": "Posizionamento strategico",
+      "titleEn": "Posizionamento Strategico"
+    }
+  },
   "nav": {
     "blog": "Blog",
     "caseStudies": "Casi studio",

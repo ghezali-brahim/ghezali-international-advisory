@@ -274,7 +274,7 @@ export const pageSEO: Record<string, SEOConfig> = {
   ...pageSEOFr,
 };
 
-const pageSEOByLocale: Record<Locale, Record<string, SEOConfig>> = {
+const pageSEOByLocale: Partial<Record<Locale, Record<string, SEOConfig>>> = {
   fr: pageSEOFr,
   en: pageSEOEn
 };

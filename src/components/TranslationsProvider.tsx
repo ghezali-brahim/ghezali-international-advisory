@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { createInstance } from 'i18next';
+import { createInstance, type Resource } from 'i18next';
 import { I18nextProvider, initReactI18next } from 'react-i18next';
 import { defaultLocale, locales } from '@/i18n/config';
 
@@ -27,7 +27,7 @@ export default function TranslationsProvider({
     instance
       .init({
         lng: locale,
-        resources,
+        resources: resources as Resource,
         fallbackLng: defaultLocale,
         supportedLngs: [...locales],
         defaultNS: namespaces[0],

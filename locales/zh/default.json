@@ -106,6 +106,34 @@
     "rights": "版权所有。",
     "strategicCapitalPartnerships": "战略资本合作伙伴关系"
   },
+  "marketArticles": {
+    "enterpriseGrowth": {
+      "description": "中型市场的增长战略和企业扩展。",
+      "descriptionEn": "中型市场的增长战略和企业扩展。",
+      "title": "企业增长战略",
+      "titleEn": "企业增长战略"
+    },
+    "internationalGrowth": {
+      "description": "国际增长战略与投资者的跨境扩展。",
+      "descriptionEn": "国际增长战略与投资者的跨境扩展。",
+      "title": "国际增长战略",
+      "titleEn": "国际增长战略"
+    },
+    "privateEquity": {
+      "description": "PE基金支持与投资组合价值创造。",
+      "descriptionEn": "PE基金支持与投资组合价值创造。",
+      "title": "私募股权咨询",
+      "titleEn": "私募股权咨询"
+    },
+    "resourcesSubtitle": "投资者的文章和分析",
+    "resourcesTitle": "战略资源",
+    "strategicPositioning": {
+      "description": "全球战略咨询与国际定位。",
+      "descriptionEn": "全球战略咨询与国际定位。",
+      "title": "战略定位",
+      "titleEn": "战略定位"
+    }
+  },
   "nav": {
     "blog": "博客",
     "caseStudies": "案例研究",

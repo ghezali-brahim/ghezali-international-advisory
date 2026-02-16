@@ -1,12 +1,4 @@
 {
-  "marketArticles": {
-    "internationalGrowth": {"title": "استراتيجية النمو الدولي", "titleEn": "International Growth Strategy", "description": "استراتيجية النمو الدولي والتوسع عبر الحدود للمستثمرين.", "descriptionEn": "International growth strategy and cross-border expansion for investors."},
-    "privateEquity": {"title": "استشارات رأس المال الخاص", "titleEn": "Private Equity Consulting", "description": "دعم صناديق رأس المال الخاص وخلق القيمة في المحفظة.", "descriptionEn": "PE fund support and portfolio value creation."},
-    "enterpriseGrowth": {"title": "استراتيجية نمو المؤسسات", "titleEn": "Enterprise Growth Strategy", "description": "استراتيجية النمو والتوسع المؤسسي لأسواق وسط.", "descriptionEn": "Growth strategy and corporate scaling for mid-market."},
-    "strategicPositioning": {"title": "التموضع الاستراتيجي", "titleEn": "Strategic Positioning", "description": "استشارات الاستراتيجية العالمية والموقف الدولي.", "descriptionEn": "Global strategy consulting and international positioning."},
-    "resourcesTitle": "الموارد الاستراتيجية",
-    "resourcesSubtitle": "مقالات وتحليلات للمستثمرين في"
-  },
   "capitalPartnerships": {
     "cta": {
       "availableUponRequest": "متاح عند الطلب",
@@ -113,6 +105,34 @@
     "privateEquity": "الأسهم الخاصة",
     "rights": "جميع الحقوق محفوظة.",
     "strategicCapitalPartnerships": "شراكات رأس المال الاستراتيجية"
+  },
+  "marketArticles": {
+    "enterpriseGrowth": {
+      "description": "استراتيجية النمو وتوسيع الشركات للسوق المتوسطة.",
+      "descriptionEn": "استراتيجية النمو وتوسيع الشركات للسوق المتوسطة.",
+      "title": "استراتيجية نمو الشركات",
+      "titleEn": "استراتيجية نمو المؤسسات"
+    },
+    "internationalGrowth": {
+      "description": "استراتيجية النمو الدولية والتوسع عبر الحدود للمستثمرين.",
+      "descriptionEn": "استراتيجية النمو الدولية والتوسع عبر الحدود للمستثمرين.",
+      "title": "استراتيجية النمو الدولية",
+      "titleEn": "استراتيجية النمو الدولية"
+    },
+    "privateEquity": {
+      "description": "دعم صندوق الأسهم الخاصة وخلق قيمة المحفظة.",
+      "descriptionEn": "دعم صندوق الأسهم الخاصة وخلق قيمة المحفظة.",
+      "title": "استشارات الأسهم الخاصة",
+      "titleEn": "استشارات الأسهم الخاصة"
+    },
+    "resourcesSubtitle": "مقالات وتحليلات للمستثمرين في",
+    "resourcesTitle": "الموارد الاستراتيجية",
+    "strategicPositioning": {
+      "description": "استشارات استراتيجية عالمية وتوجيه دولي.",
+      "descriptionEn": "استشارات استراتيجية عالمية وتوجيه دولي.",
+      "title": "التوجيه الاستراتيجي",
+      "titleEn": "التوجيه الاستراتيجي"
+    }
   },
   "nav": {
     "blog": "مدونة",

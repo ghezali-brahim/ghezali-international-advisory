@@ -106,6 +106,34 @@
     "rights": "Alle Rechte vorbehalten.",
     "strategicCapitalPartnerships": "Strategische Kapitalpartnerschaften"
   },
+  "marketArticles": {
+    "enterpriseGrowth": {
+      "description": "Wachstumsstrategie und Unternehmensskalierung für den Mittelstand.",
+      "descriptionEn": "Wachstumsstrategie und Unternehmensskalierung für den Mittelstand.",
+      "title": "Wachstumsstrategie für Unternehmen",
+      "titleEn": "Wachstumsstrategie für Unternehmen"
+    },
+    "internationalGrowth": {
+      "description": "Internationale Wachstumsstrategie und grenzüberschreitende Expansion für Investoren.",
+      "descriptionEn": "Internationale Wachstumsstrategie und grenzüberschreitende Expansion für Investoren.",
+      "title": "Internationale Wachstumsstrategie",
+      "titleEn": "Internationale Wachstumsstrategie"
+    },
+    "privateEquity": {
+      "description": "Unterstützung von PE-Fonds und Wertschöpfung im Portfolio.",
+      "descriptionEn": "Unterstützung von PE-Fonds und Wertschöpfung im Portfolio.",
+      "title": "Private Equity Beratung",
+      "titleEn": "Private Equity Beratung"
+    },
+    "resourcesSubtitle": "Artikel und Analysen für Investoren in",
+    "resourcesTitle": "Strategische Ressourcen",
+    "strategicPositioning": {
+      "description": "Globale Strategieberatung und internationale Positionierung.",
+      "descriptionEn": "Globale Strategieberatung und internationale Positionierung.",
+      "title": "Strategische Positionierung",
+      "titleEn": "Strategische Positionierung"
+    }
+  },
   "nav": {
     "blog": "Blog",
     "caseStudies": "Fallstudien",

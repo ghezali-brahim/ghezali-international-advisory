@@ -1,12 +1,4 @@
 {
-  "marketArticles": {
-    "internationalGrowth": {"title": "Stratégie de croissance internationale", "titleEn": "International Growth Strategy", "description": "Stratégie de croissance internationale et expansion transfrontalière pour investisseurs.", "descriptionEn": "International growth strategy and cross-border expansion for investors."},
-    "privateEquity": {"title": "Conseil Private Equity", "titleEn": "Private Equity Consulting", "description": "Accompagnement des fonds PE et création de valeur dans le portefeuille.", "descriptionEn": "PE fund support and portfolio value creation."},
-    "enterpriseGrowth": {"title": "Stratégie de croissance entreprise", "titleEn": "Enterprise Growth Strategy", "description": "Stratégie de croissance et scaling corporate pour ETI et mid-market.", "descriptionEn": "Growth strategy and corporate scaling for mid-market."},
-    "strategicPositioning": {"title": "Positionnement stratégique", "titleEn": "Strategic Positioning", "description": "Conseil en stratégie globale et positionnement international.", "descriptionEn": "Global strategy consulting and international positioning."},
-    "resourcesTitle": "Ressources stratégiques",
-    "resourcesSubtitle": "Articles et analyses pour investisseurs en"
-  },
   "capitalPartnerships": {
     "cta": {
       "availableUponRequest": "Disponible sur demande",
@@ -113,6 +105,34 @@
     "privateEquity": "Capital-investissement",
     "rights": "Tous droits réservés.",
     "strategicCapitalPartnerships": "Partenariats en capital stratégique"
+  },
+  "marketArticles": {
+    "enterpriseGrowth": {
+      "description": "Stratégie de croissance et mise à l'échelle des entreprises pour le marché intermédiaire.",
+      "descriptionEn": "Stratégie de croissance et mise à l'échelle des entreprises pour le marché intermédiaire.",
+      "title": "Stratégie de croissance entreprise",
+      "titleEn": "Stratégie de croissance d'entreprise"
+    },
+    "internationalGrowth": {
+      "description": "Stratégie de croissance internationale et expansion transfrontalière pour les investisseurs.",
+      "descriptionEn": "Stratégie de croissance internationale et expansion transfrontalière pour les investisseurs.",
+      "title": "Stratégie de croissance internationale",
+      "titleEn": "Stratégie de croissance internationale"
+    },
+    "privateEquity": {
+      "description": "Soutien aux fonds de capital-investissement et création de valeur de portefeuille.",
+      "descriptionEn": "Soutien aux fonds de capital-investissement et création de valeur de portefeuille.",
+      "title": "Conseil en capital-investissement",
+      "titleEn": "Consultation en capital-investissement"
+    },
+    "resourcesSubtitle": "Articles et analyses pour les investisseurs dans",
+    "resourcesTitle": "Ressources stratégiques",
+    "strategicPositioning": {
+      "description": "Consultation en stratégie mondiale et positionnement international.",
+      "descriptionEn": "Consultation en stratégie mondiale et positionnement international.",
+      "title": "Positionnement stratégique",
+      "titleEn": "Stratégie de positionnement"
+    }
   },
   "nav": {
     "blog": "Blog",

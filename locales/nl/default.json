@@ -106,6 +106,34 @@
     "rights": "Alle rechten voorbehouden.",
     "strategicCapitalPartnerships": "Strategische Kapitaalpartnerschappen"
   },
+  "marketArticles": {
+    "enterpriseGrowth": {
+      "description": "Groeistrategie en bedrijfsopschaling voor de middenmarkt.",
+      "descriptionEn": "Groeistrategie en bedrijfsopschaling voor de middenmarkt.",
+      "title": "Bedrijfsgroeistrategie",
+      "titleEn": "Bedrijfsgroeistrategie"
+    },
+    "internationalGrowth": {
+      "description": "Internationale groeistrategie en grensoverschrijdende uitbreiding voor investeerders.",
+      "descriptionEn": "Internationale groeistrategie en grensoverschrijdende uitbreiding voor investeerders.",
+      "title": "Internationale groeistrategie",
+      "titleEn": "Internationale Groeistrategie"
+    },
+    "privateEquity": {
+      "description": "PE-fonds ondersteuning en portefeuillewaardevermeerdering.",
+      "descriptionEn": "PE-fonds ondersteuning en portefeuillewaardevermeerdering.",
+      "title": "Private Equity Advies",
+      "titleEn": "Private Equity Consulting"
+    },
+    "resourcesSubtitle": "Artikelen en analyses voor investeerders in",
+    "resourcesTitle": "Strategische middelen",
+    "strategicPositioning": {
+      "description": "Globale strategieconsulting en internationale positionering.",
+      "descriptionEn": "Globale strategieconsulting en internationale positionering.",
+      "title": "Strategische positionering",
+      "titleEn": "Strategische Positionering"
+    }
+  },
   "nav": {
     "blog": "Blog",
     "caseStudies": "Casestudy's",
