@@ -87,26 +87,26 @@ const FAQ = () => {
   };
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-12 sm:py-16 lg:py-24 bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-serif text-black mb-6">
+        <div className="text-center mb-10 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-black mb-4 sm:mb-6">
             Frequently <span className="text-yellow-600">Asked Questions</span>
           </h2>
-          <div className="w-24 h-1 bg-yellow-600 mx-auto mb-6"></div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <div className="w-24 h-1 bg-yellow-600 mx-auto mb-4 sm:mb-6"></div>
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Find answers to the most common questions about our approach, methods and engagement terms.
           </p>
         </div>
 
         {/* FAQ Categories */}
-        <div className="space-y-8">
+        <div className="space-y-6 sm:space-y-8">
           {faqCategories.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="bg-gray-50 rounded-xl p-8">
-              <div className="flex items-center mb-6">
-                <category.icon className="h-6 w-6 text-yellow-600 mr-3" />
-                <h3 className="text-2xl font-serif text-black">{category.title}</h3>
+            <div key={categoryIndex} className="bg-gray-50 rounded-xl p-5 sm:p-6 lg:p-8">
+              <div className="flex items-center mb-4 sm:mb-6">
+                <category.icon className="h-5 w-5 sm:h-6 sm:w-6 text-yellow-600 mr-3 shrink-0" />
+                <h3 className="text-xl sm:text-2xl font-serif text-black">{category.title}</h3>
               </div>
               
               <div className="space-y-4">
@@ -117,8 +117,9 @@ const FAQ = () => {
                   return (
                     <div key={questionIndex} className="bg-white rounded-lg shadow-sm">
                       <button
+                        type="button"
                         onClick={() => toggleFAQ(categoryIndex, questionIndex)}
-                        className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors rounded-lg"
+                        className="w-full px-4 sm:px-6 py-3 sm:py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors rounded-lg min-h-[44px]"
                       >
                         <span className="font-semibold text-black pr-4">{faq.question}</span>
                         {isOpen ? (
@@ -144,19 +145,19 @@ const FAQ = () => {
         </div>
 
         {/* Contact CTA */}
-        <div className="mt-16 text-center">
-          <div className="bg-black p-8 rounded-xl">
-            <h3 className="text-2xl font-serif text-white mb-4">
+        <div className="mt-10 sm:mt-16 text-center">
+          <div className="bg-black p-6 sm:p-8 rounded-xl">
+            <h3 className="text-xl sm:text-2xl font-serif text-white mb-3 sm:mb-4">
               Have a specific question?
             </h3>
-            <p className="text-gray-300 mb-6">
+            <p className="text-gray-300 mb-4 sm:mb-6 text-sm sm:text-base">
               Our team is available to answer your questions in a confidential discussion.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-              <button className="bg-yellow-400 text-black hover:bg-yellow-500 px-6 py-3 rounded-lg font-semibold transition-all duration-300">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <button type="button" className="w-full sm:w-auto bg-yellow-400 text-black hover:bg-yellow-500 px-6 py-3 rounded-lg font-semibold transition-all duration-300 min-h-[44px]">
                 Ask a question
               </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-black px-6 py-3 rounded-lg font-semibold transition-all duration-300">
+              <button type="button" className="w-full sm:w-auto border-2 border-white text-white hover:bg-white hover:text-black px-6 py-3 rounded-lg font-semibold transition-all duration-300 min-h-[44px]">
                 Schedule a call
               </button>
             </div>

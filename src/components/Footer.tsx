@@ -33,14 +33,14 @@ const Footer = () => {
     }));
   }, [locale]);
   return (
-    <footer className="bg-black text-white py-16">
+    <footer className="bg-black text-white py-10 lg:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-5 gap-12">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-5 lg:gap-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <div className="text-2xl font-serif mb-4">
+            <div className="text-lg font-serif mb-4 lg:text-2xl">
               <span className="text-yellow-400">G</span>HEZALI
-              <div className="text-sm text-yellow-400 font-sans tracking-widest">
+              <div className="text-xs text-yellow-400 font-sans tracking-widest lg:text-sm">
                 INTERNATIONAL ADVISORY
               </div>
             </div>
@@ -49,10 +49,10 @@ const Footer = () => {
               Portfolio transformation, board-level execution, measurable value creation.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-yellow-400 transition-colors">
+              <a href="#" className="text-gray-400 hover:text-yellow-400 transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center" aria-label="LinkedIn">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-yellow-400 transition-colors">
+              <a href="#" className="text-gray-400 hover:text-yellow-400 transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center" aria-label="Twitter">
                 <Twitter className="h-5 w-5" />
               </a>
             </div>
@@ -60,70 +60,70 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">{t('footer.navigation')}</h3>
-            <ul className="space-y-3">
+            <h3 className="text-base font-semibold mb-4 lg:text-lg lg:mb-6">{t('footer.navigation')}</h3>
+            <ul className="space-y-0">
               <li>
-                <Link href={`${prefix}/#accueil`} className="text-gray-400 hover:text-yellow-400 transition-colors">
+                <Link href={`${prefix}/#accueil`} className="text-gray-400 hover:text-yellow-400 transition-colors block py-2">
                   {t('footer.home')}
                 </Link>
               </li>
               <li>
-                <Link href={`${prefix}/services`} className="text-gray-400 hover:text-yellow-400 transition-colors">
+                <Link href={`${prefix}/services`} className="text-gray-400 hover:text-yellow-400 transition-colors block py-2">
                   {t('footer.offers')}
                 </Link>
               </li>
               <li>
-                <Link href={`${prefix}/private-equity`} className="text-gray-400 hover:text-yellow-400 transition-colors">
+                <Link href={`${prefix}/private-equity`} className="text-gray-400 hover:text-yellow-400 transition-colors block py-2">
                   {t('footer.privateEquity')}
                 </Link>
               </li>
               <li>
-                <Link href={`${prefix}/institutional`} className="text-gray-400 hover:text-yellow-400 transition-colors">
+                <Link href={`${prefix}/institutional`} className="text-gray-400 hover:text-yellow-400 transition-colors block py-2">
                   {t('footer.institutional')}
                 </Link>
               </li>
               <li>
-                <Link href={`${prefix}/family-office`} className="text-gray-400 hover:text-yellow-400 transition-colors">
+                <Link href={`${prefix}/family-office`} className="text-gray-400 hover:text-yellow-400 transition-colors block py-2">
                   {t('footer.familyOffice')}
                 </Link>
               </li>
               <li>
-                <Link href={`${prefix}/group-holding`} className="text-gray-400 hover:text-yellow-400 transition-colors">
+                <Link href={`${prefix}/group-holding`} className="text-gray-400 hover:text-yellow-400 transition-colors block py-2">
                   {t('footer.groupHolding')}
                 </Link>
               </li>
               <li>
-                <Link href={`${prefix}/reseau`} className="text-gray-400 hover:text-yellow-400 transition-colors">
+                <Link href={`${prefix}/reseau`} className="text-gray-400 hover:text-yellow-400 transition-colors block py-2">
                   {t('footer.network')}
                 </Link>
               </li>
               <li>
-                <Link href={`${prefix}/expertise`} className="text-gray-400 hover:text-yellow-400 transition-colors">
+                <Link href={`${prefix}/expertise`} className="text-gray-400 hover:text-yellow-400 transition-colors block py-2">
                   {t('footer.expertise')}
                 </Link>
               </li>
               <li>
-                <Link href={`${prefix}/positioning`} className="text-gray-400 hover:text-yellow-400 transition-colors">
+                <Link href={`${prefix}/positioning`} className="text-gray-400 hover:text-yellow-400 transition-colors block py-2">
                   {t('footer.positioning')}
                 </Link>
               </li>
               <li>
-                <Link href={`${prefix}/#medias`} className="text-gray-400 hover:text-yellow-400 transition-colors">
+                <Link href={`${prefix}/#medias`} className="text-gray-400 hover:text-yellow-400 transition-colors block py-2">
                   {t('footer.media')}
                 </Link>
               </li>
               <li>
-                <Link href={`${prefix}/#contact`} className="text-gray-400 hover:text-yellow-400 transition-colors">
+                <Link href={`${prefix}/#contact`} className="text-gray-400 hover:text-yellow-400 transition-colors block py-2">
                   {t('footer.contact')}
                 </Link>
               </li>
               <li>
-                <Link href={`${prefix}/blog`} className="text-gray-400 hover:text-yellow-400 transition-colors">
+                <Link href={`${prefix}/blog`} className="text-gray-400 hover:text-yellow-400 transition-colors block py-2">
                   {t('footer.blog')}
                 </Link>
               </li>
               <li className="pt-2 border-t border-gray-800 mt-2">
-                <Link href={`${prefix}/capital-partnerships`} className="text-gray-400 hover:text-yellow-400 transition-colors">
+                <Link href={`${prefix}/capital-partnerships`} className="text-gray-400 hover:text-yellow-400 transition-colors block py-2">
                   {t('footer.strategicCapitalPartnerships')}
                 </Link>
                 <span className="block text-gray-500 text-xs mt-0.5">{t('footer.availableUponRequest')}</span>
@@ -133,19 +133,19 @@ const Footer = () => {
 
           {/* Marchés (24 marchés par région) */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">{t('footer.markets')}</h3>
+            <h3 className="text-base font-semibold mb-4 lg:text-lg lg:mb-6">{t('footer.markets')}</h3>
             <div className="space-y-5">
               {marketsByRegion.map(({ region, label, markets: regionMarkets }) => (
                 <div key={region}>
                   <h4 className="text-xs font-semibold uppercase tracking-wider text-yellow-400/90 mb-2">
                     {label}
                   </h4>
-                  <ul className="space-y-2">
+                  <ul className="space-y-0">
                     {regionMarkets.map((market) => {
                       const marketLocale = market.locales.includes(locale) ? locale : market.defaultLocale;
                       return (
                         <li key={market.id}>
-                          <Link href={`/${marketLocale}/markets/${market.slug}`} className="text-gray-400 hover:text-yellow-400 transition-colors text-sm">
+                          <Link href={`/${marketLocale}/markets/${market.slug}`} className="text-gray-400 hover:text-yellow-400 transition-colors text-sm block py-1.5">
                             {locale === 'fr' ? market.name : market.nameEn}
                           </Link>
                         </li>
@@ -159,7 +159,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">{t('footer.contactTitle')}</h3>
+            <h3 className="text-base font-semibold mb-4 lg:text-lg lg:mb-6">{t('footer.contactTitle')}</h3>
             <div className="space-y-4">
               <div className="flex items-start">
                 <MapPin className="h-5 w-5 text-yellow-400 mr-3 mt-0.5 flex-shrink-0" />
@@ -182,19 +182,19 @@ const Footer = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-gray-800 mt-12 pt-8">
+        <div className="border-t border-gray-800 mt-8 lg:mt-12 pt-6 lg:pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
               © 2024 Ghezali International Advisory. {t('footer.rights')}
             </div>
-            <div className="flex space-x-6 text-sm">
-              <Link href={`${prefix}/legal`} className="text-gray-400 hover:text-yellow-400 transition-colors">
+            <div className="flex flex-wrap gap-4 sm:space-x-6 text-sm">
+              <Link href={`${prefix}/legal`} className="text-gray-400 hover:text-yellow-400 transition-colors py-2">
                 {t('footer.legal')}
               </Link>
-              <Link href={`${prefix}/privacy`} className="text-gray-400 hover:text-yellow-400 transition-colors">
+              <Link href={`${prefix}/privacy`} className="text-gray-400 hover:text-yellow-400 transition-colors py-2">
                 {t('footer.privacy')}
               </Link>
-              <Link href={`${prefix}/blog`} className="text-gray-400 hover:text-yellow-400 transition-colors">
+              <Link href={`${prefix}/blog`} className="text-gray-400 hover:text-yellow-400 transition-colors py-2">
                 {t('footer.blog')}
               </Link>
             </div>
@@ -202,7 +202,7 @@ const Footer = () => {
         </div>
 
         {/* Trust Badge */}
-        <div className="mt-8 pt-8 border-t border-gray-800 text-center">
+        <div className="mt-6 lg:mt-8 pt-6 lg:pt-8 border-t border-gray-800 text-center">
           <p className="text-gray-500 text-sm">
             Cabinet agréé formation professionnelle • Certification ISO 27001 • Membre SYNTEC Conseil
           </p>

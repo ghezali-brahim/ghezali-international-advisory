@@ -48,12 +48,12 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-sm border-b border-gray-800">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-14 md:h-16">
           {/* Logo */}
-          <div className="flex items-center">
-            <div className="text-2xl font-serif text-white">
+          <div className="flex items-center min-h-[44px]">
+            <div className="text-lg font-serif text-white md:text-2xl">
               <span className="text-yellow-400">G</span>HEZALI
-              <div className="text-sm text-yellow-400 font-sans tracking-widest">
+              <div className="text-xs text-yellow-400 font-sans tracking-widest md:text-sm">
                 INTERNATIONAL ADVISORY
               </div>
             </div>
@@ -156,7 +156,9 @@ const Header = () => {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="text-white hover:text-yellow-400 p-2"
+              className="text-white hover:text-yellow-400 p-3 min-h-[44px] min-w-[44px] flex items-center justify-center"
+              aria-expanded={isMenuOpen}
+              aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
             >
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -166,38 +168,38 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-black/95 backdrop-blur-sm">
-              <Link href={prefix} className="text-white hover:text-yellow-400 block px-3 py-2 text-base font-medium">
+            <div className="px-2 pt-2 pb-3 space-y-0 bg-black/95 backdrop-blur-sm max-h-[70vh] overflow-y-auto">
+              <Link href={prefix} className="text-white hover:text-yellow-400 block px-3 py-3 text-base font-medium min-h-[44px] flex items-center">
                 {t('nav.home')}
               </Link>
-              <Link href={`${prefix}/services`} className="text-white hover:text-yellow-400 block px-3 py-2 text-base font-medium">
+              <Link href={`${prefix}/services`} className="text-white hover:text-yellow-400 block px-3 py-3 text-base font-medium min-h-[44px] flex items-center">
                 {t('nav.offers')}
               </Link>
-              <Link href={`${prefix}/private-equity`} className="text-white hover:text-yellow-400 block px-3 py-2 text-base font-medium">
+              <Link href={`${prefix}/private-equity`} className="text-white hover:text-yellow-400 block px-3 py-3 text-base font-medium min-h-[44px] flex items-center">
                 {t('nav.privateEquity')}
               </Link>
-              <Link href={`${prefix}/family-office`} className="text-white hover:text-yellow-400 block px-3 py-2 text-base font-medium">
+              <Link href={`${prefix}/family-office`} className="text-white hover:text-yellow-400 block px-3 py-3 text-base font-medium min-h-[44px] flex items-center">
                 {t('nav.familyOffice')}
               </Link>
-              <Link href={`${prefix}/group-holding`} className="text-white hover:text-yellow-400 block px-3 py-2 text-base font-medium">
+              <Link href={`${prefix}/group-holding`} className="text-white hover:text-yellow-400 block px-3 py-3 text-base font-medium min-h-[44px] flex items-center">
                 {t('nav.groupHolding')}
               </Link>
-              <Link href={`${prefix}/reseau`} className="text-white hover:text-yellow-400 block px-3 py-2 text-base font-medium">
+              <Link href={`${prefix}/reseau`} className="text-white hover:text-yellow-400 block px-3 py-3 text-base font-medium min-h-[44px] flex items-center">
                 {t('nav.network')}
               </Link>
-              <Link href={`${prefix}/expertise`} className="text-white hover:text-yellow-400 block px-3 py-2 text-base font-medium">
+              <Link href={`${prefix}/expertise`} className="text-white hover:text-yellow-400 block px-3 py-3 text-base font-medium min-h-[44px] flex items-center">
                 {t('nav.expertise')}
               </Link>
-              <Link href={`${prefix}/positioning`} className="text-white hover:text-yellow-400 block px-3 py-2 text-base font-medium">
+              <Link href={`${prefix}/positioning`} className="text-white hover:text-yellow-400 block px-3 py-3 text-base font-medium min-h-[44px] flex items-center">
                 {t('nav.positioning')}
               </Link>
-              <Link href={`${prefix}/blog`} className="text-white hover:text-yellow-400 block px-3 py-2 text-base font-medium">
+              <Link href={`${prefix}/blog`} className="text-white hover:text-yellow-400 block px-3 py-3 text-base font-medium min-h-[44px] flex items-center">
                 {t('nav.blog')}
               </Link>
-              <Link href={`${prefix}/medias`} className="text-white hover:text-yellow-400 block px-3 py-2 text-base font-medium">
+              <Link href={`${prefix}/medias`} className="text-white hover:text-yellow-400 block px-3 py-3 text-base font-medium min-h-[44px] flex items-center">
                 {t('nav.media')}
               </Link>
-              <div className="px-3 py-2 border-t border-gray-800 mt-2 pt-3">
+              <div className="px-3 py-3 border-t border-gray-800 mt-2 pt-3">
                 <p className="flex items-center gap-2 text-xs text-gray-500 mb-2">
                   <FlagIcon locale={locale} />
                   <span>{localeLabels[locale]}</span>
@@ -207,7 +209,7 @@ const Header = () => {
                     <Link
                       key={loc}
                       href={`/${loc}${pathWithoutLocale || '/'}`}
-                      className={`inline-flex items-center justify-center w-10 h-10 rounded-lg transition-colors ${locale === loc ? 'bg-yellow-400/20 ring-1 ring-yellow-400/50' : 'text-gray-400 hover:bg-gray-800 hover:text-white'}`}
+                      className={`inline-flex items-center justify-center min-h-[44px] min-w-[44px] rounded-lg transition-colors ${locale === loc ? 'bg-yellow-400/20 ring-1 ring-yellow-400/50' : 'text-gray-400 hover:bg-gray-800 hover:text-white'}`}
                       title={localeLabels[loc]}
                     >
                       <FlagIcon locale={loc} />
@@ -215,7 +217,7 @@ const Header = () => {
                   ))}
                 </div>
               </div>
-              <Link href={`${prefix}/contact`} className="bg-yellow-400 text-black hover:bg-yellow-500 block px-3 py-2 rounded-lg text-base font-medium mt-2">
+              <Link href={`${prefix}/contact`} className="bg-yellow-400 text-black hover:bg-yellow-500 block px-3 py-3 rounded-lg text-base font-medium mt-2 min-h-[44px] flex items-center justify-center">
                 {t('nav.contact')}
               </Link>
             </div>

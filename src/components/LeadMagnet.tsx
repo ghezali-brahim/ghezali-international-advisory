@@ -73,28 +73,28 @@ const LeadMagnet = () => {
   ];
 
   return (
-    <section className="py-24 bg-gray-50">
+    <section className="py-12 sm:py-16 lg:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-serif text-black mb-6">
+        <div className="text-center mb-10 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-black mb-4 sm:mb-6">
             Resources <span className="text-yellow-600">for qualified access only</span>
           </h2>
-          <div className="w-24 h-1 bg-yellow-600 mx-auto mb-6"></div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <div className="w-24 h-1 bg-yellow-600 mx-auto mb-4 sm:mb-6"></div>
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Briefings and methodologies for funds, family offices and portfolio leaders. Access on request, after profile verification.
           </p>
         </div>
 
         {/* Lead Magnets Grid */}
-        <StaggerContainer className="grid lg:grid-cols-3 gap-8 mb-16" staggerDelay={200}>
+        <StaggerContainer className="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3 mb-10 sm:mb-16" staggerDelay={200}>
           {leadMagnets.map((magnet) => (
             <div key={magnet.id} className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300">
               {/* Header */}
-              <div className={`${magnet.color} p-8 text-white relative overflow-hidden`}>
+              <div className={`${magnet.color} p-5 sm:p-6 lg:p-8 text-white relative overflow-hidden`}>
                 <div className="relative z-10">
-                  <magnet.icon className="h-12 w-12 mb-4" />
-                  <h3 className="text-xl font-serif mb-2">{magnet.title}</h3>
+                  <magnet.icon className="h-10 w-10 sm:h-12 sm:w-12 mb-3 sm:mb-4" />
+                  <h3 className="text-lg sm:text-xl font-serif mb-2">{magnet.title}</h3>
                   <div className="flex items-center justify-between text-sm opacity-90">
                     <span>{magnet.pages}</span>
                     <span>On request, after profile verification</span>
@@ -104,16 +104,16 @@ const LeadMagnet = () => {
               </div>
 
               {/* Content */}
-              <div className="p-8">
-                <p className="text-gray-600 mb-6 leading-relaxed">
+              <div className="p-5 sm:p-6 lg:p-8">
+                <p className="text-gray-600 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
                   {magnet.description}
                 </p>
                 
-                <div className="mb-6">
-                  <h4 className="font-semibold text-black mb-3">What you will discover:</h4>
+                <div className="mb-4 sm:mb-6">
+                  <h4 className="font-semibold text-black mb-2 sm:mb-3 text-sm sm:text-base">What you will discover:</h4>
                   <ul className="space-y-2">
                     {magnet.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-600">
+                      <li key={idx} className="flex items-center text-xs sm:text-sm text-gray-600">
                         <CheckCircle className="h-4 w-4 text-yellow-600 mr-3 flex-shrink-0" />
                         {feature}
                       </li>
@@ -121,7 +121,7 @@ const LeadMagnet = () => {
                   </ul>
                 </div>
 
-                <button className="w-full bg-black text-white hover:bg-gray-800 py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center group">
+                <button className="w-full bg-black text-white hover:bg-gray-800 py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center group min-h-[44px]">
                   Request access
                   <Download className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
                 </button>
@@ -131,12 +131,12 @@ const LeadMagnet = () => {
         </StaggerContainer>
 
         {/* Newsletter CTA */}
-        <div className="bg-black p-12 rounded-2xl text-center">
-          <Download className="h-12 w-12 text-yellow-400 mx-auto mb-6" />
-          <h3 className="text-3xl md:text-4xl font-serif text-white mb-6">
+        <div className="bg-black p-6 sm:p-8 lg:p-12 rounded-2xl text-center">
+          <Download className="h-10 w-10 sm:h-12 sm:w-12 text-yellow-400 mx-auto mb-4 sm:mb-6" />
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif text-white mb-4 sm:mb-6">
             Request access to resources
           </h3>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto">
             For qualified investors and leaders only. Briefings and analysis on request.
           </p>
 

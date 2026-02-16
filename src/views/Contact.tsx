@@ -36,13 +36,13 @@ const ContactPage = () => {
   return (
     <div className="pt-16">
       {/* Hero Contact */}
-      <section className="py-24 bg-gradient-to-br from-gray-900 to-black">
+      <section className="py-12 sm:py-16 lg:py-24 bg-gradient-to-br from-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-serif text-white mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-4 sm:mb-6">
             Request an <span className="text-yellow-400">invitation</span>
           </h1>
-          <div className="w-24 h-1 bg-yellow-400 mx-auto mb-6"></div>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <div className="w-24 h-1 bg-yellow-400 mx-auto mb-4 sm:mb-6"></div>
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Funds, family offices, institutions: let us discuss your mandate.
             Every request is reviewed personally. Limited number of mandates.
           </p>
@@ -50,18 +50,18 @@ const ContactPage = () => {
       </section>
 
       {/* Offices */}
-      <section className="py-24 bg-white">
+      <section className="py-12 sm:py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-serif text-black mb-6">Our offices</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <div className="text-center mb-10 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif text-black mb-4 sm:mb-6">Our offices</h2>
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
               An international presence to support you wherever you are
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 gap-6 sm:gap-8 lg:grid-cols-3">
             {offices.map((office, index) => (
-              <div key={index} className={`bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-all duration-300 ${office.soon ? 'opacity-90' : ''}`}>
+              <div key={index} className={`bg-gray-50 p-5 sm:p-6 lg:p-8 rounded-xl hover:shadow-lg transition-all duration-300 ${office.soon ? 'opacity-90' : ''}`}>
                 <div className="flex items-center gap-2 flex-wrap mb-6">
                   <h3 className="text-2xl font-serif text-black">{office.city}</h3>
                   {office.soon && (
@@ -100,32 +100,32 @@ const ContactPage = () => {
       <FAQ />
 
       {/* Trust Indicators */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-12 sm:py-16 lg:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-serif text-black mb-6">Why trust us?</h2>
+          <div className="text-center mb-10 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif text-black mb-4 sm:mb-6">Why trust us?</h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-3">
             <div className="text-center">
-              <Award className="h-12 w-12 text-yellow-600 mx-auto mb-6" />
-              <h3 className="text-xl font-semibold text-black mb-4">20 years of expertise</h3>
+              <Award className="h-10 w-10 sm:h-12 sm:w-12 text-yellow-600 mx-auto mb-4 sm:mb-6" />
+              <h3 className="text-lg sm:text-xl font-semibold text-black mb-3 sm:mb-4">20 years of expertise</h3>
               <p className="text-gray-600">
                 Proven experience at the service of business excellence since 2004
               </p>
             </div>
             
             <div className="text-center">
-              <Users className="h-12 w-12 text-yellow-600 mx-auto mb-6" />
-              <h3 className="text-xl font-semibold text-black mb-4">200+ mid-market companies supported</h3>
+              <Users className="h-10 w-10 sm:h-12 sm:w-12 text-yellow-600 mx-auto mb-4 sm:mb-6" />
+              <h3 className="text-lg sm:text-xl font-semibold text-black mb-3 sm:mb-4">200+ mid-market companies supported</h3>
               <p className="text-gray-600">
                 An exceptional track record with high-performing companies
               </p>
             </div>
             
             <div className="text-center">
-              <TrendingUp className="h-12 w-12 text-yellow-600 mx-auto mb-6" />
-              <h3 className="text-xl font-semibold text-black mb-4">+500M€ value created</h3>
+              <TrendingUp className="h-10 w-10 sm:h-12 sm:w-12 text-yellow-600 mx-auto mb-4 sm:mb-6" />
+              <h3 className="text-lg sm:text-xl font-semibold text-black mb-3 sm:mb-4">+500M€ value created</h3>
               <p className="text-gray-600">
                 Measurable, lasting value creation for our clients
               </p>

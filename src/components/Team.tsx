@@ -57,38 +57,38 @@ const Team = () => {
   ];
 
   return (
-    <section className="py-24 bg-gray-50">
+    <section className="py-12 sm:py-16 lg:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-serif text-black mb-6">
+        <div className="text-center mb-10 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-black mb-4 sm:mb-6">
             Exceptional <span className="text-yellow-600">Leadership</span>
           </h2>
-          <div className="w-24 h-1 bg-yellow-600 mx-auto mb-6"></div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <div className="w-24 h-1 bg-yellow-600 mx-auto mb-4 sm:mb-6"></div>
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             A team of recognised experts from the world&apos;s leading consultancies and top-performing companies.
           </p>
         </div>
 
         {/* Founder Section */}
-        <div className="mb-20">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
+        <div className="mb-12 sm:mb-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
+            <div className="relative w-full aspect-[4/3] lg:aspect-auto lg:h-96">
               <img
                 src={founder.image}
                 alt="Ghezali - Founder and CEO of Ghezali International Advisory - Expert in corporate strategy, M&A and mid-market transformation - 20 years of experience"
-                className="w-full h-96 object-cover rounded-lg shadow-2xl"
+                className="w-full h-full object-cover rounded-lg shadow-2xl max-w-full"
                 loading="lazy"
               />
             </div>
             <div>
-              <div className="mb-6">
-                <h3 className="text-4xl font-serif text-black mb-2">{founder.name}</h3>
-                <p className="text-xl text-yellow-600 font-semibold mb-2">{founder.title}</p>
-                <p className="text-lg text-gray-600">{founder.subtitle}</p>
+              <div className="mb-4 sm:mb-6">
+                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-black mb-2">{founder.name}</h3>
+                <p className="text-lg sm:text-xl text-yellow-600 font-semibold mb-2">{founder.title}</p>
+                <p className="text-base sm:text-lg text-gray-600">{founder.subtitle}</p>
               </div>
 
-              <p className="text-lg text-gray-700 mb-8 leading-relaxed">{founder.bio}</p>
+              <p className="text-base sm:text-lg text-gray-700 mb-6 sm:mb-8 leading-relaxed">{founder.bio}</p>
 
               {/* Specialties */}
               <div className="mb-8">
@@ -132,9 +132,9 @@ const Team = () => {
         </div>
 
         {/* Senior Advisors */}
-        <div className="mb-16">
-          <h3 className="text-3xl font-serif text-black mb-12 text-center">Expert Advisory</h3>
-          <div className="grid lg:grid-cols-3 gap-8">
+        <div className="mb-10 sm:mb-16">
+          <h3 className="text-2xl sm:text-3xl font-serif text-black mb-8 sm:mb-12 text-center">Expert Advisory</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {advisors.map((advisor, index) => (
               <div key={index} className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
                 <img
@@ -166,12 +166,12 @@ const Team = () => {
         </div>
 
         {/* Certifications & Network */}
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
           {/* Certifications */}
-          <div className="bg-white p-8 rounded-xl shadow-lg">
-            <div className="flex items-center mb-6">
-              <Award className="h-6 w-6 text-yellow-600 mr-3" />
-              <h3 className="text-2xl font-serif text-black">Professional Certifications</h3>
+          <div className="bg-white p-6 sm:p-8 rounded-xl shadow-lg">
+            <div className="flex items-center mb-4 sm:mb-6">
+              <Award className="h-5 w-5 sm:h-6 sm:w-6 text-yellow-600 mr-3 shrink-0" />
+              <h3 className="text-xl sm:text-2xl font-serif text-black">Professional Certifications</h3>
             </div>
             <div className="space-y-4">
               {certifications.map((cert, index) => (
@@ -184,10 +184,10 @@ const Team = () => {
           </div>
 
           {/* Network */}
-          <div className="bg-white p-8 rounded-xl shadow-lg">
-            <div className="flex items-center mb-6">
-              <Globe className="h-6 w-6 text-yellow-600 mr-3" />
-              <h3 className="text-2xl font-serif text-black">International Network</h3>
+          <div className="bg-white p-6 sm:p-8 rounded-xl shadow-lg">
+            <div className="flex items-center mb-4 sm:mb-6">
+              <Globe className="h-5 w-5 sm:h-6 sm:w-6 text-yellow-600 mr-3 shrink-0" />
+              <h3 className="text-xl sm:text-2xl font-serif text-black">International Network</h3>
             </div>
             <div className="space-y-6">
               <div>
@@ -211,16 +211,16 @@ const Team = () => {
         </div>
 
         {/* CTA */}
-        <div className="mt-16 text-center">
-          <div className="bg-black p-12 rounded-2xl">
-            <h3 className="text-3xl md:text-4xl font-serif text-white mb-6">
+        <div className="mt-10 sm:mt-16 text-center">
+          <div className="bg-black p-6 sm:p-8 lg:p-12 rounded-2xl">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif text-white mb-4 sm:mb-6">
               Meet our team
             </h3>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-base sm:text-xl text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto">
               Speak directly with our experts in a confidential discussion.
             </p>
-            <button className="bg-yellow-400 text-black hover:bg-yellow-500 px-10 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-400/25 inline-flex items-center">
-              <Users className="mr-2 h-5 w-5" />
+            <button type="button" className="bg-yellow-400 text-black hover:bg-yellow-500 px-8 py-3 sm:px-10 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-400/25 inline-flex items-center min-h-[44px]">
+              <Users className="mr-2 h-5 w-5 shrink-0" />
               Schedule a meeting
             </button>
           </div>

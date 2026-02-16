@@ -72,17 +72,17 @@ const MarketArticlePage = ({ article, market, locale }: MarketArticlePageProps) 
       </section>
 
       {/* Hero */}
-      <section className="py-24 bg-gradient-to-br from-gray-900 to-black">
+      <section className="py-12 sm:py-16 lg:py-24 bg-gradient-to-br from-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center px-4 py-2 rounded-full border border-yellow-400/30 bg-yellow-400/10 backdrop-blur-sm mb-6">
+          <div className="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-yellow-400/30 bg-yellow-400/10 backdrop-blur-sm mb-4 sm:mb-6">
             <Globe className="h-4 w-4 text-yellow-400 mr-2" />
-            <span className="text-yellow-400 text-sm font-medium">{countryName}</span>
+            <span className="text-yellow-400 text-xs sm:text-sm font-medium">{countryName}</span>
           </div>
-          <h1 className="text-4xl md:text-6xl font-serif text-white mb-6 leading-tight">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-serif text-white mb-4 sm:mb-6 leading-tight">
             {article.title}
           </h1>
-          <div className="w-24 h-1 bg-yellow-400 mx-auto mb-6" />
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <div className="w-24 h-1 bg-yellow-400 mx-auto mb-4 sm:mb-6" />
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             {article.description}
           </p>
         </div>
@@ -114,15 +114,15 @@ const MarketArticlePage = ({ article, market, locale }: MarketArticlePageProps) 
           <section
             key={i}
             id={`section-${i}`}
-            className={`py-16 scroll-mt-32 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}
+            className={`py-10 sm:py-14 lg:py-16 scroll-mt-32 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}
           >
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
               {section.title ? (
                 <div
-                  className={`mb-8 flex items-center gap-4 ${isRtl ? 'flex-row-reverse border-r-4 border-yellow-400 pr-6' : 'border-l-4 border-yellow-400 pl-6'}`}
+                  className={`mb-6 sm:mb-8 flex items-center gap-3 sm:gap-4 ${isRtl ? 'flex-row-reverse border-r-4 border-yellow-400 pr-4 sm:pr-6' : 'border-l-4 border-yellow-400 pl-4 sm:pl-6'}`}
                 >
-                  <Icon className="h-7 w-7 text-yellow-600 flex-shrink-0" />
-                  <h2 className="text-2xl font-serif text-black m-0">
+                  <Icon className="h-6 w-6 sm:h-7 sm:w-7 text-yellow-600 flex-shrink-0" />
+                  <h2 className="text-xl sm:text-2xl font-serif text-black m-0">
                     {section.title}
                   </h2>
                 </div>
@@ -139,9 +139,9 @@ const MarketArticlePage = ({ article, market, locale }: MarketArticlePageProps) 
 
       {/* Related articles */}
       {relatedSlugs.length > 0 && (
-        <section className="py-24 bg-white border-t border-gray-100">
+        <section className="py-12 sm:py-16 lg:py-24 bg-white border-t border-gray-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl md:text-3xl font-serif text-black mb-8">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-serif text-black mb-6 sm:mb-8">
               {t.relatedTitle}
             </h2>
             <MarketArticleCards
@@ -156,25 +156,25 @@ const MarketArticlePage = ({ article, market, locale }: MarketArticlePageProps) 
       )}
 
       {/* CTA */}
-      <section className="py-24 bg-gray-900">
+      <section className="py-12 sm:py-16 lg:py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-serif text-white mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif text-white mb-4 sm:mb-6">
             {t.discussMandate}
           </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto">
             {t.contactSubline}
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
             <LocaleLink
               href="/contact"
-              className="inline-flex items-center bg-yellow-400 text-black hover:bg-yellow-500 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
+              className="w-full sm:w-auto inline-flex items-center justify-center bg-yellow-400 text-black hover:bg-yellow-500 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-all duration-300 min-h-[44px]"
             >
               {t.contact}
               <ArrowRight className={`ml-2 h-5 w-5 flex-shrink-0 ${isRtl ? 'rotate-180' : ''}`} />
             </LocaleLink>
             <LocaleLink
               href={`/markets/${market.slug}`}
-              className="inline-flex items-center border-2 border-white text-white hover:bg-white hover:text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
+              className="w-full sm:w-auto inline-flex items-center justify-center border-2 border-white text-white hover:bg-white hover:text-black px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-all duration-300 min-h-[44px]"
             >
               <ArrowLeft className={`h-5 w-5 flex-shrink-0 ${isRtl ? 'rotate-180 mr-2' : 'mr-2'}`} />
               {t.backTo}

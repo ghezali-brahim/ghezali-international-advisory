@@ -55,26 +55,26 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-gray-50">
+    <section id="contact" className="py-12 sm:py-16 lg:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-serif text-black mb-6">
+        <div className="text-center mb-10 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-black mb-4 sm:mb-6">
             <span className="text-yellow-600">Contact us</span>
           </h2>
-          <div className="w-24 h-1 bg-yellow-600 mx-auto mb-6"></div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <div className="w-24 h-1 bg-yellow-600 mx-auto mb-4 sm:mb-6"></div>
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             We select our partners with the utmost care. Every request is reviewed personally; only qualified applications are accepted.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16">
           {/* Contact Form */}
           <div>
-            <div className="bg-white p-8 rounded-2xl shadow-xl">
-              <div className="flex items-center mb-6">
-                <Shield className="h-6 w-6 text-yellow-600 mr-3" />
-                <h3 className="text-2xl font-serif text-black">Premium Selection Process</h3>
+            <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-xl">
+              <div className="flex items-center mb-4 sm:mb-6">
+                <Shield className="h-5 w-5 sm:h-6 sm:w-6 text-yellow-600 mr-3 shrink-0" />
+                <h3 className="text-xl sm:text-2xl font-serif text-black">Premium Selection Process</h3>
               </div>
               
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -89,7 +89,7 @@ const Contact = () => {
                       name="nom"
                       value={formData.nom}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
+                      className="w-full px-4 py-3 text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
                       required
                       aria-required="true"
                     />
@@ -104,7 +104,7 @@ const Contact = () => {
                       name="societe"
                       value={formData.societe}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
+                      className="w-full px-4 py-3 text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
                       required
                       aria-required="true"
                     />
@@ -120,7 +120,7 @@ const Contact = () => {
                     name="ca"
                     value={formData.ca}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
+                    className="w-full px-4 py-3 text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
                     required
                     aria-required="true"
                   >
@@ -141,7 +141,7 @@ const Contact = () => {
                     name="objectif"
                     value={formData.objectif}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
+                    className="w-full px-4 py-3 text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
                     required
                     aria-required="true"
                   >
@@ -165,7 +165,7 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     rows={4}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
+                    className="w-full px-4 py-3 text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
                     placeholder="Briefly describe your situation and expectations..."
                     aria-describedby="contact-message-desc"
                   />
@@ -181,7 +181,7 @@ const Contact = () => {
 
                 <button
                   type="submit"
-                  className="w-full bg-black text-white hover:bg-gray-800 py-4 px-6 rounded-lg font-semibold text-lg transition-all duration-300"
+                  className="w-full bg-black text-white hover:bg-gray-800 py-3 sm:py-4 px-6 rounded-lg font-semibold text-base sm:text-lg transition-all duration-300 min-h-[44px]"
                 >
                   {locale === 'fr' ? 'Soumettre ma candidature' : 'Submit my application'}
                 </button>
@@ -196,8 +196,8 @@ const Contact = () => {
           {/* Contact Info & CTAs */}
           <div className="space-y-8">
             {/* Direct Contact */}
-            <div className="bg-black p-8 rounded-2xl text-white">
-              <h3 className="text-2xl font-serif mb-6">Direct contact</h3>
+            <div className="bg-black p-6 sm:p-8 rounded-2xl text-white">
+              <h3 className="text-xl sm:text-2xl font-serif mb-4 sm:mb-6">Direct contact</h3>
               <div className="space-y-4">
                 <div className="flex items-center">
                   <Phone className="h-5 w-5 text-yellow-400 mr-4 flex-shrink-0" />
@@ -224,32 +224,32 @@ const Contact = () => {
             </div>
 
             {/* Calendar Booking */}
-            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
+            <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-lg border border-gray-200">
               <div className="flex items-center mb-4">
-                <Calendar className="h-6 w-6 text-yellow-600 mr-3" />
-                <h3 className="text-xl font-serif text-black">Confidential discussion</h3>
+                <Calendar className="h-5 w-5 sm:h-6 sm:w-6 text-yellow-600 mr-3 shrink-0" />
+                <h3 className="text-lg sm:text-xl font-serif text-black">Confidential discussion</h3>
               </div>
-              <p className="text-gray-600 mb-2">
+              <p className="text-gray-600 mb-2 text-sm sm:text-base">
                 Book a 30-minute confidential call directly with our team.
               </p>
-              <p className="text-sm text-gray-500 mb-6">{rdvDisclaimer}</p>
+              <p className="text-sm text-gray-500 mb-4 sm:mb-6">{rdvDisclaimer}</p>
               <a
                 href={RDV_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full bg-yellow-600 text-white hover:bg-yellow-700 py-3 px-6 rounded-lg font-semibold transition-all duration-300 text-center"
+                className="block w-full bg-yellow-600 text-white hover:bg-yellow-700 py-3 px-6 rounded-lg font-semibold transition-all duration-300 text-center min-h-[44px] flex items-center justify-center"
               >
                 {locale === 'fr' ? 'Réserver un créneau' : 'Book a slot'}
               </a>
             </div>
 
             {/* Échange */}
-            <div className="bg-gradient-to-r from-gray-900 to-black p-8 rounded-2xl text-white">
-              <h3 className="text-xl font-serif mb-4">Get in touch</h3>
-              <p className="text-gray-300 mb-6">
+            <div className="bg-gradient-to-r from-gray-900 to-black p-6 sm:p-8 rounded-2xl text-white">
+              <h3 className="text-lg sm:text-xl font-serif mb-3 sm:mb-4">Get in touch</h3>
+              <p className="text-gray-300 mb-4 sm:mb-6 text-sm sm:text-base">
                 Let us discuss your mandate and objectives. Response within 24h.
               </p>
-              <LocaleLink href="/contact" className="block w-full border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black py-3 px-6 rounded-lg font-semibold transition-all duration-300 text-center">
+              <LocaleLink href="/contact" className="block w-full border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black py-3 px-6 rounded-lg font-semibold transition-all duration-300 text-center min-h-[44px] flex items-center justify-center">
                 Get in touch
               </LocaleLink>
             </div>

@@ -55,29 +55,29 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-24 bg-gray-50">
+    <section id="services" className="py-12 sm:py-16 lg:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-serif text-black mb-6">
+        <div className="text-center mb-10 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-black mb-4 sm:mb-6">
             Our offers — For funds, family offices and holdings
           </h2>
-          <div className="w-24 h-1 bg-yellow-600 mx-auto mb-6"></div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <div className="w-24 h-1 bg-yellow-600 mx-auto mb-4 sm:mb-6"></div>
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Portfolio transformation and multi-company impact. One mandate, multiple holdings transformed.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-10 sm:mb-16">
           {services.map((service, index) => (
             <div key={index} className="group">
               <div className="bg-white rounded-2xl shadow-xl overflow-hidden transform group-hover:scale-105 transition-all duration-300 h-full">
                 {/* Header */}
-                <div className={`${service.color} p-8 text-white relative overflow-hidden`}>
+                <div className={`${service.color} p-6 sm:p-8 text-white relative overflow-hidden`}>
                   <div className="relative z-10">
-                    <service.icon className="h-12 w-12 mb-4" />
-                    <h3 className="text-2xl font-serif mb-2">{service.title}</h3>
+                    <service.icon className="h-10 w-10 sm:h-12 sm:w-12 mb-3 sm:mb-4" />
+                    <h3 className="text-xl sm:text-2xl font-serif mb-2">{service.title}</h3>
                     <p className="text-sm opacity-90 mb-4">{service.subtitle}</p>
                     <div className="flex justify-between items-center text-sm">
                       <div className="flex items-center">
@@ -94,7 +94,7 @@ const Services = () => {
                 </div>
 
                 {/* Content */}
-                <div className="p-8">
+                <div className="p-6 sm:p-8">
                   <p className="text-gray-600 mb-6 leading-relaxed">
                     {service.description}
                   </p>
@@ -108,9 +108,9 @@ const Services = () => {
                     ))}
                   </ul>
 
-                  <button className="w-full bg-black text-white hover:bg-gray-800 py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center group">
+                  <button type="button" className="w-full bg-black text-white hover:bg-gray-800 py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center group min-h-[44px]">
                     Learn more
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform shrink-0" />
                   </button>
                 </div>
               </div>
@@ -119,9 +119,9 @@ const Services = () => {
         </div>
 
         {/* Process Section */}
-        <div className="mb-16">
-          <h3 className="text-3xl font-serif text-black mb-12 text-center">Our excellence process</h3>
-          <div className="grid md:grid-cols-4 gap-8">
+        <div className="mb-10 sm:mb-16">
+          <h3 className="text-2xl sm:text-3xl font-serif text-black mb-8 sm:mb-12 text-center">Our excellence process</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
             <div className="text-center">
               <div className="bg-yellow-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 font-bold text-xl">1</div>
               <h4 className="font-semibold text-black mb-2">Confidential audit</h4>
@@ -147,18 +147,18 @@ const Services = () => {
 
         {/* Bottom CTA */}
         <div className="text-center">
-          <div className="bg-black p-12 rounded-2xl">
-            <h3 className="text-3xl md:text-4xl font-serif text-white mb-6">
+          <div className="bg-black p-6 sm:p-8 lg:p-12 rounded-2xl">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif text-white mb-4 sm:mb-6">
               Every engagement is unique, every result is exceptional
             </h3>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-base sm:text-xl text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto">
               Our programmes are tailored to your ambition and specific objectives.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-              <LocaleLink href="/contact" className="bg-yellow-400 text-black hover:bg-yellow-500 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+              <LocaleLink href="/contact" className="w-full sm:w-auto bg-yellow-400 text-black hover:bg-yellow-500 px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-all duration-300 min-h-[44px] flex items-center justify-center">
                 Contact us
               </LocaleLink>
-              <LocaleLink href="/contact" className="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
+              <LocaleLink href="/contact" className="w-full sm:w-auto border-2 border-white text-white hover:bg-white hover:text-black px-6 py-3 sm:px-8 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-all duration-300 min-h-[44px] flex items-center justify-center">
                 Request a tailored proposal
               </LocaleLink>
             </div>

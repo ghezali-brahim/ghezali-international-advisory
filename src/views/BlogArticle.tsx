@@ -23,14 +23,14 @@ const BlogArticle = ({ post }: BlogArticleProps) => {
         </div>
       </section>
 
-      <section className="py-16 bg-white">
+      <section className="py-10 sm:py-14 lg:py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-8">
-            <span className="bg-yellow-600 text-white px-4 py-2 rounded-full text-sm font-medium">
+          <div className="mb-6 sm:mb-8">
+            <span className="bg-yellow-600 text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium">
               {post.category}
             </span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-serif text-black mb-6 leading-tight">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-black mb-4 sm:mb-6 leading-tight">
             {post.title}
           </h1>
           <div className="flex items-center mb-8 text-gray-600">
@@ -95,24 +95,24 @@ const BlogArticle = ({ post }: BlogArticleProps) => {
         </div>
       </section>
 
-      <section className="py-16 bg-gray-900">
+      <section className="py-12 sm:py-16 lg:py-24 bg-gray-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-serif text-white mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif text-white mb-4 sm:mb-6">
             Prêt à valoriser votre entreprise ?
           </h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto">
             Nos experts vous accompagnent pour maximiser la valeur de votre ETI
             et réussir votre opération de cession.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <LocaleLink href="/contact" className="bg-yellow-400 text-black hover:bg-yellow-500 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 inline-block">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+            <LocaleLink href="/contact" className="w-full sm:w-auto bg-yellow-400 text-black hover:bg-yellow-500 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-all duration-300 inline-flex items-center justify-center min-h-[44px]">
               Demander une évaluation gratuite
             </LocaleLink>
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-gray-50">
+      <section className="py-10 sm:py-14 lg:py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <BlogRelatedLinks />
         </div>

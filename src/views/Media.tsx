@@ -54,21 +54,21 @@ const MediaPage = () => {
   return (
     <div className="pt-16">
       {/* Publications Premium */}
-      <section className="py-24 bg-white">
+      <section className="py-12 sm:py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-serif text-black mb-6">
+          <div className="text-center mb-10 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif text-black mb-4 sm:mb-6">
               Publications <span className="text-yellow-600">Premium</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
               Guides exclusifs et ressources stratégiques pour dirigeants d'exception
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3 mb-10 sm:mb-16">
             {publications.map((pub, index) => (
               <div key={index} className="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300">
-                <div className="p-8">
+                <div className="p-5 sm:p-6 lg:p-8">
                   <div className="flex items-center justify-between mb-4">
                     <span className="bg-yellow-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
                       {pub.category}
@@ -81,7 +81,7 @@ const MediaPage = () => {
                     <span>{pub.pages}</span>
                     <span>{pub.downloads} téléchargements</span>
                   </div>
-                  <button className="w-full bg-black text-white hover:bg-gray-800 py-3 px-6 rounded-lg font-semibold transition-all duration-300">
+                  <button className="w-full bg-black text-white hover:bg-gray-800 py-3 px-6 rounded-lg font-semibold transition-all duration-300 min-h-[44px]">
                     Télécharger gratuitement
                   </button>
                 </div>
@@ -92,20 +92,20 @@ const MediaPage = () => {
       </section>
 
       {/* Webinars */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-12 sm:py-16 lg:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-serif text-black mb-6">
+          <div className="text-center mb-10 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif text-black mb-4 sm:mb-6">
               Webinars <span className="text-yellow-600">Exclusifs</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
               Sessions live avec nos experts pour approfondir vos connaissances
             </p>
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             {webinars.map((webinar, index) => (
-              <div key={index} className="bg-white p-8 rounded-xl shadow-lg">
+              <div key={index} className="bg-white p-5 sm:p-6 lg:p-8 rounded-xl shadow-lg">
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
                   <div className="lg:flex-1">
                     <div className="flex items-center mb-4">
@@ -130,7 +130,7 @@ const MediaPage = () => {
                     </div>
                   </div>
                   <div className="lg:ml-8 mt-6 lg:mt-0">
-                    <button className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    <button className={`w-full sm:w-auto px-6 py-3 rounded-lg font-semibold transition-all duration-300 min-h-[44px] ${
                       webinar.status === 'À venir' ? 
                       'bg-yellow-600 text-white hover:bg-yellow-700' :
                       'bg-gray-600 text-white hover:bg-gray-700'

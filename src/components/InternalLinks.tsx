@@ -164,11 +164,11 @@ export const ContextualLinks: FC<{ context: string }> = ({ context }) => {
   if (links.length === 0) return null;
 
   return (
-    <div className="bg-gray-50 p-8 rounded-xl">
-      <h3 className="text-xl font-semibold text-black mb-6">
+    <div className="bg-gray-50 p-5 sm:p-6 lg:p-8 rounded-xl">
+      <h3 className="text-lg sm:text-xl font-semibold text-black mb-4 sm:mb-6">
         You may also be interested in
       </h3>
-      <div className="space-y-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
         {links.map((link, index) => (
           <InternalLink
             key={index}
@@ -176,7 +176,7 @@ export const ContextualLinks: FC<{ context: string }> = ({ context }) => {
             title={link.title}
             description={link.description}
             icon={link.icon}
-            className="p-4 bg-white rounded-lg hover:shadow-md transition-shadow"
+            className="p-4 bg-white rounded-lg hover:shadow-md transition-shadow min-h-[44px] flex items-center"
           />
         ))}
       </div>
@@ -208,11 +208,11 @@ export const BlogRelatedLinks: FC = () => {
   ];
 
   return (
-    <div className="mt-12">
-      <h3 className="text-xl font-semibold text-black mb-6">
+    <div className="mt-8 sm:mt-12">
+      <h3 className="text-lg sm:text-xl font-semibold text-black mb-4 sm:mb-6">
         Related resources
       </h3>
-      <div className="grid md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
         {relatedLinks.map((link, index) => (
           <InternalLink
             key={index}
@@ -220,7 +220,7 @@ export const BlogRelatedLinks: FC = () => {
             title={link.title}
             description={link.description}
             icon={link.icon}
-            className="p-6 bg-white rounded-lg border border-gray-200 hover:border-yellow-300 hover:shadow-md transition-all"
+            className="p-4 sm:p-6 bg-white rounded-lg border border-gray-200 hover:border-yellow-300 hover:shadow-md transition-all min-h-[44px] flex items-center"
           />
         ))}
       </div>
@@ -284,16 +284,16 @@ export const QuickNavigation: FC = () => {
   ];
 
   return (
-    <div className="bg-black p-8 rounded-xl">
-      <h3 className="text-xl font-semibold text-white mb-6">
+    <div className="bg-black p-5 sm:p-6 lg:p-8 rounded-xl">
+      <h3 className="text-lg sm:text-xl font-semibold text-white mb-4 sm:mb-6">
         Quick navigation
       </h3>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
         {quickLinks.map((link, index) => (
           <Link
             key={index}
             href={link.to}
-            className="group p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors block"
+            className="group p-3 sm:p-4 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors block min-h-[44px] flex flex-col justify-center"
           >
             <h4 className="text-white font-medium group-hover:text-yellow-400 transition-colors">
               {link.title}

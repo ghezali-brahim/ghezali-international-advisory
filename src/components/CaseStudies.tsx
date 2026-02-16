@@ -97,15 +97,15 @@ const CaseStudies = () => {
   const currentCase = caseStudies[activeCase];
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-12 sm:py-16 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-serif text-black mb-6">
+        <div className="text-center mb-10 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-black mb-4 sm:mb-6">
             Detailed <span className="text-yellow-600">Case Studies</span>
           </h2>
-          <div className="w-24 h-1 bg-yellow-600 mx-auto mb-6"></div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <div className="w-24 h-1 bg-yellow-600 mx-auto mb-4 sm:mb-6"></div>
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Discover how we have transformed companies and delivered exceptional results for our clients.
           </p>
           <LocaleLink href="/expertise" className="inline-block mt-6 text-yellow-600 hover:text-yellow-700 font-medium">
@@ -114,15 +114,15 @@ const CaseStudies = () => {
         </div>
 
         {/* Case Study Selector */}
-        <div className="flex flex-col lg:flex-row gap-8 mb-16">
+        <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 mb-10 sm:mb-16">
           <div className="lg:w-1/3">
-            <h3 className="text-2xl font-serif text-black mb-6">Select a case study</h3>
+            <h3 className="text-xl sm:text-2xl font-serif text-black mb-4 sm:mb-6">Select a case study</h3>
             <div className="space-y-4">
               {caseStudies.map((study, index) => (
                 <button
                   key={study.id}
                   onClick={() => setActiveCase(index)}
-                  className={`w-full text-left p-6 rounded-lg border-2 transition-all duration-300 ${
+                  className={`w-full text-left p-4 sm:p-6 rounded-lg border-2 transition-all duration-300 min-h-[44px] ${
                     activeCase === index
                       ? 'border-yellow-600 bg-yellow-50'
                       : 'border-gray-200 hover:border-gray-300'
@@ -146,7 +146,7 @@ const CaseStudies = () => {
 
           {/* Case Study Details */}
           <div className="lg:w-2/3">
-            <div className="bg-gray-50 p-8 rounded-xl">
+            <div className="bg-gray-50 p-5 sm:p-6 lg:p-8 rounded-xl">
               {/* Header */}
               <div className="mb-8">
                 <div className="flex items-center mb-4">
@@ -222,14 +222,14 @@ const CaseStudies = () => {
 
         {/* ROI Calculator CTA */}
         <div className="text-center">
-          <div className="bg-black p-12 rounded-2xl">
-            <h3 className="text-3xl md:text-4xl font-serif text-white mb-6">
+          <div className="bg-black p-6 sm:p-8 lg:p-12 rounded-2xl">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-serif text-white mb-4 sm:mb-6">
               Calculate your valuation potential
             </h3>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-base sm:text-xl text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto">
               Discover the impact our support could have on your company.
             </p>
-            <button className="bg-yellow-400 text-black hover:bg-yellow-500 px-10 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-400/25">
+            <button type="button" className="bg-yellow-400 text-black hover:bg-yellow-500 px-8 py-3 sm:px-10 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-400/25 min-h-[44px]">
               Simulate my ROI
             </button>
           </div>

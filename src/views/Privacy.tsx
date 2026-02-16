@@ -5,14 +5,14 @@ const Privacy = () => {
     <div className="pt-16">
 
       {/* Hero Section */}
-      <section className="py-24 bg-gradient-to-br from-gray-900 to-black">
+      <section className="py-12 sm:py-16 lg:py-24 bg-gradient-to-br from-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Shield className="h-16 w-16 text-yellow-400 mx-auto mb-6" />
-          <h1 className="text-4xl md:text-6xl font-serif text-white mb-6">
+          <Shield className="h-12 w-12 sm:h-16 sm:w-16 text-yellow-400 mx-auto mb-4 sm:mb-6" />
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-4 sm:mb-6">
             Politique de <span className="text-yellow-400">Confidentialité</span>
           </h1>
-          <div className="w-24 h-1 bg-yellow-400 mx-auto mb-6"></div>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <div className="w-24 h-1 bg-yellow-400 mx-auto mb-4 sm:mb-6"></div>
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Vos données personnelles sont protégées selon les plus hauts standards de sécurité. 
             Confidentialité absolue garantie par notre certification ISO 27001.
           </p>
@@ -20,7 +20,7 @@ const Privacy = () => {
       </section>
 
       {/* Content */}
-      <section className="py-16 bg-white">
+      <section className="py-10 sm:py-14 lg:py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="prose prose-lg max-w-none">
             <p className="text-gray-600 mb-8">

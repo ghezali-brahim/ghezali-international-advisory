@@ -75,36 +75,36 @@ const ReseauPage = () => {
   return (
     <div className="pt-16">
       {/* Hero */}
-      <section className="py-24 bg-gradient-to-br from-gray-900 to-black">
+      <section className="py-12 sm:py-16 lg:py-24 bg-gradient-to-br from-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center px-4 py-2 rounded-full border border-yellow-400/30 bg-yellow-400/10 backdrop-blur-sm mb-6">
+          <div className="inline-flex items-center px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-yellow-400/30 bg-yellow-400/10 backdrop-blur-sm mb-4 sm:mb-6">
             <Briefcase className="h-4 w-4 text-yellow-400 mr-2" />
-            <span className="text-yellow-400 text-sm font-medium">{t.badge}</span>
+            <span className="text-yellow-400 text-xs sm:text-sm font-medium">{t.badge}</span>
           </div>
-          <h1 className="text-4xl md:text-6xl font-serif text-white mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-4 sm:mb-6">
             {t.heroTitle} <span className="text-yellow-400">{t.heroTitleHighlight}</span>
           </h1>
-          <p className="text-lg md:text-xl text-yellow-400/90 font-medium mb-4">{t.heroInvitationOnly}</p>
-          <div className="w-24 h-1 bg-yellow-400 mx-auto mb-6" />
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-yellow-400/90 font-medium mb-3 sm:mb-4">{t.heroInvitationOnly}</p>
+          <div className="w-24 h-1 bg-yellow-400 mx-auto mb-4 sm:mb-6" />
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             {t.heroSubtitle}
           </p>
-          <p className="text-gray-400 mt-4 text-sm md:text-base">{t.heroHint}</p>
+          <p className="text-gray-400 mt-3 sm:mt-4 text-xs sm:text-sm md:text-base">{t.heroHint}</p>
         </div>
       </section>
 
       {/* Où nous intervenons, à la demande */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-12 sm:py-16 lg:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-serif text-black mb-4">{t.whereTitle}</h2>
-          <p className="text-gray-600 mb-10 max-w-2xl">{t.whereSubtitle}</p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <h2 className="text-2xl sm:text-3xl font-serif text-black mb-3 sm:mb-4">{t.whereTitle}</h2>
+          <p className="text-gray-600 mb-6 sm:mb-10 max-w-2xl text-sm sm:text-base">{t.whereSubtitle}</p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {t.whereItems.map((label, idx) => {
               const Icon = WHERE_INTERVENE_ICONS[idx];
               return (
                 <div
                   key={idx}
-                  className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow"
+                  className="bg-white border border-gray-200 rounded-xl p-4 sm:p-6 shadow-sm hover:shadow-md transition-shadow"
                 >
                   <div className="flex items-start">
                     <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-yellow-100 flex items-center justify-center">
@@ -120,12 +120,12 @@ const ReseauPage = () => {
       </section>
 
       {/* Types de mandats - cartes dans une box */}
-      <section className="py-24 bg-white">
+      <section className="py-12 sm:py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-serif text-black mb-4">{t.mandatesTitle}</h2>
-          <p className="text-gray-600 mb-8 max-w-2xl">{t.mandatesIntro}</p>
-          <div className="border-l-4 border-yellow-500 bg-gray-50 rounded-r-xl p-8">
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <h2 className="text-2xl sm:text-3xl font-serif text-black mb-3 sm:mb-4">{t.mandatesTitle}</h2>
+          <p className="text-gray-600 mb-6 sm:mb-8 max-w-2xl text-sm sm:text-base">{t.mandatesIntro}</p>
+          <div className="border-l-4 border-yellow-500 bg-gray-50 rounded-r-xl p-5 sm:p-6 lg:p-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
               {t.mandates.map((item, idx) => (
                 <div key={idx} className="flex items-start gap-3 bg-white rounded-lg p-4 shadow-sm">
                   <Briefcase className="h-5 w-5 text-yellow-600 flex-shrink-0 mt-0.5" />
@@ -138,10 +138,10 @@ const ReseauPage = () => {
       </section>
 
       {/* Cadre d'engagement - carte conteneur */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-12 sm:py-16 lg:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-serif text-black mb-6">{t.frameworkTitle}</h2>
-          <div className="bg-white rounded-2xl shadow-md p-8 border border-gray-100">
+          <h2 className="text-2xl sm:text-3xl font-serif text-black mb-4 sm:mb-6">{t.frameworkTitle}</h2>
+          <div className="bg-white rounded-2xl shadow-md p-5 sm:p-6 lg:p-8 border border-gray-100">
             <ul className="grid sm:grid-cols-2 gap-4">
               {t.frameworkItems.map((item, idx) => (
                 <li key={idx} className="flex items-start text-gray-700">
@@ -155,10 +155,10 @@ const ReseauPage = () => {
       </section>
 
       {/* Modèles d'intervention - box */}
-      <section className="py-24 bg-white">
+      <section className="py-12 sm:py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-serif text-black mb-6">{t.modelsTitle}</h2>
-          <div className="bg-gray-50 rounded-2xl border border-gray-200 p-8">
+          <h2 className="text-2xl sm:text-3xl font-serif text-black mb-4 sm:mb-6">{t.modelsTitle}</h2>
+          <div className="bg-gray-50 rounded-2xl border border-gray-200 p-5 sm:p-6 lg:p-8">
             <ul className="grid sm:grid-cols-2 gap-4">
               {t.modelsItems.map((item, idx) => (
                 <li key={idx} className="flex items-start text-gray-700">
@@ -172,10 +172,10 @@ const ReseauPage = () => {
       </section>
 
       {/* Représentation internationale - encadré */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-12 sm:py-16 lg:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-serif text-black mb-6">{t.representationTitle}</h2>
-          <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm">
+          <h2 className="text-2xl sm:text-3xl font-serif text-black mb-4 sm:mb-6">{t.representationTitle}</h2>
+          <div className="bg-white rounded-2xl border border-gray-200 p-5 sm:p-6 lg:p-8 shadow-sm">
             <p className="text-gray-700 leading-relaxed mb-4">{t.representationP1}</p>
             <p className="text-gray-700 leading-relaxed">{t.representationP2}</p>
           </div>
@@ -183,10 +183,10 @@ const ReseauPage = () => {
       </section>
 
       {/* Processus d'examen - 4 blocs numérotés */}
-      <section className="py-24 bg-white">
+      <section className="py-12 sm:py-16 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-serif text-black mb-10">{t.processTitle}</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+          <h2 className="text-2xl sm:text-3xl font-serif text-black mb-6 sm:mb-10">{t.processTitle}</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-6 sm:mb-10">
             {t.processSteps.map((step, idx) => (
               <div key={idx} className="flex flex-col items-center text-center">
                 <div className="w-14 h-14 rounded-full bg-yellow-500 text-black font-serif font-bold text-xl flex items-center justify-center mb-4">
@@ -201,22 +201,22 @@ const ReseauPage = () => {
       </section>
 
       {/* Limited Engagement Capacity */}
-      <section className="py-24 bg-gray-900">
+      <section className="py-12 sm:py-16 lg:py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Lock className="h-12 w-12 text-yellow-400 mx-auto mb-4" />
-          <h2 className="text-2xl md:text-3xl font-serif text-white mb-4">{t.capacityTitle}</h2>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+          <Lock className="h-10 w-10 sm:h-12 sm:w-12 text-yellow-400 mx-auto mb-3 sm:mb-4" />
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-serif text-white mb-3 sm:mb-4">{t.capacityTitle}</h2>
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
             {t.capacityText}
           </p>
         </div>
       </section>
 
       {/* Régions - avec intro */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-12 sm:py-16 lg:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-serif text-black mb-4">{t.regionsTitle}</h2>
-          <p className="text-gray-600 mb-8">{t.regionsIntro}</p>
-          <div className="flex flex-wrap gap-4">
+          <h2 className="text-2xl sm:text-3xl font-serif text-black mb-3 sm:mb-4">{t.regionsTitle}</h2>
+          <p className="text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base">{t.regionsIntro}</p>
+          <div className="flex flex-wrap gap-3 sm:gap-4">
             {t.regions.map((region, idx) => (
               <span
                 key={idx}
@@ -231,18 +231,18 @@ const ReseauPage = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-black">
+      <section className="py-12 sm:py-16 lg:py-24 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-serif text-white mb-6">{t.ctaTitle}</h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">{t.ctaSubtitle}</p>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif text-white mb-4 sm:mb-6">{t.ctaTitle}</h2>
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto">{t.ctaSubtitle}</p>
           <LocaleLink
             href="/contact"
-            className="bg-yellow-400 text-black hover:bg-yellow-500 px-10 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-400/25 inline-flex items-center"
+            className="bg-yellow-400 text-black hover:bg-yellow-500 px-6 sm:px-10 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-400/25 inline-flex items-center min-h-[44px]"
           >
             <ArrowRight className="mr-2 h-5 w-5" />
             {t.ctaButton}
           </LocaleLink>
-          <p className="text-gray-400 text-sm mt-4">{t.ctaNote}</p>
+          <p className="text-gray-400 text-xs sm:text-sm mt-3 sm:mt-4">{t.ctaNote}</p>
         </div>
       </section>
     </div>
