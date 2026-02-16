@@ -11,11 +11,11 @@ const ExpertisePage = () => {
             <span className="text-yellow-400 text-sm font-medium">Expertise</span>
           </div>
           <h1 className="text-4xl md:text-6xl font-serif text-white mb-6">
-            Notre <span className="text-yellow-400">expertise</span> sectorielle
+            Our sector <span className="text-yellow-400">expertise</span>
           </h1>
           <div className="w-24 h-1 bg-yellow-400 mx-auto mb-6" />
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Une connaissance approfondie des enjeux par secteur pour un accompagnement sur mesure et des résultats optimaux.
+            In-depth knowledge of sector-specific challenges for tailored support and optimal results.
           </p>
         </div>
       </section>

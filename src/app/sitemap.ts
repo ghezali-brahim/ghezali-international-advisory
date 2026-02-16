@@ -3,6 +3,7 @@ import { BASE_URL } from '@/config/seo';
 import { locales } from '@/i18n/config';
 import { getMarketStaticParams } from '@/config/markets';
 import { getAllPosts } from '@/lib/blog';
+import { getAllMarketArticlePaths } from '@/lib/marketArticles';
 
 const staticPaths = [
   '',
@@ -28,6 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
   const posts = getAllPosts();
 
+  // Pages statiques et blog (toutes les locales)
   for (const locale of locales) {
     for (const path of staticPaths) {
       const url = `${BASE_URL}/${locale}${path}`;
@@ -48,6 +50,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
+  // Pages marchés : tous les pays, version EN + langue locale par marché
   const marketParams = getMarketStaticParams();
   for (const { locale, countrySlug } of marketParams) {
     entries.push({
@@ -55,6 +58,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: lastMod,
       changeFrequency: 'monthly',
       priority: 0.6,
+    });
+  }
+
+  // Articles marchés : tous les pays ayant du contenu (découverte automatique)
+  const marketArticleParams = getAllMarketArticlePaths();
+  for (const { locale, countrySlug, articleSlug } of marketArticleParams) {
+    entries.push({
+      url: `${BASE_URL}/${locale}/markets/${countrySlug}/${articleSlug}`,
+      lastModified: lastMod,
+      changeFrequency: 'monthly',
+      priority: 0.5,
     });
   }
 

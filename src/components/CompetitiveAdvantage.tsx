@@ -4,103 +4,73 @@ const CompetitiveAdvantage = () => {
   const advantages = [
     {
       icon: Layers,
-      title: "Un contrat = transformation globale",
-      description: "Un mandat couvre l'ensemble de vos participations (8 à 30 sociétés). Pas de facturation mission par mission.",
+      title: 'One contract = portfolio-wide transformation',
+      description: 'One mandate covers all your holdings (8 to 30 companies). No per-project billing.',
       details: [
-        "Un seul contrat pour tout le portefeuille",
-        "Impact sur plusieurs sociétés simultanément",
-        "Modèle conçu pour fonds et family offices",
-        "Efficacité et cohérence stratégique"
+        'Single contract for the entire portfolio',
+        'Impact across multiple companies at once',
+        'Model designed for funds and family offices',
+        'Efficiency and strategic consistency',
       ],
-      differentiator: "Le conseil traditionnel facture par mission ; nous transformons le portefeuille entier"
+      differentiator: 'Traditional consulting bills per project; we transform the whole portfolio',
     },
     {
       icon: Shield,
-      title: "Confidentialité absolue",
-      description: "Vos deals restent privés. Aucun conflit d'intérêts.",
+      title: 'Absolute confidentiality',
+      description: 'Your deals stay private. No conflicts of interest.',
       details: [
-        "NDA systématique avant tout échange",
-        "Équipes dédiées sans rotation",
-        "Pas de conflits d'intérêts",
-        "Certification ISO 27001"
+        'Systematic NDA before any exchange',
+        'Dedicated teams, no rotation',
+        'No conflicts of interest',
+        'ISO 27001 certification',
       ],
-      differentiator: "Les grands cabinets travaillent souvent avec vos concurrents"
+      differentiator: 'Large firms often work with your competitors',
     },
     {
       icon: Zap,
-      title: "Exécution au niveau portefeuille",
-      description: "Task force au niveau board : recrutements CEO, M&A, opérations. Nous exécutons, nous ne livrons pas que des rapports.",
+      title: 'Portfolio-level execution',
+      description: 'Board-level task force: CEO recruitment, M&A, operations. We execute, we do not just deliver reports.',
       details: [
-        "Task force opérationnelle dédiée au portefeuille",
-        "Mise en œuvre dès la semaine 1",
-        "Résultats mesurables sous 90 jours",
-        "Proximité avec les dirigeants et les boards"
+        'Dedicated operational task force for the portfolio',
+        'Implementation from week 1',
+        'Measurable results within 90 days',
+        'Close contact with leadership and boards',
       ],
-      differentiator: "Les consultants traditionnels livrent des recommandations ; nous livrons des résultats"
+      differentiator: 'Traditional consultants deliver recommendations; we deliver results',
     },
     {
       icon: Target,
-      title: "Rémunération alignée",
-      description: "Success fee, equity (1–3 %), intéressement performance ou retainer annuel (100k–300k€/an par portefeuille). Nous prenons le risque avec vous.",
+      title: 'Aligned remuneration',
+      description: 'Success fee, equity (1–3%), performance incentive or annual retainer (100k–300k€/year per portfolio). We take the risk with you.',
       details: [
-        "100k–300k€/an par portefeuille ou 1–3 % equity",
-        "Success fees et intéressement performance",
-        "KPIs contractuels définis",
-        "Alignement total sur vos résultats"
+        '100k–300k€/year per portfolio or 1–3% equity',
+        'Success fees and performance incentive',
+        'Contractual KPIs defined',
+        'Full alignment on your results',
       ],
-      differentiator: "Nous prenons des risques sur vos résultats, pas seulement des honoraires fixes"
+      differentiator: 'We take risk on your results, not just fixed fees',
     },
     {
       icon: Users,
-      title: "Réseau et recommandations",
-      description: "Les investisseurs se connaissent, co-investissent, siègent aux mêmes boards. Réussir avec quelques fonds ouvre les références.",
+      title: 'Network and referrals',
+      description: 'Investors know each other, co-invest, sit on the same boards. Succeeding with a few funds opens referrals.',
       details: [
-        "Réseau de dirigeants et d'investisseurs",
-        "Deal flow et co-investissements",
-        "Références par le réseau, pas par la pub",
-        "Partenariats que l'argent seul ne peut acheter"
+        'Network of leaders and investors',
+        'Deal flow and co-investments',
+        'Referrals through the network, not marketing',
+        'Partnerships that money alone cannot buy',
       ],
-      differentiator: "Réussir avec quelques fonds suffit : le réseau fait le reste"
-    }
+      differentiator: 'Succeeding with a few funds is enough: the network does the rest',
+    },
   ];
 
   const comparisons = [
-    {
-      criteria: "Périmètre",
-      ghezali: "Portefeuille entier / plusieurs sociétés",
-      others: "Mission par mission",
-      advantage: true
-    },
-    {
-      criteria: "Confidentialité",
-      ghezali: "Absolue - NDA renforcé",
-      others: "Standard - Conflits possibles",
-      advantage: true
-    },
-    {
-      criteria: "Exécution",
-      ghezali: "Task force dédiée, niveau board",
-      others: "Recommandations uniquement",
-      advantage: true
-    },
-    {
-      criteria: "Engagement",
-      ghezali: "Success fees / equity / retainer aligné",
-      others: "Honoraires fixes",
-      advantage: true
-    },
-    {
-      criteria: "Réseau",
-      ghezali: "Réseau sélectif",
-      others: "Réseau commercial",
-      advantage: true
-    },
-    {
-      criteria: "Durée",
-      ghezali: "6-18 mois intensifs",
-      others: "Missions longues diluées",
-      advantage: true
-    }
+    { criteria: 'Scope', ghezali: 'Full portfolio / multiple companies', others: 'Project by project', advantage: true },
+    { criteria: 'Confidentiality', ghezali: 'Absolute - reinforced NDA', others: 'Standard - possible conflicts', advantage: true },
+    { criteria: 'Execution', ghezali: 'Dedicated task force, board level', others: 'Recommendations only', advantage: true },
+    { criteria: 'Commitment', ghezali: 'Success fees / equity / aligned retainer', others: 'Fixed fees', advantage: true },
+    { criteria: 'Network', ghezali: 'Selective network', others: 'Commercial network', advantage: true },
+    { criteria: 'Duration', ghezali: '6–18 months intensive', others: 'Long, diluted projects', advantage: true },
   ];
 
   return (
@@ -109,11 +79,11 @@ const CompetitiveAdvantage = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-serif text-black mb-6">
-            Pourquoi les fonds et family offices nous <span className="text-yellow-600">choisissent</span>
+            Why funds and family offices <span className="text-yellow-600">choose us</span>
           </h2>
           <div className="w-24 h-1 bg-yellow-600 mx-auto mb-6"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Sélection exigeante et confidentialité. Ce qui nous différencie du conseil traditionnel.
+            Rigorous selection and confidentiality. What sets us apart from traditional consulting.
           </p>
         </div>
 
@@ -132,7 +102,7 @@ const CompetitiveAdvantage = () => {
               </div>
               
               <div className="mb-6">
-                <h4 className="font-semibold text-black mb-3">Concrètement :</h4>
+                <h4 className="font-semibold text-black mb-3">In practice:</h4>
                 <div className="space-y-2">
                   {advantage.details.map((detail, idx) => (
                     <div key={idx} className="flex items-center">
@@ -145,7 +115,7 @@ const CompetitiveAdvantage = () => {
 
               <div className="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-600">
                 <p className="text-sm text-gray-700 italic">
-                  <strong>Notre différence :</strong> {advantage.differentiator}
+                  <strong>Our difference:</strong> {advantage.differentiator}
                 </p>
               </div>
             </div>
@@ -155,7 +125,7 @@ const CompetitiveAdvantage = () => {
         {/* Comparison Table */}
         <div className="mb-16">
           <h3 className="text-3xl font-serif text-black mb-12 text-center">
-            Ghezali vs conseil traditionnel
+            Ghezali vs traditional consulting
           </h3>
           
           <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
@@ -163,9 +133,9 @@ const CompetitiveAdvantage = () => {
               <table className="w-full">
                 <thead className="bg-gray-900 text-white">
                   <tr>
-                    <th className="px-6 py-4 text-left font-semibold">Critères</th>
+                    <th className="px-6 py-4 text-left font-semibold">Criteria</th>
                     <th className="px-6 py-4 text-left font-semibold text-yellow-400">Ghezali International Advisory</th>
-                    <th className="px-6 py-4 text-left font-semibold">Cabinets Traditionnels</th>
+                    <th className="px-6 py-4 text-left font-semibold">Traditional firms</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -189,7 +159,7 @@ const CompetitiveAdvantage = () => {
 
         {/* Client Success Stories */}
         <div className="bg-black p-12 rounded-2xl text-white mb-16">
-          <h3 className="text-3xl font-serif mb-8 text-center">Ce que disent fonds et family offices</h3>
+          <h3 className="text-3xl font-serif mb-8 text-center">What funds and family offices say</h3>
           <div className="grid lg:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="flex justify-center mb-4">
@@ -198,9 +168,9 @@ const CompetitiveAdvantage = () => {
                 ))}
               </div>
               <blockquote className="text-gray-300 italic mb-4">
-                &quot;Un partenaire stratégique du portefeuille, pas un prestataire. Exit à 4,2x au lieu des 2,8x prévus. La valeur créée parle d&apos;elle-même.&quot;
+                &quot;Strategic partner to the portfolio, not a vendor. Exit at 4.2x instead of 2.8x expected. The value created speaks for itself.&quot;
               </blockquote>
-              <cite className="text-yellow-400">— Managing Partner, Fonds PE</cite>
+              <cite className="text-yellow-400">— Managing Partner, PE Fund</cite>
             </div>
             <div className="text-center">
               <div className="flex justify-center mb-4">
@@ -209,7 +179,7 @@ const CompetitiveAdvantage = () => {
                 ))}
               </div>
               <blockquote className="text-gray-300 italic mb-4">
-                &quot;Confidentialité absolue, discrétion totale. Ils interviennent sur plusieurs de nos participations avec une cohérence rare. On les recommande en interne.&quot;
+                &quot;Absolute confidentiality, total discretion. They work across several of our holdings with rare consistency. We recommend them internally.&quot;
               </blockquote>
               <cite className="text-yellow-400">— Family Office, Europe</cite>
             </div>
@@ -220,21 +190,21 @@ const CompetitiveAdvantage = () => {
                 ))}
               </div>
               <blockquote className="text-gray-300 italic mb-4">
-                &quot;En 18 mois, valorisation du portefeuille significativement renforcée. Un contrat, plusieurs sociétés transformées. C&apos;est exactement ce qu&apos;on cherchait.&quot;
+                &quot;In 18 months, portfolio valuation significantly strengthened. One contract, multiple companies transformed. Exactly what we were looking for.&quot;
               </blockquote>
-              <cite className="text-yellow-400">— Holding d&apos;entrepreneurs</cite>
+              <cite className="text-yellow-400">— Entrepreneur holding</cite>
             </div>
           </div>
         </div>
 
         {/* Awards & Recognition */}
         <div className="text-center">
-          <h3 className="text-2xl font-serif text-black mb-8">Reconnaissances & Distinctions</h3>
+          <h3 className="text-2xl font-serif text-black mb-8">Recognition & awards</h3>
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
               <Award className="h-12 w-12 text-yellow-600 mx-auto mb-4" />
               <h4 className="font-semibold text-black mb-2">Top Consulting Firm</h4>
-              <p className="text-gray-600 text-sm">Les Échos Business 2024</p>
+              <p className="text-gray-600 text-sm">Business Awards 2024</p>
             </div>
             <div className="text-center">
               <Award className="h-12 w-12 text-yellow-600 mx-auto mb-4" />
@@ -249,7 +219,7 @@ const CompetitiveAdvantage = () => {
             <div className="text-center">
               <Award className="h-12 w-12 text-yellow-600 mx-auto mb-4" />
               <h4 className="font-semibold text-black mb-2">Client Satisfaction</h4>
-              <p className="text-gray-600 text-sm">98% - Record industrie</p>
+              <p className="text-gray-600 text-sm">98% - Industry record</p>
             </div>
           </div>
         </div>

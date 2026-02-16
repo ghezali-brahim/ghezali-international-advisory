@@ -6,7 +6,8 @@ import { usePathname } from 'next/navigation';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useLocale } from '@/context/LocaleContext';
-import { locales, getPathWithoutLocale, localeFlags } from '@/i18n/config';
+import { locales, getPathWithoutLocale, localeLabels } from '@/i18n/config';
+import FlagIcon from '@/components/FlagIcon';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -118,13 +119,16 @@ const Header = () => {
                 <button
                   type="button"
                   onClick={() => setLangDropdownOpen((v) => !v)}
-                  className="flex items-center gap-1 px-2 py-1.5 text-lg rounded border border-gray-700 hover:border-gray-500 transition-colors"
+                  className="flex items-center gap-1.5 px-2 py-1.5 text-lg rounded border border-gray-700 hover:border-gray-500 transition-colors min-w-[8rem] justify-between"
                   aria-label="Changer de langue"
                   aria-expanded={langDropdownOpen}
                   aria-haspopup="true"
                 >
-                  <span className="leading-none">{localeFlags[locale]}</span>
-                  <ChevronDown className="h-4 w-4 text-gray-400" />
+                  <span className="flex items-center gap-1.5">
+                    <FlagIcon locale={locale} className="shrink-0" />
+                    <span className="text-sm font-medium text-white">{localeLabels[locale]}</span>
+                  </span>
+                  <ChevronDown className="h-4 w-4 text-gray-400 shrink-0" />
                 </button>
                 {langDropdownOpen && (
                   <div className="absolute top-full right-0 mt-2 w-48 bg-black/95 backdrop-blur-sm border border-gray-800 rounded-lg shadow-xl py-2 z-50">
@@ -135,8 +139,8 @@ const Header = () => {
                         className={`flex items-center gap-2 px-4 py-2 text-sm transition-colors ${locale === loc ? 'text-yellow-400 bg-gray-800/50' : 'text-white hover:bg-gray-800 hover:text-yellow-400'}`}
                         onClick={() => setLangDropdownOpen(false)}
                       >
-                        <span className="text-lg leading-none">{localeFlags[loc]}</span>
-                        <span>{loc.toUpperCase()}</span>
+                        <FlagIcon locale={loc} className="shrink-0" />
+                        <span>{localeLabels[loc]}</span>
                       </Link>
                     ))}
                   </div>
@@ -193,17 +197,23 @@ const Header = () => {
               <Link href={`${prefix}/medias`} className="text-white hover:text-yellow-400 block px-3 py-2 text-base font-medium">
                 {t('nav.media')}
               </Link>
-              <div className="flex flex-wrap gap-2 px-3 py-2 border-t border-gray-800 mt-2 pt-3">
-                {locales.map((loc) => (
-                  <Link
-                    key={loc}
-                    href={`/${loc}${pathWithoutLocale || '/'}`}
-                    className={`inline-flex items-center justify-center w-10 h-10 rounded-lg text-xl transition-colors ${locale === loc ? 'bg-yellow-400/20 text-yellow-400' : 'text-gray-400 hover:bg-gray-800 hover:text-white'}`}
-                    title={loc.toUpperCase()}
-                  >
-                    {localeFlags[loc]}
-                  </Link>
-                ))}
+              <div className="px-3 py-2 border-t border-gray-800 mt-2 pt-3">
+                <p className="flex items-center gap-2 text-xs text-gray-500 mb-2">
+                  <FlagIcon locale={locale} />
+                  <span>{localeLabels[locale]}</span>
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {locales.map((loc) => (
+                    <Link
+                      key={loc}
+                      href={`/${loc}${pathWithoutLocale || '/'}`}
+                      className={`inline-flex items-center justify-center w-10 h-10 rounded-lg transition-colors ${locale === loc ? 'bg-yellow-400/20 ring-1 ring-yellow-400/50' : 'text-gray-400 hover:bg-gray-800 hover:text-white'}`}
+                      title={localeLabels[loc]}
+                    >
+                      <FlagIcon locale={loc} />
+                    </Link>
+                  ))}
+                </div>
               </div>
               <Link href={`${prefix}/contact`} className="bg-yellow-400 text-black hover:bg-yellow-500 block px-3 py-2 rounded-lg text-base font-medium mt-2">
                 {t('nav.contact')}

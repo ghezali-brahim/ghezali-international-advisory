@@ -1,110 +1,11 @@
 'use client';
 
 import { LocaleLink } from '@/components/LocaleLink';
-import { useLocale } from '@/context/LocaleContext';
 import { ArrowRight, Briefcase, FileCheck, Scale, Lock, MapPin, Mic, Users, LayoutDashboard, Calendar, Shield, Target } from 'lucide-react';
-
-type Locale = 'fr' | 'en';
 
 const WHERE_INTERVENE_ICONS = [LayoutDashboard, Mic, Calendar, Users, Shield, Target] as const;
 
-const content: Record<Locale, {
-  badge: string;
-  heroTitle: string;
-  heroTitleHighlight: string;
-  heroInvitationOnly: string;
-  heroSubtitle: string;
-  heroHint: string;
-  whereTitle: string;
-  whereSubtitle: string;
-  whereItems: string[];
-  mandatesTitle: string;
-  mandatesIntro: string;
-  mandates: string[];
-  frameworkTitle: string;
-  frameworkItems: string[];
-  modelsTitle: string;
-  modelsItems: string[];
-  representationTitle: string;
-  representationP1: string;
-  representationP2: string;
-  processTitle: string;
-  processSteps: string[];
-  processNote: string;
-  capacityTitle: string;
-  capacityText: string;
-  regionsIntro: string;
-  regionsTitle: string;
-  regions: string[];
-  ctaTitle: string;
-  ctaSubtitle: string;
-  ctaButton: string;
-  ctaNote: string;
-}> = {
-  fr: {
-    badge: 'Interventions stratégiques internationales',
-    heroTitle: 'Interventions stratégiques',
-    heroTitleHighlight: 'internationales',
-    heroInvitationOnly: 'Sur invitation uniquement',
-    heroSubtitle: 'Nous acceptons un nombre limité de mandats stratégiques au niveau board et institutionnels en Europe, aux États-Unis et au Moyen-Orient.',
-    heroHint: 'Mandats, boards, conférences et événements — à la demande.',
-    whereTitle: 'Où nous intervenons, à la demande',
-    whereSubtitle: 'Nous sommes sollicités pour intervenir en tant qu\'intervenant stratégique, sur invitation.',
-    whereItems: [
-      'Conseils d\'administration et comités (boards)',
-      'Conférences et keynotes',
-      'Événements stratégiques et cercles restreints',
-      'Réseaux et clubs d\'investisseurs (intervention ponctuelle)',
-      'Sessions board-level et gouvernance',
-      'Missions institutionnelles et task forces',
-    ],
-    mandatesTitle: 'Types de mandats envisagés',
-    mandatesIntro: 'Nous intervenons sur invitation, dans un cadre défini.',
-    mandates: [
-      'Transformation de portefeuille pour fonds PE',
-      'Intervention stratégique en environnements de gouvernance complexes',
-      'Exécution de croissance cross-border',
-      'Mandats advisory institutionnels',
-      'Situations confidentielles et spéciales',
-    ],
-    frameworkTitle: 'Cadre d\'engagement',
-    frameworkItems: [
-      'Accès direct aux décideurs',
-      'Mandat au niveau board',
-      'Périmètre et autorité clairement définis',
-      'Accord de confidentialité',
-      'Calendrier d\'exécution défini',
-      'Alignement des intérêts',
-    ],
-    modelsTitle: 'Modèles d\'intervention',
-    modelsItems: [
-      'Mandat stratégique forfaitaire',
-      'Alignement sur la performance (success-based)',
-      'Participation au capital (le cas échéant)',
-      'Retainers advisory long terme',
-    ],
-    representationTitle: 'Représentation internationale',
-    representationP1: 'Nous collaborons avec des intermédiaires et agents stratégiques sélectionnés pour structurer des interventions de haut niveau à l\'international.',
-    representationP2: 'La représentation est examinée au cas par cas.',
-    processTitle: 'Processus d\'examen des mandats',
-    processSteps: [
-      'Introduction confidentielle',
-      'Entretien d\'alignement stratégique initial',
-      'Revue interne du mandat',
-      'Décision formelle d\'engagement',
-    ],
-    processNote: 'Chaque mandat est examiné en interne avant acceptation.',
-    capacityTitle: 'Capacité d\'engagement limitée',
-    capacityText: 'Pour préserver la qualité d\'exécution et la discrétion, nous maintenons un nombre strictement limité de mandats internationaux simultanés.',
-    regionsIntro: 'Nous intervenons actuellement dans les régions suivantes.',
-    regionsTitle: 'Régions d\'intervention actuelles',
-    regions: ['Europe', 'États-Unis', 'Golfe (GCC)', 'Marchés africains sélectionnés'],
-    ctaTitle: 'Demande de considération stratégique',
-    ctaSubtitle: 'Chaque introduction de mandat est examinée avec attention. Réponse sous 24h pour les demandes qualifiées.',
-    ctaButton: 'Soumettre une introduction de mandat',
-    ctaNote: 'Introduction confidentielle',
-  },
-  en: {
+const content = {
     badge: 'International Strategic Interventions',
     heroTitle: 'International Strategic',
     heroTitleHighlight: 'Interventions',
@@ -166,12 +67,10 @@ const content: Record<Locale, {
     ctaSubtitle: 'Each mandate introduction is reviewed with care. Response within 24h for qualified requests.',
     ctaButton: 'Submit a Mandate Introduction',
     ctaNote: 'Confidential introduction',
-  },
 };
 
 const ReseauPage = () => {
-  const locale = useLocale() as Locale;
-  const t = content[locale] ?? content.en;
+  const t = content;
 
   return (
     <div className="pt-16">

@@ -4,71 +4,58 @@ const InternationalInstitutions = () => {
   const services = [
     {
       icon: Globe,
-      title: "Stratégie de Développement National",
-      description: "Accompagnement des gouvernements dans l'élaboration de stratégies de croissance économique et de compétitivité internationale",
+      title: 'National development strategy',
+      description:
+        'Support for governments in designing economic growth and international competitiveness strategies',
       examples: [
-        "Plans de développement économique nationaux",
-        "Stratégies d'attractivité des investissements",
-        "Politiques d'innovation et de digitalisation",
-        "Réformes structurelles pour la croissance"
-      ]
+        'National economic development plans',
+        'Investment attractiveness strategies',
+        'Innovation and digitalisation policies',
+        'Structural reforms for growth',
+      ],
     },
     {
       icon: Building2,
-      title: "Transformation Institutionnelle",
-      description: "Modernisation des institutions publiques et optimisation des systèmes administratifs pour une efficacité maximale",
+      title: 'Institutional transformation',
+      description:
+        'Modernisation of public institutions and optimisation of administrative systems for maximum efficiency',
       examples: [
-        "Digitalisation des services publics",
-        "Réorganisation administrative",
-        "Amélioration de la gouvernance",
-        "Optimisation des processus institutionnels"
-      ]
+        'Digitalisation of public services',
+        'Administrative reorganisation',
+        'Governance improvement',
+        'Institutional process optimisation',
+      ],
     },
     {
       icon: TrendingUp,
-      title: "Dynamisation des Marchés",
-      description: "Développement d'écosystèmes économiques performants et stimulation de la croissance des secteurs stratégiques",
+      title: 'Market dynamisation',
+      description:
+        'Development of high-performing economic ecosystems and stimulation of strategic sector growth',
       examples: [
-        "Développement de clusters industriels",
-        "Création de zones économiques spéciales",
-        "Programmes de soutien aux PME/ETI",
-        "Stratégies sectorielles ciblées"
-      ]
-    }
+        'Industrial cluster development',
+        'Special economic zones',
+        'SME and mid-market support programmes',
+        'Targeted sector strategies',
+      ],
+    },
   ];
 
   const achievements = [
-    {
-      metric: "12",
-      label: "Pays accompagnés",
-      description: "Missions stratégiques réalisées"
-    },
-    {
-      metric: "25+",
-      label: "Institutions internationales",
-      description: "Partenariats établis"
-    },
-    {
-      metric: "€2.5Md",
-      label: "Impact économique généré",
-      description: "Croissance stimulée"
-    },
-    {
-      metric: "150+",
-      label: "Réformes implémentées",
-      description: "Transformations réussies"
-    }
+    { metric: '12', label: 'Countries supported', description: 'Strategic missions delivered' },
+    { metric: '25+', label: 'International institutions', description: 'Partnerships established' },
+    { metric: '€2.5B', label: 'Economic impact generated', description: 'Growth stimulated' },
+    { metric: '150+', label: 'Reforms implemented', description: 'Successful transformations' },
   ];
 
   const partnerships = [
-    "Banque Mondiale",
-    "Union Européenne",
-    "OCDE",
-    "Banques de Développement Régionales",
-    "Agences de Coopération Internationale",
-    "Ministères des Finances",
-    "Agences de Développement Économique",
-    "Chambres de Commerce Internationales"
+    'World Bank',
+    'European Union',
+    'OECD',
+    'Regional development banks',
+    'International cooperation agencies',
+    'Finance ministries',
+    'Economic development agencies',
+    'International chambers of commerce',
   ];
 
   return (
@@ -81,15 +68,15 @@ const InternationalInstitutions = () => {
             <span className="text-yellow-400 text-sm font-medium">Institutional Advisory</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-serif text-white mb-6">
-            Institutional Advisory — <span className="text-yellow-400">Conseil aux institutions</span>
+            Institutional Advisory — <span className="text-yellow-400">Advisory for institutions</span>
           </h2>
           <div className="w-24 h-1 bg-yellow-400 mx-auto mb-6"></div>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Nous accompagnons les pays et institutions internationales dans leur stratégie de développement, 
-            l'optimisation de leur croissance, la dynamisation des marchés et la transformation des systèmes en place.
+            We support countries and international institutions in their development strategy,
+            growth optimisation, market dynamisation and transformation of existing systems.
           </p>
           <p className="text-base text-gray-400 max-w-3xl mx-auto mt-4">
-            Nous priorisons les mandats fonds et family offices ; nos interventions institutionnelles restent sélectives.
+            We prioritise fund and family office mandates; our institutional work remains selective.
           </p>
         </div>
 
@@ -120,7 +107,7 @@ const InternationalInstitutions = () => {
 
         {/* Achievements */}
         <div className="mb-20">
-          <h3 className="text-3xl font-serif text-white mb-12 text-center">Notre impact international</h3>
+          <h3 className="text-3xl font-serif text-white mb-12 text-center">Our international impact</h3>
           <div className="grid md:grid-cols-4 gap-8">
             {achievements.map((achievement, index) => (
               <div key={index} className="text-center">
@@ -138,48 +125,48 @@ const InternationalInstitutions = () => {
             <div>
               <div className="flex items-center mb-6">
                 <Award className="h-6 w-6 text-yellow-400 mr-3" />
-                <span className="text-yellow-400 font-semibold">Étude de cas récente</span>
+                <span className="text-yellow-400 font-semibold">Recent case study</span>
               </div>
               <h3 className="text-3xl font-serif text-white mb-6">
-                Transformation Économique Nationale
+                National economic transformation
               </h3>
               <p className="text-gray-300 mb-6 leading-relaxed">
-                Accompagnement d'un pays émergent dans la refonte complète de sa stratégie de développement économique, 
-                incluant la digitalisation des institutions et la création de nouveaux écosystèmes industriels.
+                Support for an emerging country in the complete overhaul of its economic development strategy,
+                including institutional digitalisation and creation of new industrial ecosystems.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center">
                   <div className="bg-yellow-400 w-2 h-2 rounded-full mr-4"></div>
-                  <span className="text-gray-300">+35% de croissance du PIB en 3 ans</span>
+                  <span className="text-gray-300">+35% GDP growth in 3 years</span>
                 </div>
                 <div className="flex items-center">
                   <div className="bg-yellow-400 w-2 h-2 rounded-full mr-4"></div>
-                  <span className="text-gray-300">50+ réformes structurelles implémentées</span>
+                  <span className="text-gray-300">50+ structural reforms implemented</span>
                 </div>
                 <div className="flex items-center">
                   <div className="bg-yellow-400 w-2 h-2 rounded-full mr-4"></div>
-                  <span className="text-gray-300">€800M d'investissements étrangers attirés</span>
+                  <span className="text-gray-300">€800M foreign investment attracted</span>
                 </div>
               </div>
             </div>
             <div className="bg-gray-900 p-8 rounded-xl">
-              <h4 className="text-xl font-serif text-white mb-6">Méthodologie appliquée</h4>
+              <h4 className="text-xl font-serif text-white mb-6">Methodology applied</h4>
               <div className="space-y-4">
                 <div className="flex items-center">
                   <div className="bg-yellow-400 text-black w-8 h-8 rounded-full flex items-center justify-center mr-4 text-sm font-bold">1</div>
-                  <span className="text-gray-300">Diagnostic économique complet</span>
+                  <span className="text-gray-300">Full economic diagnostic</span>
                 </div>
                 <div className="flex items-center">
                   <div className="bg-yellow-400 text-black w-8 h-8 rounded-full flex items-center justify-center mr-4 text-sm font-bold">2</div>
-                  <span className="text-gray-300">Stratégie de développement sur mesure</span>
+                  <span className="text-gray-300">Tailored development strategy</span>
                 </div>
                 <div className="flex items-center">
                   <div className="bg-yellow-400 text-black w-8 h-8 rounded-full flex items-center justify-center mr-4 text-sm font-bold">3</div>
-                  <span className="text-gray-300">Implémentation avec task force locale</span>
+                  <span className="text-gray-300">Implementation with local task force</span>
                 </div>
                 <div className="flex items-center">
                   <div className="bg-yellow-400 text-black w-8 h-8 rounded-full flex items-center justify-center mr-4 text-sm font-bold">4</div>
-                  <span className="text-gray-300">Suivi et optimisation continue</span>
+                  <span className="text-gray-300">Ongoing monitoring and optimisation</span>
                 </div>
               </div>
             </div>
@@ -188,7 +175,7 @@ const InternationalInstitutions = () => {
 
         {/* Partnerships */}
         <div className="text-center mb-16">
-          <h3 className="text-3xl font-serif text-white mb-12">Nos partenaires institutionnels</h3>
+          <h3 className="text-3xl font-serif text-white mb-12">Our institutional partners</h3>
           <div className="grid md:grid-cols-4 gap-6">
             {partnerships.map((partner, index) => (
               <div key={index} className="bg-gray-800 p-4 rounded-lg border border-gray-700">
@@ -202,15 +189,15 @@ const InternationalInstitutions = () => {
         <div className="text-center">
           <div className="bg-gradient-to-r from-gray-800 to-gray-900 p-12 rounded-2xl border border-gray-700">
             <h3 className="text-3xl md:text-4xl font-serif text-white mb-6">
-              Transformons ensemble l'avenir économique
+              Shaping the economic future together
             </h3>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Que vous soyez un gouvernement, une institution internationale ou une agence de développement, 
-              nous avons l'expertise pour catalyser votre croissance.
+              Whether you are a government, international institution or development agency,
+              we have the expertise to catalyse your growth.
             </p>
             <button className="bg-yellow-400 text-black hover:bg-yellow-500 px-10 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-400/25 inline-flex items-center">
               <Globe className="mr-2 h-5 w-5" />
-              Discuter de votre projet
+              Discuss your project
             </button>
           </div>
         </div>

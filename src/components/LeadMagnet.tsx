@@ -30,46 +30,46 @@ const LeadMagnet = () => {
   const leadMagnets = [
     {
       id: 1,
-      title: "Briefing confidentiel : Valorisation et transformation de portefeuille",
-      description: "Pour fonds et family offices. Méthodes exclusives pour maximiser la valeur du portefeuille et accélérer la transformation de vos participations.",
-      pages: "Réservé aux qualifiés",
+      title: 'Confidential briefing: Portfolio valuation and transformation',
+      description: 'For funds and family offices. Exclusive methods to maximise portfolio value and accelerate transformation of your holdings.',
+      pages: 'Qualified access only',
       icon: TrendingUp,
-      color: "bg-gradient-to-br from-yellow-600 to-yellow-800",
+      color: 'bg-gradient-to-br from-yellow-600 to-yellow-800',
       features: [
-        "Leviers de valorisation multi-sociétés",
-        "Structures retainer / equity / success fee",
-        "Transformation globale vs mission par mission",
-        "Critères de sélection partenaire stratégique"
-      ]
+        'Multi-company valuation levers',
+        'Retainer / equity / success fee structures',
+        'Portfolio-wide transformation vs project by project',
+        'Strategic partner selection criteria',
+      ],
     },
     {
       id: 2,
-      title: "Valoriser son ETI avant cession",
-      description: "Pour vos participations. Méthodes pour maximiser la valeur avant sortie. Multiples optimisés, valorisation augmentée.",
-      pages: "45 pages",
+      title: 'Valuing your mid-market company before exit',
+      description: 'For your holdings. Methods to maximise value before exit. Optimised multiples, increased valuation.',
+      pages: '45 pages',
       icon: FileText,
-      color: "bg-gradient-to-br from-blue-500 to-blue-700",
+      color: 'bg-gradient-to-br from-blue-500 to-blue-700',
       features: [
-        "5 leviers de valorisation",
-        "Études de cas réelles",
-        "Checklist de préparation",
-        "Templates négociation"
-      ]
+        '5 valuation levers',
+        'Real case studies',
+        'Preparation checklist',
+        'Negotiation templates',
+      ],
     },
     {
       id: 3,
-      title: "Executive Advisory : pour les dirigeants de portefeuille",
-      description: "Comment l'Executive Advisory transforme le leadership des dirigeants de vos sociétés et accélère les résultats.",
-      pages: "32 pages",
+      title: 'Executive Advisory: for portfolio company leaders',
+      description: 'How Executive Advisory transforms the leadership of your portfolio company leaders and accelerates results.',
+      pages: '32 pages',
       icon: Users,
-      color: "bg-gradient-to-br from-purple-500 to-purple-700",
+      color: 'bg-gradient-to-br from-purple-500 to-purple-700',
       features: [
-        "Méthodologie S.E.R",
-        "ROI et critères de sélection",
-        "Alignement avec les objectifs fonds",
-        "Accès board et décisions"
-      ]
-    }
+        'S.E.R methodology',
+        'ROI and selection criteria',
+        'Alignment with fund objectives',
+        'Board access and decisions',
+      ],
+    },
   ];
 
   return (
@@ -78,11 +78,11 @@ const LeadMagnet = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-serif text-black mb-6">
-            Ressources <span className="text-yellow-600">réservées aux qualifiés</span>
+            Resources <span className="text-yellow-600">for qualified access only</span>
           </h2>
           <div className="w-24 h-1 bg-yellow-600 mx-auto mb-6"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Briefings et méthodologies pour fonds, family offices et dirigeants de portefeuille. Accès sur demande, après vérification de profil.
+            Briefings and methodologies for funds, family offices and portfolio leaders. Access on request, after profile verification.
           </p>
         </div>
 
@@ -97,7 +97,7 @@ const LeadMagnet = () => {
                   <h3 className="text-xl font-serif mb-2">{magnet.title}</h3>
                   <div className="flex items-center justify-between text-sm opacity-90">
                     <span>{magnet.pages}</span>
-                    <span>Sur demande, après vérification de profil</span>
+                    <span>On request, after profile verification</span>
                   </div>
                 </div>
                 <div className="absolute top-0 right-0 w-24 h-24 bg-white/10 rounded-full -translate-y-12 translate-x-12"></div>
@@ -110,7 +110,7 @@ const LeadMagnet = () => {
                 </p>
                 
                 <div className="mb-6">
-                  <h4 className="font-semibold text-black mb-3">Ce que vous découvrirez :</h4>
+                  <h4 className="font-semibold text-black mb-3">What you will discover:</h4>
                   <ul className="space-y-2">
                     {magnet.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center text-sm text-gray-600">
@@ -122,7 +122,7 @@ const LeadMagnet = () => {
                 </div>
 
                 <button className="w-full bg-black text-white hover:bg-gray-800 py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center group">
-                  Demander l'accès
+                  Request access
                   <Download className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
                 </button>
               </div>
@@ -134,10 +134,10 @@ const LeadMagnet = () => {
         <div className="bg-black p-12 rounded-2xl text-center">
           <Download className="h-12 w-12 text-yellow-400 mx-auto mb-6" />
           <h3 className="text-3xl md:text-4xl font-serif text-white mb-6">
-            Demander l'accès aux ressources
+            Request access to resources
           </h3>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Réservé aux investisseurs et dirigeants qualifiés. Briefings et analyses sur demande.
+            For qualified investors and leaders only. Briefings and analysis on request.
           </p>
 
           {!isDownloaded ? (
@@ -145,21 +145,21 @@ const LeadMagnet = () => {
               <FormValidation
                 fields={fieldConfigs.leadMagnet}
                 onSubmit={handleSubmit}
-                submitButtonText="Demander l'accès"
+                submitButtonText="Request access"
                 className="space-y-4"
               />
               <p className="text-gray-400 text-sm mt-4 text-center">
-                Réservé aux investisseurs et dirigeants qualifiés. En vous inscrivant, vous acceptez nos conditions de confidentialité.
+                For qualified investors and leaders only. By signing up, you accept our confidentiality terms.
               </p>
             </div>
           ) : (
             <div className="bg-green-600 p-6 rounded-lg">
               <CheckCircle className="h-12 w-12 text-white mx-auto mb-4" />
               <h4 className="text-xl font-semibold text-white mb-2">
-                Inscription Réussie !
+                Successfully registered
               </h4>
               <p className="text-gray-100">
-                Vous recevrez bientôt tous nos guides premium par email.
+                You will soon receive all our premium guides by email.
               </p>
             </div>
           )}

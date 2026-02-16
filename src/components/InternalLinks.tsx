@@ -74,20 +74,20 @@ export const ContextualLinks: FC<{ context: string }> = ({ context }) => {
         return [
           {
             to: '/services',
-            title: 'Offres pour fonds et family offices',
+            title: 'Offers for funds and family offices',
             description: 'Strategic Deals & Equity, Executive Advisory, Corporate Acceleration',
             icon: TrendingUp
           },
           {
             to: '/reseau',
-            title: 'Réseau & Partenariats',
-            description: 'Partenariats sélectifs avec fonds et dirigeants',
+            title: 'Network & Partnerships',
+            description: 'Selective partnerships with funds and leaders',
             icon: Users
           },
           {
             to: '/blog',
-            title: 'Lire nos insights stratégiques',
-            description: 'Analyses exclusives et retours d\'expérience',
+            title: 'Read our strategic insights',
+            description: 'Exclusive analysis and experience sharing',
             icon: BookOpen
           }
         ];
@@ -97,37 +97,37 @@ export const ContextualLinks: FC<{ context: string }> = ({ context }) => {
           {
             to: '/private-equity',
             title: 'Private Equity',
-            description: 'Partenaire stratégique des fonds PE, transformation de portefeuille',
+            description: 'Strategic partner to PE funds, portfolio transformation',
             icon: TrendingUp
           },
           {
             to: '/family-office',
             title: 'Family Office',
-            description: 'Partenaire stratégique des family offices, patrimoine et M&A',
+            description: 'Strategic partner to family offices, wealth and M&A',
             icon: Users
           },
           {
             to: '/group-holding',
             title: 'Group Holding',
-            description: 'Conseil aux groupes et holdings, structuration et valorisation',
+            description: 'Advisory for groups and holdings, structuring and valuation',
             icon: TrendingUp
           },
           {
             to: '/institutional',
             title: 'Institutional Advisory',
-            description: 'Conseil aux institutions et gouvernements',
+            description: 'Advisory for institutions and governments',
             icon: Users
           },
           {
             to: '/expertise',
-            title: 'Expertise sectorielle',
-            description: 'Industrie, distribution, tech, services — accompagnement sur mesure',
+            title: 'Sector expertise',
+            description: 'Industry, distribution, tech, services — tailored support',
             icon: BookOpen
           },
           {
             to: '/contact',
-            title: 'Demander une consultation',
-            description: 'Échange confidentiel avec nos experts',
+            title: 'Request a consultation',
+            description: 'Confidential discussion with our experts',
             icon: ArrowRight
           }
         ];
@@ -136,20 +136,20 @@ export const ContextualLinks: FC<{ context: string }> = ({ context }) => {
         return [
           {
             to: '/services',
-            title: 'Appliquer ces stratégies',
-            description: 'Nos programmes d\'accompagnement pour transformer votre entreprise',
+            title: 'Apply these strategies',
+            description: 'Our programmes to transform your business',
             icon: TrendingUp
           },
           {
             to: '/reseau',
-            title: 'Réseau & Partenariats',
-            description: 'Partenariats sélectifs, réseau d\'investisseurs et de dirigeants',
+            title: 'Network & Partnerships',
+            description: 'Selective partnerships, investors and leaders network',
             icon: Users
           },
           {
             to: '/contact',
-            title: 'Échanger avec nos experts',
-            description: 'Discussion confidentielle sur votre situation',
+            title: 'Speak with our experts',
+            description: 'Confidential discussion about your situation',
             icon: ArrowRight
           }
         ];
@@ -166,7 +166,7 @@ export const ContextualLinks: FC<{ context: string }> = ({ context }) => {
   return (
     <div className="bg-gray-50 p-8 rounded-xl">
       <h3 className="text-xl font-semibold text-black mb-6">
-        Vous pourriez aussi être intéressé par
+        You may also be interested in
       </h3>
       <div className="space-y-4">
         {links.map((link, index) => (
@@ -189,20 +189,20 @@ export const BlogRelatedLinks: FC = () => {
   const relatedLinks = [
     {
       to: '/blog',
-      title: 'Tous nos articles',
-      description: 'Découvrez tous nos insights stratégiques',
+      title: 'All our articles',
+      description: 'Discover all our strategic insights',
       icon: BookOpen
     },
     {
       to: '/services',
-      title: 'Nos programmes d\'accompagnement',
-      description: 'Transformez ces insights en résultats concrets',
+      title: 'Our support programmes',
+      description: 'Turn these insights into concrete results',
       icon: TrendingUp
     },
     {
       to: '/contact',
-      title: 'Échange avec nos experts',
-      description: 'Discussion confidentielle sur votre situation',
+      title: 'Speak with our experts',
+      description: 'Confidential discussion about your situation',
       icon: Users
     }
   ];
@@ -210,7 +210,7 @@ export const BlogRelatedLinks: FC = () => {
   return (
     <div className="mt-12">
       <h3 className="text-xl font-semibold text-black mb-6">
-        Ressources complémentaires
+        Related resources
       </h3>
       <div className="grid md:grid-cols-3 gap-6">
         {relatedLinks.map((link, index) => (
@@ -234,7 +234,7 @@ export const QuickNavigation: FC = () => {
     {
       to: '/services',
       title: 'Services',
-      description: 'Nos offres premium'
+      description: 'Our premium offers'
     },
     {
       to: '/private-equity',
@@ -249,44 +249,44 @@ export const QuickNavigation: FC = () => {
     {
       to: '/group-holding',
       title: 'Group Holding',
-      description: 'Groupes et holdings'
+      description: 'Groups and holdings'
     },
     {
       to: '/team',
-      title: 'Équipe',
-      description: 'Nos experts'
+      title: 'Team',
+      description: 'Our experts'
     },
     {
       to: '/expertise',
       title: 'Expertise',
-      description: 'Expertise sectorielle'
+      description: 'Sector expertise'
     },
     {
       to: '/positioning',
-      title: 'Positionnement',
-      description: 'Notre différenciation'
+      title: 'Positioning',
+      description: 'Our differentiation'
     },
     {
       to: '/blog',
       title: 'Blog',
-      description: 'Insights stratégiques'
+      description: 'Strategic insights'
     },
     {
       to: '/reseau',
-      title: 'Réseau',
-      description: 'Partenariats'
+      title: 'Network',
+      description: 'Partnerships'
     },
     {
       to: '/contact',
       title: 'Contact',
-      description: 'Nous contacter'
+      description: 'Contact us'
     }
   ];
 
   return (
     <div className="bg-black p-8 rounded-xl">
       <h3 className="text-xl font-semibold text-white mb-6">
-        Navigation rapide
+        Quick navigation
       </h3>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
         {quickLinks.map((link, index) => (

@@ -3,6 +3,20 @@
 import type { Locale } from '@/i18n/config';
 import { locales, defaultLocale, isValidLocale } from '@/i18n/config';
 import { getMarketBySlug } from '@/config/markets';
+import type { MarketConfig } from '@/config/markets';
+
+/** Codes hreflang par défaut pour les pages génériques (sans pays) : langue-région BCP 47. */
+export const DEFAULT_HREFLANG_BY_LOCALE: Record<Locale, string> = {
+  en: 'en-US',
+  fr: 'fr-FR',
+  de: 'de-DE',
+  nl: 'nl-NL',
+  es: 'es-ES',
+  it: 'it-IT',
+  ar: 'ar-AE',
+  he: 'he-IL',
+  zh: 'zh-HK',
+};
 
 export const BASE_URL = 'https://www.ghezali-business.com';
 
@@ -271,19 +285,26 @@ export function getSEOConfig(page: string, locale: string = defaultLocale): SEOC
   return byLocale[page] ?? defaultSEO;
 }
 
+/** Code hreflang BCP 47 pour une page marché (ex. en + US → en-US, ar + AE → ar-AE). */
+export function getHreflangCode(locale: Locale, market: MarketConfig): string {
+  return `${locale}-${market.hreflangRegion}`;
+}
+
 /** pathWithoutLocale: '' pour home, '/services', '/blog', '/blog/slug' */
 export function getAlternates(
   pathWithoutLocale: string,
   localeList: readonly Locale[] = locales
 ): { canonical: string; languages: Record<string, string> } {
   const path = pathWithoutLocale.startsWith('/') ? pathWithoutLocale : `/${pathWithoutLocale}`;
+  const segment = path === '/' ? '' : path;
   const languages: Record<string, string> = {};
   for (const loc of localeList) {
-    const segment = path === '/' ? '' : path;
-    languages[loc] = `${BASE_URL}/${loc}${segment}`;
+    const hreflang = DEFAULT_HREFLANG_BY_LOCALE[loc];
+    languages[hreflang] = `${BASE_URL}/${loc}${segment}`;
   }
-  languages['x-default'] = `${BASE_URL}/${defaultLocale}${path === '/' ? '' : path}`;
-  const canonical = languages[defaultLocale] ?? `${BASE_URL}/${defaultLocale}${path}`;
+  const defaultUrl = `${BASE_URL}/${defaultLocale}${segment}`;
+  languages['x-default'] = defaultUrl;
+  const canonical = defaultUrl;
   return { canonical, languages };
 }
 
@@ -294,10 +315,30 @@ export function getMarketAlternates(countrySlug: string): { canonical: string; l
   const path = `/markets/${countrySlug}`;
   const languages: Record<string, string> = {};
   for (const loc of market.locales) {
-    languages[loc] = `${BASE_URL}/${loc}${path}`;
+    const hreflang = getHreflangCode(loc as Locale, market);
+    languages[hreflang] = `${BASE_URL}/${loc}${path}`;
   }
   languages['x-default'] = `${BASE_URL}/${market.defaultLocale}${path}`;
   const canonical = `${BASE_URL}/${market.defaultLocale}${path}`;
+  return { canonical, languages };
+}
+
+/** Alternates (hreflang + canonical) pour une page article marché. */
+export function getMarketArticleAlternates(
+  countrySlug: string,
+  articleSlug: string,
+  locale: Locale
+): { canonical: string; languages: Record<string, string> } | null {
+  const market = getMarketBySlug(countrySlug);
+  if (!market || !market.locales.includes(locale)) return null;
+  const path = `/markets/${countrySlug}/${articleSlug}`;
+  const languages: Record<string, string> = {};
+  for (const loc of market.locales) {
+    const hreflang = getHreflangCode(loc as Locale, market);
+    languages[hreflang] = `${BASE_URL}/${loc}${path}`;
+  }
+  languages['x-default'] = `${BASE_URL}/${market.defaultLocale}${path}`;
+  const canonical = `${BASE_URL}/${locale}${path}`;
   return { canonical, languages };
 }
 

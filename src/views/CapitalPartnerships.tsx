@@ -1,13 +1,12 @@
 'use client';
 
-import { useTranslation } from 'react-i18next';
+import { capitalPartnershipsEn } from '@/content/capitalPartnershipsEn';
 import { LocaleLink } from '@/components/LocaleLink';
 import { Shield, ArrowRight, ChevronRight } from 'lucide-react';
 
-const CapitalPartnershipsPage = () => {
-  const { t } = useTranslation('default');
-  const arr = (key: string) => t(key, { returnObjects: true }) as string[];
+const c = capitalPartnershipsEn;
 
+const CapitalPartnershipsPage = () => {
   return (
     <div className="pt-16">
       {/* 1. Hero */}
@@ -15,36 +14,36 @@ const CapitalPartnershipsPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex flex-wrap justify-center gap-2 mb-6">
             <span className="inline-flex items-center px-4 py-2 rounded-full border border-yellow-400/30 bg-yellow-400/10 backdrop-blur-sm text-yellow-400 text-sm font-medium">
-              {t('capitalPartnerships.hero.badge1')}
+              {c.hero.badge1}
             </span>
             <span className="inline-flex items-center px-4 py-2 rounded-full border border-yellow-400/30 bg-yellow-400/10 backdrop-blur-sm text-yellow-400 text-sm font-medium">
-              {t('capitalPartnerships.hero.badge2')}
+              {c.hero.badge2}
             </span>
             <span className="inline-flex items-center px-4 py-2 rounded-full border border-yellow-400/30 bg-yellow-400/10 backdrop-blur-sm text-yellow-400 text-sm font-medium">
-              {t('capitalPartnerships.hero.badge3')}
+              {c.hero.badge3}
             </span>
           </div>
           <h1 className="text-4xl md:text-6xl font-serif text-white mb-6">
-            {t('capitalPartnerships.hero.headline')}
+            {c.hero.headline}
           </h1>
           <div className="w-24 h-1 bg-yellow-400 mx-auto mb-6" />
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            {t('capitalPartnerships.hero.subtitle')}
+            {c.hero.subtitle}
           </p>
         </div>
       </section>
 
-      {/* 2. Le problème / The context */}
+      {/* 2. The context */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-serif text-black mb-6">
-            {t('capitalPartnerships.problem.title')}
+            {c.problem.title}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mb-10 leading-relaxed">
-            {t('capitalPartnerships.problem.intro')}
+            {c.problem.intro}
           </p>
           <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 text-gray-600">
-            {arr('capitalPartnerships.problem.items').map((item) => (
+            {c.problem.items.map((item) => (
               <li key={item} className="flex items-center">
                 <ChevronRight className="h-5 w-5 text-yellow-600 mr-2 flex-shrink-0" />
                 {item}
@@ -54,17 +53,17 @@ const CapitalPartnershipsPage = () => {
         </div>
       </section>
 
-      {/* 3. La solution / Our role */}
+      {/* 3. Our role */}
       <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-serif text-black mb-6">
-            {t('capitalPartnerships.solution.title')}
+            {c.solution.title}
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mb-10 leading-relaxed font-medium">
-            {t('capitalPartnerships.solution.intro')}
+            {c.solution.intro}
           </p>
           <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {arr('capitalPartnerships.solution.items').map((item) => (
+            {c.solution.items.map((item) => (
               <li
                 key={item}
                 className="p-6 rounded-2xl bg-white border border-gray-200 flex items-center"
@@ -81,15 +80,15 @@ const CapitalPartnershipsPage = () => {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-serif text-black mb-12">
-            {t('capitalPartnerships.thesis.title')}
+            {c.thesis.title}
           </h2>
           <div className="grid md:grid-cols-2 gap-12">
             <div>
               <h3 className="text-xl font-serif text-black mb-4 border-b border-yellow-400 pb-2">
-                {t('capitalPartnerships.thesis.focusTitle')}
+                {c.thesis.focusTitle}
               </h3>
               <ul className="space-y-2 text-gray-600">
-                {arr('capitalPartnerships.thesis.focusItems').map((item) => (
+                {c.thesis.focusItems.map((item) => (
                   <li key={item} className="flex items-center">
                     <ChevronRight className="h-4 w-4 text-yellow-600 mr-2 flex-shrink-0" />
                     {item}
@@ -99,20 +98,20 @@ const CapitalPartnershipsPage = () => {
             </div>
             <div>
               <h3 className="text-xl font-serif text-black mb-4 border-b border-yellow-400 pb-2">
-                {t('capitalPartnerships.thesis.targetTitle')}
+                {c.thesis.targetTitle}
               </h3>
               <dl className="space-y-2 text-gray-600">
                 <div>
-                  <dt className="font-medium text-gray-800">{t('capitalPartnerships.thesis.targetRevenue')}</dt>
+                  <dt className="font-medium text-gray-800">{c.thesis.targetRevenue}</dt>
                 </div>
                 <div>
-                  <dt className="font-medium text-gray-800">{t('capitalPartnerships.thesis.targetEbitda')}</dt>
+                  <dt className="font-medium text-gray-800">{c.thesis.targetEbitda}</dt>
                 </div>
                 <div>
-                  <dt className="font-medium text-gray-800">{t('capitalPartnerships.thesis.targetSector')}</dt>
+                  <dt className="font-medium text-gray-800">{c.thesis.targetSector}</dt>
                 </div>
                 <div>
-                  <dt className="font-medium text-gray-800">{t('capitalPartnerships.thesis.targetGeography')}</dt>
+                  <dt className="font-medium text-gray-800">{c.thesis.targetGeography}</dt>
                 </div>
               </dl>
             </div>
@@ -124,13 +123,13 @@ const CapitalPartnershipsPage = () => {
       <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-serif text-black mb-6">
-            {t('capitalPartnerships.risk.title')}
+            {c.risk.title}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mb-10 leading-relaxed">
-            {t('capitalPartnerships.risk.intro')}
+            {c.risk.intro}
           </p>
           <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {arr('capitalPartnerships.risk.items').map((item) => (
+            {c.risk.items.map((item) => (
               <li
                 key={item}
                 className="p-6 rounded-2xl bg-white border border-gray-200 flex items-center"
@@ -143,17 +142,17 @@ const CapitalPartnershipsPage = () => {
         </div>
       </section>
 
-      {/* 6. Structure proposée */}
+      {/* 6. Structure proposed */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-serif text-black mb-6">
-            {t('capitalPartnerships.structure.title')}
+            {c.structure.title}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mb-10 leading-relaxed">
-            {t('capitalPartnerships.structure.intro')}
+            {c.structure.intro}
           </p>
           <ul className="grid sm:grid-cols-2 gap-4">
-            {arr('capitalPartnerships.structure.items').map((item) => (
+            {c.structure.items.map((item) => (
               <li key={item} className="flex items-center p-4 rounded-xl bg-gray-50">
                 <ChevronRight className="h-5 w-5 text-yellow-600 mr-3 flex-shrink-0" />
                 <span className="text-gray-700">{item}</span>
@@ -167,10 +166,10 @@ const CapitalPartnershipsPage = () => {
       <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-serif text-black mb-10">
-            {t('capitalPartnerships.process.title')}
+            {c.process.title}
           </h2>
           <ol className="space-y-4 max-w-2xl">
-            {arr('capitalPartnerships.process.steps').map((step: string, index: number) => (
+            {c.process.steps.map((step, index) => (
               <li key={step} className="flex items-start">
                 <span className="flex h-10 w-10 items-center justify-center rounded-full bg-yellow-400 text-black font-semibold flex-shrink-0 mr-4">
                   {index + 1}
@@ -186,17 +185,17 @@ const CapitalPartnershipsPage = () => {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-sm text-gray-500 max-w-2xl mx-auto mb-10 leading-relaxed">
-            {t('capitalPartnerships.disclaimer.text')}
+            {c.disclaimer.text}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <LocaleLink
               href="/contact"
               className="border-2 border-black text-black hover:bg-black hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 inline-flex items-center"
             >
-              {t('capitalPartnerships.cta.contact')}
+              {c.cta.contact}
               <ArrowRight className="ml-2 h-5 w-5" />
             </LocaleLink>
-            <span className="text-gray-500 text-sm">{t('capitalPartnerships.cta.availableUponRequest')}</span>
+            <span className="text-gray-500 text-sm">{c.cta.availableUponRequest}</span>
           </div>
         </div>
       </section>

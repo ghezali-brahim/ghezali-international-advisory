@@ -8,7 +8,7 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <img
           src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg"
-          alt="Cabinet de conseil stratégique - Dirigeants d'ETI et grands groupes en réunion d'affaires - Ghezali International Advisory"
+          alt="Strategic advisory firm - Business leaders in meeting - Ghezali International Advisory"
           className="w-full h-full object-cover"
           loading="eager"
         />
@@ -44,7 +44,7 @@ const Hero = () => {
           <div className="mb-8">
             <button className="group inline-flex items-center px-6 py-3 bg-black/50 backdrop-blur-sm border border-yellow-400/30 rounded-full text-white hover:bg-yellow-400/10 transition-all duration-300">
               <Play className="h-5 w-5 mr-3 text-yellow-400" />
-              <span>Découvrir notre approche en 2 minutes</span>
+              <span>Discover our approach in 2 minutes</span>
             </button>
           </div>
 
@@ -52,30 +52,30 @@ const Hero = () => {
           <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-12 mb-12">
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-yellow-400">+500M€</div>
-              <div className="text-gray-400">Valorisation générée</div>
+              <div className="text-gray-400">Value created</div>
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-yellow-400">12</div>
-              <div className="text-gray-400">Mandats actifs</div>
+              <div className="text-gray-400">Active mandates</div>
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-yellow-400">15</div>
-              <div className="text-gray-400">Pays d&apos;intervention</div>
+              <div className="text-gray-400">Countries</div>
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-yellow-400">24h</div>
-              <div className="text-gray-400">Réponse sous 24h</div>
+              <div className="text-gray-400">Response within 24h</div>
             </div>
           </div>
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
             <LocaleLink href="/contact" className="bg-yellow-400 text-black hover:bg-yellow-500 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-400/25 flex items-center">
-              Nous contacter
+              Contact us
               <ArrowRight className="ml-2 h-5 w-5" />
             </LocaleLink>
             <LocaleLink href="/contact" className="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center">
-              Échanger
+              Get in touch
               <Star className="ml-2 h-5 w-5" />
             </LocaleLink>
           </div>
@@ -83,12 +83,12 @@ const Hero = () => {
           {/* Trust Badge */}
           <div className="mt-8 inline-flex items-center px-4 py-2 bg-black/30 backdrop-blur-sm border border-gray-600 rounded-full">
             <Shield className="h-4 w-4 text-yellow-400 mr-2" />
-            <span className="text-gray-300 text-sm">Confidentialité ISO 27001 • NDA systématique</span>
+            <span className="text-gray-300 text-sm">ISO 27001 confidentiality • Systematic NDA</span>
           </div>
 
           {/* Trust Indicators */}
           <div className="mt-16 pt-8 border-t border-gray-700">
-            <p className="text-gray-400 text-sm mb-2">Confidentialité absolue. Nos clients ne nous citent pas.</p>
+            <p className="text-gray-400 text-sm mb-2">Strict confidentiality. Our clients do not cite us.</p>
             <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2 opacity-60">
               <span className="text-2xl font-bold text-white">FONDS PE</span>
               <span className="text-2xl font-bold text-white">FAMILY OFFICES</span>

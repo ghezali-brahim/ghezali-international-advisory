@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     description: 'Strategic advisory for private equity, family offices and institutional investors. Portfolio transformation, board-level execution.',
     images: ['/twitter-image.jpg'],
   },
+  // Canonical par défaut ; chaque page [locale] et sous-route doit définir sa propre canonical (URL courante) dans generateMetadata pour éviter le duplicate content.
   alternates: { canonical: defaultSEO.canonical },
   other: {
     'geo.region': 'FR-IDF',

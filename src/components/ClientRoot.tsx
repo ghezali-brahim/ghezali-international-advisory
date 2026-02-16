@@ -16,7 +16,7 @@ function getPageName(pathname: string): string {
   const map: Record<string, string> = {
     '/': 'Home',
     '/services': 'Services',
-    '/reseau': 'Réseau',
+    '/reseau': 'Network',
     '/expertise': 'Expertise',
     '/team': 'Team',
     '/medias': 'Media',

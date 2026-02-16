@@ -8,74 +8,74 @@ const FAQ = () => {
 
   const faqCategories = [
     {
-      title: "Processus & Méthodologie",
+      title: "Process & Methodology",
       icon: HelpCircle,
       questions: [
         {
-          question: "Comment se déroule le processus de sélection ?",
-          answer: "Notre processus de sélection comprend 4 étapes : (1) Analyse de votre candidature sous 48h, (2) Entretien confidentiel de qualification, (3) Audit stratégique préliminaire, (4) Proposition d'accompagnement sur mesure. Seules les candidatures alignées avec nos critères d'excellence sont retenues."
+          question: "How does the selection process work?",
+          answer: "Our selection process has 4 steps: (1) Review of your application within 48h, (2) Confidential qualification interview, (3) Preliminary strategic audit, (4) Tailored engagement proposal. Only applications aligned with our excellence criteria are accepted."
         },
         {
-          question: "Quelle est votre méthodologie d'intervention ?",
-          answer: "Notre approche S.E.R (Stratégie - Exécution - Résultats) combine vision long terme et mise en œuvre immédiate. Nous commençons par un diagnostic approfondi, développons une stratégie personnalisée, puis déployons une task force opérationnelle pour garantir l'exécution et mesurer les résultats."
+          question: "What is your intervention methodology?",
+          answer: "Our S.E.R approach (Strategy - Execution - Results) combines long-term vision with immediate implementation. We start with an in-depth diagnosis, develop a tailored strategy, then deploy an operational task force to ensure execution and measure results."
         },
         {
-          question: "Combien de temps dure un accompagnement typique ?",
-          answer: "La durée varie selon l'objectif : Executive Advisory (6-12 mois), Corporate Acceleration (12-18 mois), Strategic Deals (variable selon le deal). Chaque mission est calibrée pour maximiser l'impact dans les délais optimaux."
+          question: "How long does a typical engagement last?",
+          answer: "Duration varies by objective: Executive Advisory (6-12 months), Corporate Acceleration (12-18 months), Strategic Deals (varies by deal). Each assignment is calibrated to maximise impact within optimal timelines."
         }
       ]
     },
     {
-      title: "Investissement & ROI",
+      title: "Investment & ROI",
       icon: DollarSign,
       questions: [
         {
-          question: "Quels sont vos tarifs et modalités de paiement ?",
-          answer: "Nos programmes s'échelonnent de 200k€ à 1M€+ selon la complexité et l'ampleur de la mission. Nous proposons des modalités flexibles : forfait, success fee, ou combinaison des deux. Chaque proposition est personnalisée selon vos objectifs et contraintes."
+          question: "What are your fees and payment terms?",
+          answer: "Our programmes range from 200k€ to 1M€+ depending on complexity and scope. We offer flexible arrangements: fixed fee, success fee, or a combination. Each proposal is tailored to your objectives and constraints."
         },
         {
-          question: "Comment garantissez-vous le retour sur investissement ?",
-          answer: "Nous nous engageons contractuellement sur des KPIs mesurables : augmentation de valorisation, génération de cash, amélioration de multiples, etc. Notre taux de réussite de 95% et ROI moyen de 380% témoignent de notre capacité à créer de la valeur tangible."
+          question: "How do you guarantee return on investment?",
+          answer: "We commit contractually to measurable KPIs: valuation increase, cash generation, multiple improvement, etc. Our 95% success rate and average 380% ROI demonstrate our ability to create tangible value."
         },
         {
-          question: "Proposez-vous des garanties de résultats ?",
-          answer: "Oui, nous proposons des engagements contractuels avec des clauses de performance. Si les objectifs convenus ne sont pas atteints, nous adaptons notre rémunération en conséquence. Notre réputation repose sur des résultats concrets et mesurables."
+          question: "Do you offer result guarantees?",
+          answer: "Yes, we offer contractual commitments with performance clauses. If agreed objectives are not met, we adjust our remuneration accordingly. Our reputation is built on concrete, measurable results."
         }
       ]
     },
     {
-      title: "Confidentialité & Sécurité",
+      title: "Confidentiality & Security",
       icon: Shield,
       questions: [
         {
-          question: "Comment protégez-vous la confidentialité de nos informations ?",
-          answer: "Nous appliquons les plus hauts standards de sécurité : NDA systématique avant tout échange, certification ISO 27001, données chiffrées, accès restreint aux équipes projet. Votre confidentialité est notre priorité absolue."
+          question: "How do you protect the confidentiality of our information?",
+          answer: "We apply the highest security standards: systematic NDA before any exchange, ISO 27001 certification, encrypted data, restricted access for project teams. Your confidentiality is our absolute priority."
         },
         {
-          question: "Qui a accès aux informations de notre entreprise ?",
-          answer: "Seuls les membres de l'équipe projet directement impliqués dans votre mission ont accès aux informations. Chaque intervenant signe un accord de confidentialité spécifique. Nous appliquons le principe du 'need to know' de manière stricte."
+          question: "Who has access to our company information?",
+          answer: "Only project team members directly involved in your assignment have access. Each consultant signs a specific confidentiality agreement. We apply the 'need to know' principle strictly."
         },
         {
-          question: "Travaillez-vous avec nos concurrents ?",
-          answer: "Nous appliquons une politique stricte de non-concurrence pendant toute la durée de notre collaboration et 24 mois après. Si nous intervenons dans votre secteur, c'est uniquement sur des marchés géographiques ou segments différents, avec votre accord préalable."
+          question: "Do you work with our competitors?",
+          answer: "We apply a strict non-compete policy for the full duration of our collaboration and 24 months after. If we operate in your sector, it is only in different geographic markets or segments, with your prior agreement."
         }
       ]
     },
     {
-      title: "Critères d'engagement",
+      title: "Engagement criteria",
       icon: Clock,
       questions: [
         {
-          question: "Quels sont vos critères de sélection ?",
-          answer: "Nous accompagnons principalement les ETI (CA 50M€+) et divisions de Grands Groupes avec un potentiel de croissance significatif, des dirigeants visionnaires, et une ambition d'excellence. L'engagement du leadership et la capacité d'investissement sont essentiels."
+          question: "What are your selection criteria?",
+          answer: "We primarily work with mid-market companies (50M€+ revenue) and divisions of large groups with significant growth potential, visionary leadership, and an ambition for excellence. Leadership commitment and investment capacity are essential."
         },
         {
-          question: "Intervenez-vous dans tous les secteurs ?",
-          answer: "Nous avons une expertise reconnue dans l'industrie, la distribution, les services, et la tech. Notre approche sectorielle nous permet d'apporter une valeur ajoutée immédiate grâce à notre connaissance des enjeux spécifiques de chaque marché."
+          question: "Do you operate across all sectors?",
+          answer: "We have recognised expertise in industry, distribution, services, and tech. Our sector approach enables us to deliver immediate added value through our knowledge of each market's specific challenges."
         },
         {
-          question: "Accompagnez-vous les entreprises en difficulté ?",
-          answer: "Notre positionnement se concentre sur l'accélération de la performance d'entreprises saines avec un potentiel de croissance. Pour les situations de retournement, nous orientons vers des spécialistes du restructuring de notre réseau."
+          question: "Do you support companies in difficulty?",
+          answer: "Our positioning focuses on accelerating performance of healthy companies with growth potential. For turnaround situations, we refer to restructuring specialists within our network."
         }
       ]
     }
@@ -92,12 +92,11 @@ const FAQ = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-serif text-black mb-6">
-            Questions <span className="text-yellow-600">Fréquentes</span>
+            Frequently <span className="text-yellow-600">Asked Questions</span>
           </h2>
           <div className="w-24 h-1 bg-yellow-600 mx-auto mb-6"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Retrouvez les réponses aux questions les plus courantes sur notre approche, 
-            nos méthodes et nos conditions d&apos;intervention.
+            Find answers to the most common questions about our approach, methods and engagement terms.
           </p>
         </div>
 
@@ -148,18 +147,17 @@ const FAQ = () => {
         <div className="mt-16 text-center">
           <div className="bg-black p-8 rounded-xl">
             <h3 className="text-2xl font-serif text-white mb-4">
-              Une question spécifique ?
+              Have a specific question?
             </h3>
             <p className="text-gray-300 mb-6">
-              Notre équipe est disponible pour répondre à toutes vos questions 
-              lors d&apos;un échange confidentiel.
+              Our team is available to answer your questions in a confidential discussion.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
               <button className="bg-yellow-400 text-black hover:bg-yellow-500 px-6 py-3 rounded-lg font-semibold transition-all duration-300">
-                Poser une question
+                Ask a question
               </button>
               <button className="border-2 border-white text-white hover:bg-white hover:text-black px-6 py-3 rounded-lg font-semibold transition-all duration-300">
-                Planifier un appel
+                Schedule a call
               </button>
             </div>
           </div>

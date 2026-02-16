@@ -10,10 +10,10 @@ const CaseStudies = () => {
   const caseStudies = [
     {
       id: 1,
-      title: "Transformation d'une ETI Industrielle",
-      sector: "Industrie & Manufacturing",
-      challenge: "Restructuration complète et préparation à la cession",
-      duration: "18 mois",
+      title: "Industrial Mid-Market Transformation",
+      sector: "Industry & Manufacturing",
+      challenge: "Full restructuring and sale preparation",
+      duration: "18 months",
       investment: "750k€",
       results: {
         valorisation: "+45%",
@@ -21,27 +21,27 @@ const CaseStudies = () => {
         multiple: "8x EBITDA",
         roi: "420%"
       },
-      description: "Une ETI industrielle de 180M€ de CA souhaitait optimiser sa structure avant une cession. Notre intervention a permis une transformation complète de l'organisation.",
+      description: "An industrial mid-market company with 180M€ revenue sought to optimise its structure before a sale. Our intervention enabled a full organisational transformation.",
       methodology: [
-        "Audit stratégique et opérationnel complet",
-        "Restructuration des processus clés",
-        "Optimisation de la supply chain",
-        "Préparation due diligence",
-        "Négociation et closing de la cession"
+        "Complete strategic and operational audit",
+        "Restructuring of key processes",
+        "Supply chain optimisation",
+        "Due diligence preparation",
+        "Sale negotiation and closing"
       ],
       timeline: [
-        { phase: "Audit & Diagnostic", duration: "2 mois", status: "completed" },
-        { phase: "Restructuration", duration: "8 mois", status: "completed" },
-        { phase: "Optimisation", duration: "6 mois", status: "completed" },
-        { phase: "Cession", duration: "2 mois", status: "completed" }
+        { phase: "Audit & Diagnosis", duration: "2 months", status: "completed" },
+        { phase: "Restructuring", duration: "8 months", status: "completed" },
+        { phase: "Optimisation", duration: "6 months", status: "completed" },
+        { phase: "Sale", duration: "2 months", status: "completed" }
       ]
     },
     {
       id: 2,
-      title: "Digitalisation d'un Groupe de Distribution",
+      title: "Distribution Group Digitalisation",
       sector: "Distribution & Retail",
-      challenge: "Transformation digitale et optimisation supply chain",
-      duration: "24 mois",
+      challenge: "Digital transformation and supply chain optimisation",
+      duration: "24 months",
       investment: "1.2M€",
       results: {
         valorisation: "+35%",
@@ -49,27 +49,27 @@ const CaseStudies = () => {
         multiple: "6.5x EBITDA",
         roi: "380%"
       },
-      description: "Un groupe de distribution de 320M€ de CA nécessitait une transformation digitale complète pour rester compétitif.",
+      description: "A distribution group with 320M€ revenue required a full digital transformation to remain competitive.",
       methodology: [
-        "Stratégie de transformation digitale",
-        "Implémentation d'outils CRM/ERP",
-        "Optimisation logistique",
-        "Formation des équipes",
-        "Mesure de performance"
+        "Digital transformation strategy",
+        "CRM/ERP tool implementation",
+        "Logistics optimisation",
+        "Team training",
+        "Performance measurement"
       ],
       timeline: [
-        { phase: "Stratégie Digitale", duration: "3 mois", status: "completed" },
-        { phase: "Implémentation", duration: "12 mois", status: "completed" },
-        { phase: "Formation", duration: "6 mois", status: "completed" },
-        { phase: "Optimisation", duration: "3 mois", status: "completed" }
+        { phase: "Digital Strategy", duration: "3 months", status: "completed" },
+        { phase: "Implementation", duration: "12 months", status: "completed" },
+        { phase: "Training", duration: "6 months", status: "completed" },
+        { phase: "Optimisation", duration: "3 months", status: "completed" }
       ]
     },
     {
       id: 3,
-      title: "Accélération Portfolio Company",
+      title: "Portfolio Company Acceleration",
       sector: "Private Equity",
-      challenge: "Maximisation de la valeur avant exit",
-      duration: "12 mois",
+      challenge: "Value maximisation before exit",
+      duration: "12 months",
       investment: "500k€",
       results: {
         valorisation: "+65%",
@@ -77,19 +77,19 @@ const CaseStudies = () => {
         multiple: "4.2x",
         roi: "520%"
       },
-      description: "Un fonds de Private Equity souhaitait accélérer la croissance d'une participation avant la sortie.",
+      description: "A private equity fund sought to accelerate the growth of a portfolio company before exit.",
       methodology: [
-        "Due diligence stratégique approfondie",
-        "Plan d'accélération sur mesure",
-        "Optimisation opérationnelle",
-        "Préparation à l'exit",
-        "Négociation avec acquéreurs"
+        "In-depth strategic due diligence",
+        "Tailored acceleration plan",
+        "Operational optimisation",
+        "Exit preparation",
+        "Buyer negotiation"
       ],
       timeline: [
-        { phase: "Due Diligence", duration: "1 mois", status: "completed" },
-        { phase: "Accélération", duration: "8 mois", status: "completed" },
-        { phase: "Préparation Exit", duration: "2 mois", status: "completed" },
-        { phase: "Closing", duration: "1 mois", status: "completed" }
+        { phase: "Due Diligence", duration: "1 month", status: "completed" },
+        { phase: "Acceleration", duration: "8 months", status: "completed" },
+        { phase: "Exit Preparation", duration: "2 months", status: "completed" },
+        { phase: "Closing", duration: "1 month", status: "completed" }
       ]
     }
   ];
@@ -102,22 +102,21 @@ const CaseStudies = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-serif text-black mb-6">
-            Études de <span className="text-yellow-600">Cas Détaillées</span>
+            Detailed <span className="text-yellow-600">Case Studies</span>
           </h2>
           <div className="w-24 h-1 bg-yellow-600 mx-auto mb-6"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Découvrez comment nous avons transformé des entreprises et généré 
-            des résultats exceptionnels pour nos clients.
+            Discover how we have transformed companies and delivered exceptional results for our clients.
           </p>
           <LocaleLink href="/expertise" className="inline-block mt-6 text-yellow-600 hover:text-yellow-700 font-medium">
-            Voir toutes les études de cas premium →
+            View all premium case studies →
           </LocaleLink>
         </div>
 
         {/* Case Study Selector */}
         <div className="flex flex-col lg:flex-row gap-8 mb-16">
           <div className="lg:w-1/3">
-            <h3 className="text-2xl font-serif text-black mb-6">Sélectionnez une étude</h3>
+            <h3 className="text-2xl font-serif text-black mb-6">Select a case study</h3>
             <div className="space-y-4">
               {caseStudies.map((study, index) => (
                 <button
@@ -138,7 +137,7 @@ const CaseStudies = () => {
                   <p className="text-sm text-gray-600 mb-2">{study.sector}</p>
                   <div className="flex items-center text-sm text-yellow-600">
                     <TrendingUp className="h-4 w-4 mr-1" />
-                    {study.results.valorisation} valorisation
+                    {study.results.valorisation} valuation
                   </div>
                 </button>
               ))}
@@ -163,12 +162,12 @@ const CaseStudies = () => {
                 <div className="bg-white p-4 rounded-lg text-center">
                   <TrendingUp className="h-6 w-6 text-yellow-600 mx-auto mb-2" />
                   <div className="text-2xl font-bold text-black">{currentCase.results.valorisation}</div>
-                  <div className="text-sm text-gray-600">Valorisation</div>
+                  <div className="text-sm text-gray-600">Valuation</div>
                 </div>
                 <div className="bg-white p-4 rounded-lg text-center">
                   <DollarSign className="h-6 w-6 text-green-600 mx-auto mb-2" />
                   <div className="text-2xl font-bold text-black">{currentCase.results.cash}</div>
-                  <div className="text-sm text-gray-600">Cash généré</div>
+                  <div className="text-sm text-gray-600">Cash generated</div>
                 </div>
                 <div className="bg-white p-4 rounded-lg text-center">
                   <Target className="h-6 w-6 text-blue-600 mx-auto mb-2" />
@@ -178,13 +177,13 @@ const CaseStudies = () => {
                 <div className="bg-white p-4 rounded-lg text-center">
                   <Calendar className="h-6 w-6 text-purple-600 mx-auto mb-2" />
                   <div className="text-2xl font-bold text-black">{currentCase.duration}</div>
-                  <div className="text-sm text-gray-600">Durée</div>
+                  <div className="text-sm text-gray-600">Duration</div>
                 </div>
               </div>
 
               {/* Methodology */}
               <div className="mb-8">
-                <h4 className="text-xl font-semibold text-black mb-4">Méthodologie appliquée</h4>
+                <h4 className="text-xl font-semibold text-black mb-4">Methodology applied</h4>
                 <div className="space-y-3">
                   {currentCase.methodology.map((step, index) => (
                     <div key={index} className="flex items-center">
@@ -197,7 +196,7 @@ const CaseStudies = () => {
 
               {/* Timeline */}
               <div>
-                <h4 className="text-xl font-semibold text-black mb-4">Timeline du projet</h4>
+                <h4 className="text-xl font-semibold text-black mb-4">Project timeline</h4>
                 <div className="space-y-4">
                   {currentCase.timeline.map((phase, index) => (
                     <div key={index} className="flex items-center">
@@ -225,13 +224,13 @@ const CaseStudies = () => {
         <div className="text-center">
           <div className="bg-black p-12 rounded-2xl">
             <h3 className="text-3xl md:text-4xl font-serif text-white mb-6">
-              Calculez votre potentiel de valorisation
+              Calculate your valuation potential
             </h3>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Découvrez l&apos;impact que notre accompagnement pourrait avoir sur votre entreprise.
+              Discover the impact our support could have on your company.
             </p>
             <button className="bg-yellow-400 text-black hover:bg-yellow-500 px-10 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-400/25">
-              Simuler mon ROI
+              Simulate my ROI
             </button>
           </div>
         </div>

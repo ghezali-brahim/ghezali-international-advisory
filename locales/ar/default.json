@@ -1,4 +1,12 @@
 {
+  "marketArticles": {
+    "internationalGrowth": {"title": "استراتيجية النمو الدولي", "titleEn": "International Growth Strategy", "description": "استراتيجية النمو الدولي والتوسع عبر الحدود للمستثمرين.", "descriptionEn": "International growth strategy and cross-border expansion for investors."},
+    "privateEquity": {"title": "استشارات رأس المال الخاص", "titleEn": "Private Equity Consulting", "description": "دعم صناديق رأس المال الخاص وخلق القيمة في المحفظة.", "descriptionEn": "PE fund support and portfolio value creation."},
+    "enterpriseGrowth": {"title": "استراتيجية نمو المؤسسات", "titleEn": "Enterprise Growth Strategy", "description": "استراتيجية النمو والتوسع المؤسسي لأسواق وسط.", "descriptionEn": "Growth strategy and corporate scaling for mid-market."},
+    "strategicPositioning": {"title": "التموضع الاستراتيجي", "titleEn": "Strategic Positioning", "description": "استشارات الاستراتيجية العالمية والموقف الدولي.", "descriptionEn": "Global strategy consulting and international positioning."},
+    "resourcesTitle": "الموارد الاستراتيجية",
+    "resourcesSubtitle": "مقالات وتحليلات للمستثمرين في"
+  },
   "capitalPartnerships": {
     "cta": {
       "availableUponRequest": "متاح عند الطلب",
